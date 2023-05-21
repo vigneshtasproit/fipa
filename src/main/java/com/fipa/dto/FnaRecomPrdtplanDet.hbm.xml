@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated May 17, 2018 11:20:37 AM by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.fipa.dto.FnaRecomPrdtplanDet" table="FNA_RECOM_PRDTPLAN_DET" >
+        <id name="recomPpId" type="string">
+            <column name="RECOM_PP_ID" length="20" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="fnaSelfspouseDets" class="com.fipa.dto.FnaSelfspouseDets" fetch="select">
+            <column name="FNA_ID" length="20" />
+        </many-to-one>
+        <property name="recomPpProdtype" type="string">
+            <column name="RECOM_PP_PRODTYPE" length="10" />
+        </property>
+        <property name="recomPpProdname" type="string">
+            <column name="RECOM_PP_PRODNAME" length="20" />
+        </property>
+        <property name="recomPpSumassr" type="java.lang.Double">
+            <column name="RECOM_PP_SUMASSR" precision="126" scale="0" />
+        </property>
+        <property name="recomPpPaymentmode" type="string">
+            <column name="RECOM_PP_PAYMENTMODE" length="20" />
+        </property>
+        <property name="recomPpPlanterm" type="string">
+            <column name="RECOM_PP_PLANTERM" length="30" />
+        </property>
+        <property name="recomPpPayterm" type="string">
+            <column name="RECOM_PP_PAYTERM" length="30" />
+        </property>
+        <property name="recomPpPremium" type="java.lang.Double">
+            <column name="RECOM_PP_PREMIUM" precision="126" scale="0" />
+        </property>
+        <property name="recomPpPerson" type="string">
+            <column name="RECOM_PP_PERSON" length="20" />
+        </property>
+        <property name="recomPpPersonname" type="string">
+            <column name="RECOM_PP_PERSONNAME" length="60" />
+        </property>
+        <property name="recomPpCateg" type="string">
+            <column name="RECOM_PP_CATEG" length="10" />
+        </property>
+        <property name="createdBy" type="string">
+            <column name="CREATED_BY" length="20" />
+        </property>
+        <property name="createdDate" type="date">
+            <column name="CREATED_DATE" length="7" />
+        </property>
+        <property name="recomPpPrin" type="string">
+            <column name="RECOM_PP_PRIN" length="60" />
+        </property>
+        <property name="recomPpPlan" type="string">
+            <column name="RECOM_PP_PLAN" length="300" />
+        </property>
+        <property name="recomPpBasrid" type="string">
+            <column name="RECOM_PP_BASRID" length="20" />
+        </property>
+        <property name="recomPpOpt" type="string">
+            <column name="RECOM_PP_OPT" length="20">
+                <comment>PRE OR CUSTOM</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

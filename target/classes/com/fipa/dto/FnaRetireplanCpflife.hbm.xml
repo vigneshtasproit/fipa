@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Mar 5, 2019 9:27:04 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.fipa.dto.FnaRetireplanCpflife" table="FNA_RETIREPLAN_CPFLIFE">
+        <id name="rpClId" type="string">
+            <column name="RP_CL_ID" length="20" />
+            <generator class="assigned" />
+        </id> 
+        <many-to-one name="fnaSelfspouseDets" class="com.fipa.dto.FnaSelfspouseDets" fetch="select">
+            <column name="FNA_ID" length="20" />
+        </many-to-one>
+        <property name="age" type="string">
+            <column name="AGE" length="20" />
+        </property>
+        <property name="cpflifeType" type="string">
+            <column name="CPFLIFE_TYPE" length="60" />
+        </property>
+        <property name="cpflifePrem" type="java.lang.Double">
+            <column name="CPFLIFE_PREM" precision="126" scale="0" />
+        </property>
+        <property name="cpflifePayoutincome" type="java.lang.Double">
+            <column name="CPFLIFE_PAYOUTINCOME" precision="126" scale="0" />
+        </property>
+        <property name="cpflifeFromRa" type="java.lang.Double">
+            <column name="CPFLIFE_FROM_RA" precision="126" scale="0" />
+        </property>
+    </class>
+</hibernate-mapping>

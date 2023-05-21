@@ -1,0 +1,105 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated May 17, 2018 11:20:37 AM by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.fipa.dto.FnaAssetOtherdets" table="FNA_ASSET_OTHERDETS" >
+        <id name="othId" type="string">
+            <column name="OTH_ID" length="20" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="fnaSelfspouseDets" class="com.fipa.dto.FnaSelfspouseDets" fetch="select">
+            <column name="FNA_ID" length="20" />
+        </many-to-one>
+        <property name="othasstSelfPers" type="java.lang.Double">
+            <column name="OTHASST_SELF_PERS" precision="126" scale="0" />
+        </property>
+        <property name="othasstSpousePers" type="java.lang.Double">
+            <column name="OTHASST_SPOUSE_PERS" precision="126" scale="0" />
+        </property>
+        <property name="othasstJointPers" type="java.lang.Double">
+            <column name="OTHASST_JOINT_PERS" precision="126" scale="0" />
+        </property>
+        <property name="othasstLoansPers" type="java.lang.Double">
+            <column name="OTHASST_LOANS_PERS" precision="126" scale="0" />
+        </property>
+        <property name="othasstRemarksPers" type="string">
+            <column name="OTHASST_REMARKS_PERS" length="300" />
+        </property>
+        <property name="othasstSelfClub" type="java.lang.Double">
+            <column name="OTHASST_SELF_CLUB" precision="126" scale="0" />
+        </property>
+        <property name="othasstSpouseClub" type="java.lang.Double">
+            <column name="OTHASST_SPOUSE_CLUB" precision="126" scale="0" />
+        </property>
+        <property name="othasstJointClub" type="java.lang.Double">
+            <column name="OTHASST_JOINT_CLUB" precision="126" scale="0" />
+        </property>
+        <property name="othasstLoansClub" type="java.lang.Double">
+            <column name="OTHASST_LOANS_CLUB" precision="126" scale="0" />
+        </property>
+        <property name="othasstRemarksClub" type="string">
+            <column name="OTHASST_REMARKS_CLUB" length="300" />
+        </property>
+        <property name="othasstSelfBusi" type="java.lang.Double">
+            <column name="OTHASST_SELF_BUSI" precision="126" scale="0" />
+        </property>
+        <property name="othasstSpouseBusi" type="java.lang.Double">
+            <column name="OTHASST_SPOUSE_BUSI" precision="126" scale="0" />
+        </property>
+        <property name="othasstJointBusi" type="java.lang.Double">
+            <column name="OTHASST_JOINT_BUSI" precision="126" scale="0" />
+        </property>
+        <property name="othasstLoansBusi" type="java.lang.Double">
+            <column name="OTHASST_LOANS_BUSI" precision="126" scale="0" />
+        </property>
+        <property name="othasstRemarksBusi" type="string">
+            <column name="OTHASST_REMARKS_BUSI" length="300" />
+        </property>
+        <property name="othasstSelfOth" type="java.lang.Double">
+            <column name="OTHASST_SELF_OTH" precision="126" scale="0" />
+        </property>
+        <property name="othasstSpouseOth" type="java.lang.Double">
+            <column name="OTHASST_SPOUSE_OTH" precision="126" scale="0" />
+        </property>
+        <property name="othasstJointOth" type="java.lang.Double">
+            <column name="OTHASST_JOINT_OTH" precision="126" scale="0" />
+        </property>
+        <property name="othasstLoansOth" type="java.lang.Double">
+            <column name="OTHASST_LOANS_OTH" precision="126" scale="0" />
+        </property>
+        <property name="othasstRemarksOth" type="string">
+            <column name="OTHASST_REMARKS_OTH" length="300" />
+        </property>
+        <property name="othasstSelfTot" type="java.lang.Double">
+            <column name="OTHASST_SELF_TOT" precision="126" scale="0" />
+        </property>
+        <property name="othasstSpouseTot" type="java.lang.Double">
+            <column name="OTHASST_SPOUSE_TOT" precision="126" scale="0" />
+        </property>
+        <property name="othasstJointTot" type="java.lang.Double">
+            <column name="OTHASST_JOINT_TOT" precision="126" scale="0" />
+        </property>
+        <property name="othasstLoansTot" type="java.lang.Double">
+            <column name="OTHASST_LOANS_TOT" precision="126" scale="0" />
+        </property>
+        <property name="othasstRemarksTot" type="string">
+            <column name="OTHASST_REMARKS_TOT" length="300" />
+        </property>
+        <property name="othasstNotes" type="string">
+            <column name="OTHASST_NOTES" length="300" />
+        </property>
+        <property name="othasstCreatedBy" type="string">
+            <column name="OTHASST_CREATED_BY" length="20" />
+        </property>
+        <property name="othasstCreatedDate" type="date">
+            <column name="OTHASST_CREATED_DATE" length="7" />
+        </property>
+        <property name="othasstModifiedBy" type="string">
+            <column name="OTHASST_MODIFIED_BY" length="20" />
+        </property>
+        <property name="othasstModifiedDate" type="date">
+            <column name="OTHASST_MODIFIED_DATE" length="7" />
+        </property>
+    </class>
+</hibernate-mapping>

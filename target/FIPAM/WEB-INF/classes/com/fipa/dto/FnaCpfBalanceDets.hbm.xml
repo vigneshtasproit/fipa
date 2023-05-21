@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated May 17, 2018 11:20:37 AM by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.fipa.dto.FnaCpfBalanceDets" table="FNA_CPF_BALANCE_DETS" >
+        <id name="cpfId" type="string">
+            <column name="CPF_ID" length="20" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="masterCpfAcctype" class="com.fipa.dto.MasterCpfAcctype" fetch="select">
+            <column name="CPF_AC_ID" length="20" />
+        </many-to-one>
+        <many-to-one name="fnaSelfspouseDets" class="com.fipa.dto.FnaSelfspouseDets" fetch="select">
+            <column name="FNA_ID" length="20" />
+        </many-to-one>
+        <property name="cpfSelfBalance" type="java.lang.Double">
+            <column name="CPF_SELF_BALANCE" precision="126" scale="0" />
+        </property>
+        <property name="cpfSelfOrSps" type="string">
+            <column name="CPF_SELF_OR_SPS" length="20" />
+        </property>
+        <property name="cpfCrtdBy" type="string">
+            <column name="CPF_CRTD_BY" length="20" />
+        </property>
+        <property name="cpfCrtdDate" type="date">
+            <column name="CPF_CRTD_DATE" length="7" />
+        </property>
+        <property name="cpfModBy" type="string">
+            <column name="CPF_MOD_BY" length="20" />
+        </property>
+        <property name="cpfModDate" type="date">
+            <column name="CPF_MOD_DATE" length="7" />
+        </property>
+    </class>
+</hibernate-mapping>

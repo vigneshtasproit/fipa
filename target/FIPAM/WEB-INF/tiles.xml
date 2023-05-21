@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE tiles-definitions PUBLIC
+  "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN" 
+  "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+
+	<definition name="login.definition" template="/jsp/layout/loginLayout.jsp">
+		<put-attribute name="title" value="Avallis - FIPA Login" />
+		<put-attribute name="body" value="" />
+	</definition>
+	
+	<definition name="login" extends="login.definition">		
+		<put-attribute name="body" value="/jsp/login/login.jsp" />
+	</definition>
+	
+	<definition name="logout" extends="login.definition">
+		<put-attribute name="title" value="FIPA - Login" />
+		<put-attribute name="body" value="/jsp/login/logout.jsp" />
+	</definition>
+	
+	
+	<definition name="base.definition" template="/jsp/layout/layout.jsp">
+		<!-- <put-attribute name="title" value="" />
+		<put-attribute name="header" value="/jsp/layout/header.jsp" /> 
+		<put-attribute name="treeflow" value="/jsp/layout/treeflow.jsp" /> 
+		<put-attribute name="toolbar" value="/jsp/layout/toolbar.jsp" />
+		<put-attribute name="body" value="" /> -->
+<!-- 		<put-attribute name="footer" value="/jsp/layout/footer.jsp" /> -->
+	</definition> 
+	
+	<definition name="fipamenu" extends="base.definition">
+		<!-- <put-attribute name="title" value="Avallis | FIPA" />
+		<put-attribute name="body" value="/jsp/fipa/fipalinks.jsp" />
+		<put-attribute name="footerText" value="/jsp/layout/footerText.jsp" /> -->
+	</definition>
+	
+	
+	
+ 	<definition name="filenotfound" extends="commonpage.definition">
+		<put-attribute name="title" value="FIPA - File Not Found" />
+		<put-attribute name="body" value="/jsp/common/fileNotFoundError.jsp" />
+	</definition>
+	 
+	<definition name="commonpage.definition" template="/jsp/layout/commonLayout.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="body" value="" />		
+	</definition>
+	
+	
+	<definition name="fipahome" extends="login.definition">
+		<put-attribute name="title" value="Avallis | FIPA" />
+		<put-attribute name="body" value="/jsp/login/fipahome.jsp" />
+	</definition>
+	
+	
+	
+	<definition name="sessionExpired"  extends="commonpage.definition">
+		<put-attribute name="title" value="FIPA - Session Expired" />
+		<put-attribute name="body" value="/jsp/common/sessionExpired.jsp" />		
+	 </definition>
+	 	
+	<definition name="resubmit" extends="commonpage.definition">
+		<put-attribute name="title" value="FIPA - Form ReSubmit" />
+		<put-attribute name="body" value="/jsp/common/resubmit.jsp" />		
+	 </definition>
+	 
+		<definition name="generalError" extends="commonpage.definition">
+		<put-attribute name="title" value="FIPA - General Error" />
+		<put-attribute name="body" value="/jsp/common/generalError.jsp" />
+	</definition>
+	
+	<definition name="dbError" extends="commonpage.definition">
+		<put-attribute name="title" value="FIPA - DBError" />
+		<put-attribute name="body" value="/jsp/common/dbError.jsp" />
+	</definition>
+	 
+<definition name="masterpage.definition" template="/jsp/layout/masterLayout.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="body" value="" />		
+	</definition>
+	
+
+	<definition name="mastercpfaccount" extends="masterpage.definition">
+		<put-attribute name="title" value="Avallis - FIPA" />
+		<put-attribute name="body" value="/jsp/masters/CPFAccType.jsp" />
+<!-- 		<put-attribute name="footerText" value="/jsp/layout/footerText.jsp" /> -->
+	</definition>
+	
+	<definition name="mastercpfcontribution" extends="masterpage.definition">
+		<put-attribute name="title" value="Avallis - FIPA" />
+		<put-attribute name="body" value="/jsp/masters/CPFContribution.jsp" />
+<!-- 		<put-attribute name="footerText" value="/jsp/layout/footerText.jsp" /> -->
+	</definition>
+	
+	<definition name="mastercpfAllocation" extends="masterpage.definition">
+		<put-attribute name="title" value="Avallis - FIPA" />
+		<put-attribute name="body" value="/jsp/masters/CPFAllocation.jsp" />
+<!-- 		<put-attribute name="footerText" value="/jsp/layout/footerText.jsp" /> -->
+	</definition>
+	
+	<definition name="mastercpfInterestRate" extends="masterpage.definition">
+		<put-attribute name="title" value="Avallis - FIPA" />
+		<put-attribute name="body" value="/jsp/masters/CPFInterestRate.jsp" />
+<!-- 		<put-attribute name="footerText" value="/jsp/layout/footerText.jsp" /> -->
+	</definition>
+	
+	<definition name="retirementcpfsum" extends="masterpage.definition">
+		<put-attribute name="title" value="Avallis - FIPA" />
+		<put-attribute name="body" value="/jsp/masters/CPFRetirementSum.jsp" />
+<!-- 		<put-attribute name="footerText" value="/jsp/layout/footerText.jsp" /> -->
+	</definition>
+	
+	<definition name="cpflifepayout" extends="masterpage.definition">
+		<put-attribute name="title" value="Avallis - FIPA" />
+		<put-attribute name="body" value="/jsp/masters/CPFLifePayout.jsp" />
+<!-- 		<put-attribute name="footerText" value="/jsp/layout/footerText.jsp" /> -->
+	</definition>
+	
+	<definition name="masterquotes" extends="masterpage.definition">
+		<put-attribute name="title" value="Avallis - FIPA" />
+		<put-attribute name="body" value="/jsp/masters/Quotes.jsp" />
+<!-- 		<put-attribute name="footerText" value="/jsp/layout/footerText.jsp" /> -->
+	</definition>
+	
+	
+	
+ 	<definition name="filefound">
+ 		
+		<put-attribute name="title" value="FIPA - File  Found" />
+		<put-attribute name="body" value="/jsp/common/fileFound.jsp" />
+	</definition>
+
+</tiles-definitions>  

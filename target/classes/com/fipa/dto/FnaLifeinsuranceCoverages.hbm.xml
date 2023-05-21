@@ -1,0 +1,98 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated May 17, 2018 11:20:37 AM by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.fipa.dto.FnaLifeinsuranceCoverages" table="FNA_LIFEINSURANCE_COVERAGES" >
+        <id name="coverId" type="string">
+            <column name="COVER_ID" length="20" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="fnaLifeinsuranceDets" class="com.fipa.dto.FnaLifeinsuranceDets" fetch="select">
+            <column name="LIP_ID" length="20" />
+        </many-to-one>
+        <many-to-one name="fnaSelfspouseDets" class="com.fipa.dto.FnaSelfspouseDets" fetch="select">
+            <column name="FNA_ID" length="20" />
+        </many-to-one>
+        <property name="coverName" type="string">
+            <column name="COVER_NAME" length="60" />
+        </property>
+        <property name="coverLevelortype" type="string">
+            <column name="COVER_LEVELORTYPE" length="60" />
+        </property>
+        <property name="coverPlanname" type="string">
+            <column name="COVER_PLANNAME" length="150" />
+        </property>
+        <property name="coverBasorrid" type="string">
+            <column name="COVER_BASORRID" length="10" />
+        </property>
+        <property name="effDate" type="date">
+            <column name="EFF_DATE" length="7" />
+        </property>
+        <property name="expiryDate" type="date">
+            <column name="EXPIRY_DATE" length="7" />
+        </property>
+        <property name="coverageTerm" type="string">
+            <column name="COVERAGE_TERM" length="20" />
+        </property>
+        <property name="premPaymentTerm" type="string">
+            <column name="PREM_PAYMENT_TERM" length="20" />
+        </property>
+        <property name="coverSumAssured" type="java.lang.Double">
+            <column name="COVER_SUM_ASSURED" precision="126" scale="0" />
+        </property>
+        <property name="coverPremium" type="java.lang.Double">
+            <column name="COVER_PREMIUM" precision="126" scale="0" />
+        </property>
+        <property name="coverDeductable" type="java.lang.Double">
+            <column name="COVER_DEDUCTABLE" precision="126" scale="0" />
+        </property>
+        <property name="coInsurance" type="java.lang.Double">
+            <column name="CO_INSURANCE" precision="126" scale="0" />
+        </property>
+        <property name="coverRemarks" type="string">
+            <column name="COVER_REMARKS" length="300" />
+        </property>
+        <property name="coverCreatedBy" type="string">
+            <column name="COVER_CREATED_BY" length="20" not-null="true" />
+        </property>
+        <property name="coverCreatedDate" type="date">
+            <column name="COVER_CREATED_DATE" length="7" not-null="true" />
+        </property>
+        <property name="coverModifiedBy" type="string">
+            <column name="COVER_MODIFIED_BY" length="20" />
+        </property>
+        <property name="coverModifiedDate" type="date">
+            <column name="COVER_MODIFIED_DATE" length="7" />
+        </property> 
+          <property name="multiBoost" type="java.lang.Double">
+            <column name="MULTIBOOST" precision="126" scale="0" />
+        </property>
+          <property name="maaAmtAssured" type="java.lang.Double">
+            <column name="MAA_AMTASS" precision="126" scale="0" />
+        </property>
+          <property name="maaExPeriod" type="string">
+            <column name="MAA_EXPERD" length="20" />
+        </property>
+          <property name="payNoofyear" type="string">
+            <column name="PAY_NOOFYEAR" length="20" />
+        </property>
+          <property name="benefAmount" type="java.lang.Double">
+            <column name="BENEFIT_AMT" precision="126" scale="0" />
+        </property>
+          <property name="payYears" type="string">
+            <column name="PAY_YRS" length="20" />
+        </property>
+          <property name="maxPayoutAge" type="string">
+            <column name="MAX_PAYOUTAGE" length="20" />
+        </property>
+          <property name="typeOfHS" type="string">
+            <column name="TYPE_OF_HS" length="150" />
+        </property>
+          <property name="descriptions" type="string">
+            <column name="DESCRIPTIONS" length="150" />
+        </property>
+         
+
+    </class>
+</hibernate-mapping>

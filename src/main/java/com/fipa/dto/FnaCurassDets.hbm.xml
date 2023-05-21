@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated May 17, 2018 11:20:37 AM by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.fipa.dto.FnaCurassDets" table="FNA_CURASS_DETS" >
+        <id name="caId" type="string">
+            <column name="CA_ID" length="20" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="fnaSelfspouseDets" class="com.fipa.dto.FnaSelfspouseDets" fetch="select">
+            <column name="FNA_ID" length="20" />
+        </many-to-one>
+        <property name="caSelfRoi" type="java.lang.Double">
+            <column name="CA_SELF_ROI" precision="126" scale="0" />
+        </property>
+        <property name="caSpsRoi" type="java.lang.Double">
+            <column name="CA_SPS_ROI" precision="126" scale="0" />
+        </property>
+        <property name="caFamRoi" type="java.lang.Double">
+            <column name="CA_FAM_ROI" precision="126" scale="0" />
+        </property>
+        <property name="caGenInfrate" type="java.lang.Double">
+            <column name="CA_GEN_INFRATE" precision="126" scale="0" />
+        </property>
+        <property name="caEdnInfrate" type="java.lang.Double">
+            <column name="CA_EDN_INFRATE" precision="126" scale="0" />
+        </property>
+        <property name="caSavingDeprate" type="java.lang.Double">
+            <column name="CA_SAVING_DEPRATE" precision="126" scale="0" />
+        </property>
+        <property name="caBonds" type="java.lang.Double">
+            <column name="CA_BONDS" precision="126" scale="0" />
+        </property>
+        <property name="caUtilp" type="java.lang.Double">
+            <column name="CA_UTILP" precision="126" scale="0" />
+        </property>
+        <property name="caShares" type="java.lang.Double">
+            <column name="CA_SHARES" precision="126" scale="0" />
+        </property>
+        <property name="caOthinv" type="java.lang.Double">
+            <column name="CA_OTHINV" precision="126" scale="0" />
+        </property>
+        <property name="caCreatedBy" type="string">
+            <column name="CA_CREATED_BY" length="20" />
+        </property>
+        <property name="caCreatedDate" type="date">
+            <column name="CA_CREATED_DATE" length="7" />
+        </property>
+        <property name="caModifiedBy" type="string">
+            <column name="CA_MODIFIED_BY" length="20" />
+        </property>
+        <property name="caModifiedDate" type="date">
+            <column name="CA_MODIFIED_DATE" length="7" />
+        </property>
+        
+         <property name="caProjSelfRoi" type="java.lang.Double">
+            <column name="CA_PROJ_SELF_ROI" precision="126" scale="0" />
+        </property>
+        <property name="caProjSpsRoi" type="java.lang.Double">
+            <column name="CA_PROJ_SPS_ROI" precision="126" scale="0" />
+        </property>
+        <property name="caProjFamRoi" type="java.lang.Double">
+            <column name="CA_PROJ_FAM_ROI" precision="126" scale="0" />
+        </property>  
+<!--         //	 changes done 19/06/2019  -->
+          <property name="caSRSSatRetAge" type="java.lang.Double">
+            <column name="SRS_SATRTD_RETAGE" precision="126" scale="0" />
+        </property>
+        
+       
+    </class>
+</hibernate-mapping>

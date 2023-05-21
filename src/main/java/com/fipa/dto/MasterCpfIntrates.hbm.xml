@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE  hibernate-mapping  SYSTEM 
+    "classpath://com/fipa/util/hibernate-mapping.dtd">
+<!-- Generated Mar 8, 2017 11:03:16 AM by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.fipa.dto.MasterCpfIntrates" table="MASTER_CPF_INTRATES">
+        <id name="txtFldCpfIntId" type="string">
+           <column name="CPF_ID" length="20" />
+            <generator class="assigned" />
+        </id>
+        <property name="selCpfAccount" type="string">
+           <column name="CPF_ACCOUNT" length="20" not-null="true" />
+        </property>
+        <property name="txtFldCpfIntRate" type="string">
+            <column name="INTEREST_RATE" length="30" not-null="true" />
+        </property>
+        <property name="txtFldCpfIntMonth" type="string">
+            <column name="CPF_INT_MONTH" length="60" />
+        </property>
+        <property name="txtFldCpfCreatedBy" type="string">
+        	<column name="CREATE_BY" length="20" not-null="true" />
+        </property>
+        <property name="txtFldCpfCreatedDate" type="date">
+           <column name="CREATED_DATE" length="7" not-null="true" />
+        </property>
+        <property name="txtFldCpfModifiedBy" type="string">
+		   <column name="MODIFIED_BY" length="20" />
+        </property>
+        <property name="txtFldCpfModifiedDate" type="date">
+       		<column name="MODIFIED_DATE" length="7" />
+        </property>
+    </class>
+</hibernate-mapping>

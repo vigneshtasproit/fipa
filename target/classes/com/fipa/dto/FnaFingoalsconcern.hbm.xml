@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated May 17, 2018 11:20:37 AM by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.fipa.dto.FnaFingoalsconcern" table="FNA_FINGOALSCONCERN" >
+        <id name="fnaGoalId" type="string">
+            <column name="FNA_GOAL_ID" length="20" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="fnaSelfspouseDets" class="com.fipa.dto.FnaSelfspouseDets" fetch="select">
+            <column name="FNA_ID" length="20" />
+        </many-to-one>
+        <property name="fgType" type="string">
+            <column name="FG_TYPE" length="150" />
+        </property>
+        <property name="finGoal" type="string">
+            <column name="FIN_GOAL" length="500" not-null="true" />
+        </property>
+        <property name="fgPriority" type="string">
+            <column name="FG_PRIORITY" length="10" />
+        </property>
+        <property name="fgCreatedBy" type="string">
+            <column name="FG_CREATED_BY" length="20" />
+        </property>
+        <property name="fgCreatedDate" type="date">
+            <column name="FG_CREATED_DATE" length="7" />
+        </property>
+        <property name="fgModifiedBy" type="string">
+            <column name="FG_MODIFIED_BY" length="20" />
+        </property>
+        <property name="fgModifiedDate" type="date">
+            <column name="FG_MODIFIED_DATE" length="7" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,225 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated May 17, 2018 11:20:37 AM by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.fipa.dto.FnaExpenditureDets" table="FNA_EXPENDITURE_DETS" >
+        <id name="expdId" type="string">
+            <column name="EXPD_ID" length="20" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="fnaSelfspouseDets" class="com.fipa.dto.FnaSelfspouseDets" fetch="select">
+            <column name="FNA_ID" length="20" />
+        </many-to-one>
+        <property name="expdSelfRent" type="java.lang.Double">
+            <column name="EXPD_SELF_RENT" precision="126" scale="0" />
+        </property>
+        <property name="expdSelfUtil" type="java.lang.Double">
+            <column name="EXPD_SELF_UTIL" precision="126" scale="0" />
+        </property>
+        <property name="expdSelfGrocery" type="java.lang.Double">
+            <column name="EXPD_SELF_GROCERY" precision="126" scale="0" />
+        </property>
+        <property name="expdSelfEatingout" type="java.lang.Double">
+            <column name="EXPD_SELF_EATINGOUT" precision="126" scale="0" />
+        </property>
+        <property name="expdSelfClothing" type="java.lang.Double">
+            <column name="EXPD_SELF_CLOTHING" precision="126" scale="0" />
+        </property>
+        <property name="expdSelfTransport" type="java.lang.Double">
+            <column name="EXPD_SELF_TRANSPORT" precision="126" scale="0" />
+        </property>
+        <property name="expdSelfMedical" type="java.lang.Double">
+            <column name="EXPD_SELF_MEDICAL" precision="126" scale="0" />
+        </property>
+        <property name="expdSelfPersonal" type="java.lang.Double">
+            <column name="EXPD_SELF_PERSONAL" precision="126" scale="0" />
+        </property>
+        <property name="expdSelfDepntcontr" type="java.lang.Double">
+            <column name="EXPD_SELF_DEPNTCONTR" precision="126" scale="0" />
+        </property>
+        <property name="expdSelfTaxes" type="java.lang.Double">
+            <column name="EXPD_SELF_TAXES" precision="126" scale="0" />
+        </property>
+        <property name="expdSelfEntertain" type="java.lang.Double">
+            <column name="EXPD_SELF_ENTERTAIN" precision="126" scale="0" />
+        </property>
+        <property name="expdSelfFestiv" type="java.lang.Double">
+            <column name="EXPD_SELF_FESTIV" precision="126" scale="0" />
+        </property>
+        <property name="expdSelfVacations" type="java.lang.Double">
+            <column name="EXPD_SELF_VACATIONS" precision="126" scale="0" />
+        </property>
+        <property name="expdSelfCharity" type="java.lang.Double">
+            <column name="EXPD_SELF_CHARITY" precision="126" scale="0" />
+        </property>
+        <property name="expdSelfProploan" type="java.lang.Double">
+            <column name="EXPD_SELF_PROPLOAN" precision="126" scale="0" />
+        </property>
+        <property name="expdSelfVehiloan" type="java.lang.Double">
+            <column name="EXPD_SELF_VEHILOAN" precision="126" scale="0" />
+        </property>
+        <property name="expdSelfInsurance" type="java.lang.Double">
+            <column name="EXPD_SELF_INSURANCE" precision="126" scale="0" />
+        </property>
+        <property name="expdSelfOthers" type="java.lang.Double">
+            <column name="EXPD_SELF_OTHERS" precision="126" scale="0" />
+        </property>
+        <property name="expdSpsRent" type="java.lang.Double">
+            <column name="EXPD_SPS_RENT" precision="126" scale="0" />
+        </property>
+        <property name="expdSpsUtil" type="java.lang.Double">
+            <column name="EXPD_SPS_UTIL" precision="126" scale="0" />
+        </property>
+        <property name="expdSpsGrocery" type="java.lang.Double">
+            <column name="EXPD_SPS_GROCERY" precision="126" scale="0" />
+        </property>
+        <property name="expdSpsEatingout" type="java.lang.Double">
+            <column name="EXPD_SPS_EATINGOUT" precision="126" scale="0" />
+        </property>
+        <property name="expdSpsClothing" type="java.lang.Double">
+            <column name="EXPD_SPS_CLOTHING" precision="126" scale="0" />
+        </property>
+        <property name="expdSpsTransport" type="java.lang.Double">
+            <column name="EXPD_SPS_TRANSPORT" precision="126" scale="0" />
+        </property>
+        <property name="expdSpsMedical" type="java.lang.Double">
+            <column name="EXPD_SPS_MEDICAL" precision="126" scale="0" />
+        </property>
+        <property name="expdSpsPersonal" type="java.lang.Double">
+            <column name="EXPD_SPS_PERSONAL" precision="126" scale="0" />
+        </property>
+        <property name="expdSpsDepntcontr" type="java.lang.Double">
+            <column name="EXPD_SPS_DEPNTCONTR" precision="126" scale="0" />
+        </property>
+        <property name="expdSpsTaxes" type="java.lang.Double">
+            <column name="EXPD_SPS_TAXES" precision="126" scale="0" />
+        </property>
+        <property name="expdSpsEntertain" type="java.lang.Double">
+            <column name="EXPD_SPS_ENTERTAIN" precision="126" scale="0" />
+        </property>
+        <property name="expdSpsFestiv" type="java.lang.Double">
+            <column name="EXPD_SPS_FESTIV" precision="126" scale="0" />
+        </property>
+        <property name="expdSpsVacations" type="java.lang.Double">
+            <column name="EXPD_SPS_VACATIONS" precision="126" scale="0" />
+        </property>
+        <property name="expdSpsCharity" type="java.lang.Double">
+            <column name="EXPD_SPS_CHARITY" precision="126" scale="0" />
+        </property>
+        <property name="expdSpsProploan" type="java.lang.Double">
+            <column name="EXPD_SPS_PROPLOAN" precision="126" scale="0" />
+        </property>
+        <property name="expdSpsVehiloan" type="java.lang.Double">
+            <column name="EXPD_SPS_VEHILOAN" precision="126" scale="0" />
+        </property>
+        <property name="expdSpsInsurance" type="java.lang.Double">
+            <column name="EXPD_SPS_INSURANCE" precision="126" scale="0" />
+        </property>
+        <property name="expdSpsOthers" type="java.lang.Double">
+            <column name="EXPD_SPS_OTHERS" precision="126" scale="0" />
+        </property>
+        <property name="expdFamilyRent" type="java.lang.Double">
+            <column name="EXPD_FAMILY_RENT" precision="126" scale="0" />
+        </property>
+        <property name="expdFamilyUtil" type="java.lang.Double">
+            <column name="EXPD_FAMILY_UTIL" precision="126" scale="0" />
+        </property>
+        <property name="expdFamilyGrocery" type="java.lang.Double">
+            <column name="EXPD_FAMILY_GROCERY" precision="126" scale="0" />
+        </property>
+        <property name="expdFamilyEatingout" type="java.lang.Double">
+            <column name="EXPD_FAMILY_EATINGOUT" precision="126" scale="0" />
+        </property>
+        <property name="expdFamilyClothing" type="java.lang.Double">
+            <column name="EXPD_FAMILY_CLOTHING" precision="126" scale="0" />
+        </property>
+        <property name="expdFamilyTransport" type="java.lang.Double">
+            <column name="EXPD_FAMILY_TRANSPORT" precision="126" scale="0" />
+        </property>
+        <property name="expdFamilyMedical" type="java.lang.Double">
+            <column name="EXPD_FAMILY_MEDICAL" precision="126" scale="0" />
+        </property>
+        <property name="expdFamilyPersonal" type="java.lang.Double">
+            <column name="EXPD_FAMILY_PERSONAL" precision="126" scale="0" />
+        </property>
+        <property name="expdFamilyHousehold" type="java.lang.Double">
+            <column name="EXPD_FAMILY_HOUSEHOLD" precision="126" scale="0" />
+        </property>
+        <property name="expdFamilyDomestic" type="java.lang.Double">
+            <column name="EXPD_FAMILY_DOMESTIC" precision="126" scale="0" />
+        </property>
+        <property name="expdFamilyEnhance" type="java.lang.Double">
+            <column name="EXPD_FAMILY_ENHANCE" precision="126" scale="0" />
+        </property>
+        <property name="expdFamilyTaxes" type="java.lang.Double">
+            <column name="EXPD_FAMILY_TAXES" precision="126" scale="0" />
+        </property>
+        <property name="expdFamilyEntertain" type="java.lang.Double">
+            <column name="EXPD_FAMILY_ENTERTAIN" precision="126" scale="0" />
+        </property>
+        <property name="expdFamilyFestiv" type="java.lang.Double">
+            <column name="EXPD_FAMILY_FESTIV" precision="126" scale="0" />
+        </property>
+        <property name="expdFamilyVacations" type="java.lang.Double">
+            <column name="EXPD_FAMILY_VACATIONS" precision="126" scale="0" />
+        </property>
+        <property name="expdFamilyCharity" type="java.lang.Double">
+            <column name="EXPD_FAMILY_CHARITY" precision="126" scale="0" />
+        </property>
+        <property name="expdFamilyProploan" type="java.lang.Double">
+            <column name="EXPD_FAMILY_PROPLOAN" precision="126" scale="0" />
+        </property>
+        <property name="expdFamilyVehiloan" type="java.lang.Double">
+            <column name="EXPD_FAMILY_VEHILOAN" precision="126" scale="0" />
+        </property>
+        <property name="expdFamilyInsurance" type="java.lang.Double">
+            <column name="EXPD_FAMILY_INSURANCE" precision="126" scale="0" />
+        </property>
+        <property name="expdFamilyOthers" type="java.lang.Double">
+            <column name="EXPD_FAMILY_OTHERS" precision="126" scale="0" />
+        </property>
+        <property name="expdSelfLoanrepay" type="java.lang.Double">
+            <column name="EXPD_SELF_LOANREPAY" precision="126" scale="0" />
+        </property>
+        <property name="expdSpsLoanrepay" type="java.lang.Double">
+            <column name="EXPD_SPS_LOANREPAY" precision="126" scale="0" />
+        </property>
+        <property name="expdFamilyLoanrepay" type="java.lang.Double">
+            <column name="EXPD_FAMILY_LOANREPAY" precision="126" scale="0" />
+        </property>
+        <property name="expdSelfGi" type="java.lang.Double">
+            <column name="EXPD_SELF_GI" precision="126" scale="0" />
+        </property>
+        <property name="expdSpsGi" type="java.lang.Double">
+            <column name="EXPD_SPS_GI" precision="126" scale="0" />
+        </property>
+        <property name="expdFamilyGi" type="java.lang.Double">
+            <column name="EXPD_FAMILY_GI" precision="126" scale="0" />
+        </property>
+        <property name="expdSelfTotalannl" type="java.lang.Double">
+            <column name="EXPD_SELF_TOTALANNL" precision="126" scale="0" />
+        </property>
+        <property name="expdSpsTotalannl" type="java.lang.Double">
+            <column name="EXPD_SPS_TOTALANNL" precision="126" scale="0" />
+        </property>
+        <property name="expdFamilyTotalannl" type="java.lang.Double">
+            <column name="EXPD_FAMILY_TOTALANNL" precision="126" scale="0" />
+        </property>
+        <property name="expdRemarks" type="string">
+            <column name="EXPD_REMARKS" length="300" />
+        </property>
+        <property name="expdCreatedBy" type="string">
+            <column name="EXPD_CREATED_BY" length="20" />
+        </property>
+        <property name="expdCreatedDate" type="date">
+            <column name="EXPD_CREATED_DATE" length="7" />
+        </property>
+        <property name="expdModifiedBy" type="string">
+            <column name="EXPD_MODIFIED_BY" length="20" />
+        </property>
+        <property name="expdModifiedDate" type="date">
+            <column name="EXPD_MODIFIED_DATE" length="7" />
+        </property>
+    </class>
+</hibernate-mapping>

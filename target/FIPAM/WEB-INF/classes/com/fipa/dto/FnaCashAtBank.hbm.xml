@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated May 17, 2018 11:20:37 AM by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.fipa.dto.FnaCashAtBank" table="FNA_CASH_AT_BANK" >
+        <id name="cashBankId" type="string">
+            <column name="CASH_BANK_ID" length="20" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="fnaSelfspouseDets" class="com.fipa.dto.FnaSelfspouseDets" fetch="select">
+            <column name="FNA_ID" length="20" />
+        </many-to-one>
+        <property name="mainAccountHolder" type="string">
+            <column name="MAIN_ACCOUNT_HOLDER" length="75" not-null="true" />
+        </property>
+        <property name="suppAccountHolder" type="string">
+            <column name="SUPP_ACCOUNT_HOLDER" length="75" />
+        </property>
+        <property name="relationship" type="string">
+            <column name="RELATIONSHIP" length="20" />
+        </property>
+        <property name="ownershipType" type="string">
+            <column name="OWNERSHIP_TYPE" length="20" />
+        </property>
+        <property name="bankName" type="string">
+            <column name="BANK_NAME" length="150" />
+        </property>
+        <property name="bankAccNo" type="string">
+            <column name="BANK_ACC_NO" length="60"/>
+        </property>
+        <property name="accountType" type="string">
+            <column name="ACCOUNT_TYPE" length="20" />
+        </property>
+        <property name="currentBalance" type="java.lang.Double">
+            <column name="CURRENT_BALANCE" precision="126" scale="0" />
+        </property>
+        <property name="regularDeposit" type="java.lang.Double">
+            <column name="REGULAR_DEPOSIT" precision="126" scale="0" />
+        </property>
+        <property name="depositFrequency" type="string">
+            <column name="DEPOSIT_FREQUENCY" length="30" />
+        </property>
+        <property name="periodFrom" type="date">
+            <column name="PERIOD_FROM" length="7" />
+        </property>
+        <property name="periodTo" type="date">
+            <column name="PERIOD_TO" length="7" />
+        </property>
+        <property name="objective" type="string">
+            <column name="OBJECTIVE" length="300" />
+        </property>
+        <property name="retirementPrcnt" type="java.lang.Double">
+            <column name="RETIREMENT_PRCNT" precision="126" scale="0" />
+        </property>
+        <property name="childName" type="string">
+            <column name="CHILD_NAME" length="75" />
+        </property>
+        <property name="remarks" type="string">
+            <column name="REMARKS" length="300" />
+        </property>
+        <property name="bankAccCrtdBy" type="string">
+            <column name="BANK_ACC_CRTD_BY" length="20" not-null="true" />
+        </property>
+        <property name="bankAccCrtdDate" type="date">
+            <column name="BANK_ACC_CRTD_DATE" length="7" not-null="true" />
+        </property>
+        <property name="bankAccModifiedBy" type="string">
+            <column name="BANK_ACC_MODIFIED_BY" length="20" />
+        </property>
+        <property name="bankAccModifiedDate" type="date">
+            <column name="BANK_ACC_MODIFIED_DATE" length="7" />
+        </property>
+           <property name="cbRefId" type="string">
+            <column name="CB_REFID" length="20" />
+        </property>
+        <property name="fnaDescription" type="string">
+            <column name="DESCRIPTION" length="150" />
+        </property>
+    </class>
+</hibernate-mapping>

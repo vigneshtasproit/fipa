@@ -1,0 +1,205 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jun 21, 2018 6:10:02 PM by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.fipa.dto.FnaRetireplanDets" table="FNA_RETIREPLAN_DETS">
+        <id name="retId" type="string">
+            <column name="RET_ID" length="20" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="fnaSelfspouseDets" class="com.fipa.dto.FnaSelfspouseDets" fetch="select">
+            <column name="FNA_ID" length="20" />
+        </many-to-one>
+        <property name="retSelfAge" type="string">
+            <column name="RET_SELF_AGE" length="20" />
+        </property>
+        <property name="retSpsAge" type="string">
+            <column name="RET_SPS_AGE" length="20" />
+        </property>
+        <property name="retAgeBasedon" type="string">
+            <column name="RET_AGE_BASEDON" length="20" />
+        </property>
+        <property name="retYrstoret" type="string">
+            <column name="RET_YRSTORET" length="20" />
+        </property>
+        <property name="retSelfCoordinateage" type="string">
+            <column name="RET_SELF_COORDINATEAGE" length="20" />
+        </property>
+        <property name="retSpsCoordinateage" type="string">
+            <column name="RET_SPS_COORDINATEAGE" length="20" />
+        </property>
+        <property name="retSelfProjage" type="string">
+            <column name="RET_SELF_PROJAGE" length="20" />
+        </property>
+        <property name="retSpsProjage" type="string">
+            <column name="RET_SPS_PROJAGE" length="20" />
+        </property>
+        <property name="retSelfLivyrs" type="string">
+            <column name="RET_SELF_LIVYRS" length="20" />
+        </property>
+        <property name="retSpsLivyrs" type="string">
+            <column name="RET_SPS_LIVYRS" length="20" />
+        </property>
+        <property name="retFamLivyrs" type="string">
+            <column name="RET_FAM_LIVYRS" length="20" />
+        </property>
+        <property name="retSelfProjroi" type="java.lang.Double">
+            <column name="RET_SELF_PROJROI" precision="126" scale="0" />
+        </property>
+        <property name="retSpsProjroi" type="java.lang.Double">
+            <column name="RET_SPS_PROJROI" precision="126" scale="0" />
+        </property>
+        <property name="retFamProjroi" type="java.lang.Double">
+            <column name="RET_FAM_PROJROI" precision="126" scale="0" />
+        </property>
+        <property name="retSelfAnnlexpdamt" type="java.lang.Double">
+            <column name="RET_SELF_ANNLEXPDAMT" precision="126" scale="0" />
+        </property>
+        <property name="retSelfAnnlexpdyrs" type="string">
+            <column name="RET_SELF_ANNLEXPDYRS" length="20" />
+        </property>
+        <property name="retSpsAnnlexpdamt" type="java.lang.Double">
+            <column name="RET_SPS_ANNLEXPDAMT" precision="126" scale="0" />
+        </property>
+        <property name="retSpsAnnlexpdyrs" type="string">
+            <column name="RET_SPS_ANNLEXPDYRS" length="20" />
+        </property>
+        <property name="retFamAnnlexpdamt" type="java.lang.Double">
+            <column name="RET_FAM_ANNLEXPDAMT" precision="126" scale="0" />
+        </property>
+        <property name="retFamAnnlexpdyrs" type="string">
+            <column name="RET_FAM_ANNLEXPDYRS" length="20" />
+        </property>
+        <property name="retSelfFv1amt" type="java.lang.Double">
+            <column name="RET_SELF_FV1AMT" precision="126" scale="0" />
+        </property>
+        <property name="retSelfFv1yrs" type="string">
+            <column name="RET_SELF_FV1YRS" length="20" />
+        </property>
+        <property name="retSpsFv1amt" type="java.lang.Double">
+            <column name="RET_SPS_FV1AMT" precision="126" scale="0" />
+        </property>
+        <property name="retSpsFv1yrs" type="string">
+            <column name="RET_SPS_FV1YRS" length="20" />
+        </property>
+        <property name="retFamFv1amt" type="java.lang.Double">
+            <column name="RET_FAM_FV1AMT" precision="126" scale="0" />
+        </property>
+        <property name="retFamFv1yrs" type="string">
+            <column name="RET_FAM_FV1YRS" length="20" />
+        </property>
+        <property name="retSelfFv1agefrom" type="string">
+            <column name="RET_SELF_FV1AGEFROM" length="20" />
+        </property>
+        <property name="retSelfFv1ageto" type="string">
+            <column name="RET_SELF_FV1AGETO" length="20" />
+        </property>
+        <property name="retSpsFv1agefrom" type="string">
+            <column name="RET_SPS_FV1AGEFROM" length="20" />
+        </property>
+        <property name="retSpsFv1ageto" type="string">
+            <column name="RET_SPS_FV1AGETO" length="20" />
+        </property>
+        <property name="retFamFv1agefrom" type="string">
+            <column name="RET_FAM_FV1AGEFROM" length="20" />
+        </property>
+        <property name="retFamFv1ageto" type="string">
+            <column name="RET_FAM_FV1AGETO" length="20" />
+        </property>
+        <property name="retSelfFv2amt" type="java.lang.Double">
+            <column name="RET_SELF_FV2AMT" precision="126" scale="0" />
+        </property>
+        <property name="retSelfFv2yrs" type="string">
+            <column name="RET_SELF_FV2YRS" length="20" />
+        </property>
+        <property name="retSpsFv2amt" type="java.lang.Double">
+            <column name="RET_SPS_FV2AMT" precision="126" scale="0" />
+        </property>
+        <property name="retSpsFv2yrs" type="string">
+            <column name="RET_SPS_FV2YRS" length="20" />
+        </property>
+        <property name="retFamFv2amt" type="java.lang.Double">
+            <column name="RET_FAM_FV2AMT" precision="126" scale="0" />
+        </property>
+        <property name="retFamFv2yrs" type="string">
+            <column name="RET_FAM_FV2YRS" length="20" />
+        </property>
+        <property name="retSelfFv2agefrom" type="string">
+            <column name="RET_SELF_FV2AGEFROM" length="20" />
+        </property>
+        <property name="retSelfFv2ageto" type="string">
+            <column name="RET_SELF_FV2AGETO" length="20" />
+        </property>
+        <property name="retSpsFv2agefrom" type="string">
+            <column name="RET_SPS_FV2AGEFROM" length="20" />
+        </property>
+        <property name="retSpsFv2ageto" type="string">
+            <column name="RET_SPS_FV2AGETO" length="20" />
+        </property>
+        <property name="retFamFv2agefrom" type="string">
+            <column name="RET_FAM_FV2AGEFROM" length="20" />
+        </property>
+        <property name="retFamFv2ageto" type="string">
+            <column name="RET_FAM_FV2AGETO" length="20" />
+        </property>
+        <property name="retSelfAssetval" type="java.lang.Double">
+            <column name="RET_SELF_ASSETVAL" precision="126" scale="0" />
+        </property>
+        <property name="retSpsAssetval" type="java.lang.Double">
+            <column name="RET_SPS_ASSETVAL" precision="126" scale="0" />
+        </property>
+        <property name="retCreatedBy" type="string">
+            <column name="RET_CREATED_BY" length="20" />
+        </property>
+        <property name="retCreatedDate" type="date">
+            <column name="RET_CREATED_DATE" length="7" />
+        </property>
+        <property name="retModifiedBy" type="string">
+            <column name="RET_MODIFIED_BY" length="20" />
+        </property>
+        <property name="retModifiedDate" type="date">
+            <column name="RET_MODIFIED_DATE" length="7" />
+        </property>
+        <property name="retSelfCoordretage" type="string">
+            <column name="RET_SELF_COORDRETAGE" length="20" />
+        </property>
+        <property name="retSpsCoordretage" type="string">
+            <column name="RET_SPS_COORDRETAGE" length="20" />
+        </property>
+        <property name="retFamCoordretage" type="string">
+            <column name="RET_FAM_COORDRETAGE" length="20" />
+        </property>
+        <property name="retSelfSDRSAmt" type="java.lang.Double">
+            <column name="RET_SELF_SDRSAMOUNT" precision="126" scale="0" />
+        </property>
+        <property name="retSpsSDRSAmt" type="java.lang.Double">
+            <column name="RET_SPS_SDRSAMOUNT" precision="126" scale="0" />
+        </property>
+        <property name="retFamSDRSAmt" type="java.lang.Double">
+            <column name="RET_FAM_SDRSAMOUNT" precision="126" scale="0" />
+        </property>  
+         <property name="retPropToCPF" type="string">
+            <column name="RET_PROP_TO_CPF" length="20" />
+        </property>
+         <property name="retMedGround" type="string">
+            <column name="RET_MEDICAL_GROUND" length="20" />
+        </property>
+         <property name="retTopUpRAERS" type="string">
+            <column name="RET_TOPUP_RA_ERS" length="20" />
+        </property>
+         <property name="retExistAnnuity" type="string">
+            <column name="RET_EXIST_ANNUITY" length="20" />
+        </property>
+        
+         <property name="retFromSrsAge" type="string">
+            <column name="RET_FROMSRS_AGE" length="20" />
+        </property>
+        
+        <property name="retFromSrsAmount" type="java.lang.Double">
+            <column name="RET_FROMSRS_AMOUNT" precision="126" scale="0" />
+        </property>  
+
+        
+    </class>
+</hibernate-mapping>

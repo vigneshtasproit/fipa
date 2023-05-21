@@ -1,0 +1,173 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated May 17, 2018 11:20:37 AM by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.fipa.dto.FnaLifeinsuranceDets" table="FNA_LIFEINSURANCE_DETS" >
+        <id name="lipId" type="string">
+            <column name="LIP_ID" length="20" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="fnaSelfspouseDets" class="com.fipa.dto.FnaSelfspouseDets" fetch="select">
+            <column name="FNA_ID" length="20" />
+        </many-to-one>
+        <property name="lipOwner" type="string">
+            <column name="LIP_OWNER" length="75" />
+        </property>
+        <property name="lipAssured" type="string">
+            <column name="LIP_ASSURED" length="75" />
+        </property>
+        <property name="lipCompany" type="string">
+            <column name="LIP_COMPANY" length="150" />
+        </property>
+        <property name="lipPolicyno" type="string">
+            <column name="LIP_POLICYNO" length="20" />
+        </property>
+        <property name="lipPlantype" type="string">
+            <column name="LIP_PLANTYPE" length="60" />
+        </property>
+        <property name="lipPaymentfreq" type="string">
+            <column name="LIP_PAYMENTFREQ" length="60" />
+        </property>
+        <property name="lipPaymentmethod" type="string">
+            <column name="LIP_PAYMENTMETHOD" length="60" />
+        </property>
+        <property name="lipPremiumsrc" type="string">
+            <column name="LIP_PREMIUMSRC" length="60" />
+        </property>
+        <property name="lipIncepdate" type="date">
+            <column name="LIP_INCEPDATE" length="7" />
+        </property>
+        <property name="lipSa" type="java.lang.Double">
+            <column name="LIP_SA" precision="126" scale="0" />
+        </property>
+        <property name="lipPlanname" type="string">
+            <column name="LIP_PLANNAME" length="150" />
+        </property>
+        <property name="lipCoveragetype" type="string">
+            <column name="LIP_COVERAGETYPE" length="300" />
+        </property>
+        <property name="lipIsnurObject" type="string">
+            <column name="LIP_ISNUR_OBJECT" length="300" />
+        </property>
+        <property name="lipCurrBonusAcc" type="java.lang.Double">
+            <column name="LIP_CURR_BONUS_ACC" precision="126" scale="0" />
+        </property>
+        <property name="lipCurrCashVal" type="java.lang.Double">
+            <column name="LIP_CURR_CASH_VAL" precision="126" scale="0" />
+        </property>
+        <property name="lipMaturityVal" type="java.lang.Double">
+            <column name="LIP_MATURITY_VAL" precision="126" scale="0" />
+        </property>
+        <property name="lipMaturityDate" type="date">
+            <column name="LIP_MATURITY_DATE" length="7" />
+        </property>
+        <property name="osLoan" type="java.lang.Double">
+            <column name="OS_LOAN" precision="126" scale="0" />
+        </property>
+        <property name="nominationType" type="string">
+            <column name="NOMINATION_TYPE" length="30" />
+        </property>
+        <property name="thirdpartyName" type="string">
+            <column name="THIRDPARTY_NAME" length="60" />
+        </property>
+        <property name="lfretYrstoret" type="java.lang.Integer">
+            <column name="RET_YRSTORET" precision="5" scale="0" />
+        </property>
+        <property name="retSelfretage" type="java.lang.Integer">
+            <column name="RET_SELFRETAGE" precision="5" scale="0" />
+        </property>
+        <property name="retSpouseretage" type="java.lang.Integer">
+            <column name="RET_SPOUSERETAGE" precision="5" scale="0" />
+        </property>
+        <property name="retMultionret" type="string">
+            <column name="RET_MULTIONRET" length="5" />
+        </property>
+        <property name="retCashvalonret" type="big_decimal">
+            <column name="RET_CASHVALONRET" precision="22" scale="4" />
+        </property>
+        <property name="lipPolicytype" type="string">
+            <column name="LIP_POLICYTYPE" length="10" />
+        </property>
+        <property name="retIntrateused" type="java.lang.Double">
+            <column name="RET_INTRATEUSED" precision="126" scale="0" />
+        </property>
+        <property name="retPrcnttoused" type="java.lang.Double">
+            <column name="RET_PRCNTTOUSED" precision="126" scale="0" />
+        </property>
+        <property name="policyStatus" type="string">
+            <column name="POLICY_STATUS" length="60" />
+        </property>
+        <property name="lipRemarks" type="string">
+            <column name="LIP_REMARKS" length="300" />
+        </property>
+         <property name="retTotalSa" type="java.lang.Double">
+            <column name="LIP_TOTAL_SA" precision="126" scale="0" />
+        </property>
+         <property name="retTotalPrem" type="java.lang.Double">
+            <column name="LIP_TOTAL_PREM" precision="126" scale="0" />
+        </property>
+        <property name="lipCreatedBy" type="string">
+            <column name="LIP_CREATED_BY" length="20" />
+        </property>
+        <property name="lipCreatedDate" type="date">
+            <column name="LIP_CREATED_DATE" length="7" />
+        </property>
+        <property name="lipModifiedBy" type="string">
+            <column name="LIP_MODIFIED_BY" length="20" />
+        </property>
+        <property name="lipModifiedDate" type="date">
+            <column name="LIP_MODIFIED_DATE" length="7" />
+        </property>
+        <property name="lipRefId" type="string">
+            <column name="LIP_REFID" length="20" />
+        </property>
+        <property name="lipRetRefId" type="string">
+            <column name="LIPRET_REFID" length="20" />
+        </property> 
+        <property name="cashvalRetAge" type="java.lang.Integer">
+            <column name="CASHVAL_AGERET" precision="5" scale="0" />
+        </property> 
+         <property name="lipExpdate" type="date">
+            <column name="LIP_EXPDATE" length="7" />
+        </property>
+        
+        
+        <set name="fnaLifeinsuranceCoverageses" table="FNA_LIFEINSURANCE_COVERAGES" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="LIP_ID" length="20" />
+            </key>
+            <one-to-many class="com.fipa.dto.FnaLifeinsuranceCoverages" />
+        </set>
+        <set name="fnaLifeinsuranceChildedcs" table="FNA_LIFEINSURANCE_CHILDEDC" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="LIP_ID" length="20" />
+            </key>
+            <one-to-many class="com.fipa.dto.FnaLifeinsuranceChildedc" />
+        </set>
+        <set name="fnaLifeinsuranceBasicriderses" table="FNA_LIFEINSURANCE_BASICRIDERS" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="LIP_ID" length="20" />
+            </key>
+            <one-to-many class="com.fipa.dto.FnaLifeinsuranceBasicriders" />
+        </set>
+        <set name="fnaLifeinsuranceMvRets" table="FNA_LIFEINSURANCE_MV_RET" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="LIP_ID" length="20" />
+            </key>
+            <one-to-many class="com.fipa.dto.FnaLifeinsuranceMvRet" />
+        </set>
+        <set name="fnaLifeinsuranceDisablebenfses" table="FNA_LIFEINSURANCE_DISABLEBENFS" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="LIP_ID" length="20" />
+            </key>
+            <one-to-many class="com.fipa.dto.FnaLifeinsuranceDisablebenfs" />
+        </set>
+        <set name="fnaLifeinsuranceNomineeses" table="FNA_LIFEINSURANCE_NOMINEES" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="LIP_ID" length="20" />
+            </key>
+            <one-to-many class="com.fipa.dto.FnaLifeinsuranceNominees" />
+        </set>
+    </class>
+</hibernate-mapping>

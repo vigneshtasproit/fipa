@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated May 17, 2018 11:20:37 AM by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.fipa.dto.FnaRecomFundDet" table="FNA_RECOM_FUND_DET" >
+        <id name="recomFfId" type="string">
+            <column name="RECOM_FF_ID" length="20" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="fnaSelfspouseDets" class="com.fipa.dto.FnaSelfspouseDets" fetch="select">
+            <column name="FNA_ID" length="20" />
+        </many-to-one>
+        <property name="recomFfProdtype" type="string">
+            <column name="RECOM_FF_PRODTYPE" length="10" />
+        </property>
+        <property name="recomFfProname" type="string">
+            <column name="RECOM_FF_PRONAME" length="20" />
+        </property>
+        <property name="recomFfFundriskrate" type="java.lang.Double">
+            <column name="RECOM_FF_FUNDRISKRATE" precision="126" scale="0" />
+        </property>
+        <property name="recomFfPaymentmode" type="string">
+            <column name="RECOM_FF_PAYMENTMODE" length="20" />
+        </property>
+        <property name="recomFfSaleschrg" type="java.lang.Double">
+            <column name="RECOM_FF_SALESCHRG" precision="126" scale="0" />
+        </property>
+        <property name="recomFfPuramount" type="java.lang.Double">
+            <column name="RECOM_FF_PURAMOUNT" precision="126" scale="0" />
+        </property>
+        <property name="recomFfPurprcnt" type="java.lang.Double">
+            <column name="RECOM_FF_PURPRCNT" precision="126" scale="0" />
+        </property>
+        <property name="recomFfIaffee" type="string">
+            <column name="RECOM_FF_IAFFEE" length="60" />
+        </property>
+        <property name="createdBy" type="string">
+            <column name="CREATED_BY" length="20" />
+        </property>
+        <property name="createdDate" type="date">
+            <column name="CREATED_DATE" length="7" />
+        </property>
+        <property name="recomFfPrin" type="string">
+            <column name="RECOM_FF_PRIN" length="60">
+                <comment>Principal or Fund Manager</comment>
+            </column>
+        </property>
+        <property name="recomFfPlan" type="string">
+            <column name="RECOM_FF_PLAN" length="300" />
+        </property>
+        <property name="recomFfBasrid" type="string">
+            <column name="RECOM_FF_BASRID" length="20" />
+        </property>
+        <property name="recomFfOpt" type="string">
+            <column name="RECOM_FF_OPT" length="20">
+                <comment>Pre Or Custom</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

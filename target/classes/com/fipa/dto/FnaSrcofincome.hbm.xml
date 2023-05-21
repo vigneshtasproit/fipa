@@ -1,0 +1,234 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated May 17, 2018 11:20:37 AM by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.fipa.dto.FnaSrcofincome" table="FNA_SRCOFINCOME" >
+        <id name="incsrcId" type="string">
+            <column name="INCSRC_ID" length="20" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="fnaSelfspouseDets" class="com.fipa.dto.FnaSelfspouseDets" fetch="select">
+            <column name="FNA_ID" length="20" />
+        </many-to-one>
+        <property name="incsrcSelfEmpMonthly" type="java.lang.Double">
+            <column name="INCSRC_SELF_EMP_MONTHLY" precision="126" scale="0" />
+        </property>
+        <property name="incsrcSelfEmpIncr" type="java.lang.Double">
+            <column name="INCSRC_SELF_EMP_INCR" precision="126" scale="0" />
+        </property>
+        <property name="incsrcSelfEmpPeriod" type="java.lang.Double">
+            <column name="INCSRC_SELF_EMP_PERIOD" precision="126" scale="0" />
+        </property>
+        <property name="incsrcSpsEmpMonthly" type="java.lang.Double">
+            <column name="INCSRC_SPS_EMP_MONTHLY" precision="126" scale="0" />
+        </property>
+        <property name="incsrcSpsEmpIncr" type="java.lang.Double">
+            <column name="INCSRC_SPS_EMP_INCR" precision="126" scale="0" />
+        </property>
+        <property name="incsrcSpsEmpPeriod" type="java.lang.Double">
+            <column name="INCSRC_SPS_EMP_PERIOD" precision="126" scale="0" />
+        </property>
+        <property name="incsrcJointEmpMonthly" type="java.lang.Double">
+            <column name="INCSRC_JOINT_EMP_MONTHLY" precision="126" scale="0" />
+        </property>
+        <property name="incsrcJointEmpIncr" type="java.lang.Double">
+            <column name="INCSRC_JOINT_EMP_INCR" precision="126" scale="0" />
+        </property>
+        <property name="incsrcJointEmpPeriod" type="java.lang.Double">
+            <column name="INCSRC_JOINT_EMP_PERIOD" precision="126" scale="0" />
+        </property>
+        <property name="incsrcSelfEmpAddlwage" type="java.lang.Double">
+            <column name="INCSRC_SELF_EMP_ADDLWAGE" precision="126" scale="0" />
+        </property>
+        <property name="incsrcSpsEmpAddlwage" type="java.lang.Double">
+            <column name="INCSRC_SPS_EMP_ADDLWAGE" precision="126" scale="0" />
+        </property>
+        <property name="incsrcSelfNempMonthly" type="java.lang.Double">
+            <column name="INCSRC_SELF_NEMP_MONTHLY" precision="126" scale="0" />
+        </property>
+        <property name="incsrcSelfNempIncr" type="java.lang.Double">
+            <column name="INCSRC_SELF_NEMP_INCR" precision="126" scale="0" />
+        </property>
+        <property name="incsrcSelfNempPeriod" type="java.lang.Double">
+            <column name="INCSRC_SELF_NEMP_PERIOD" precision="126" scale="0" />
+        </property>
+        <property name="incsrcSpsNempMonthly" type="java.lang.Double">
+            <column name="INCSRC_SPS_NEMP_MONTHLY" precision="126" scale="0" />
+        </property>
+        <property name="incsrcSpsNempIncr" type="java.lang.Double">
+            <column name="INCSRC_SPS_NEMP_INCR" precision="126" scale="0" />
+        </property>
+        <property name="incsrcSpsNempPeriod" type="java.lang.Double">
+            <column name="INCSRC_SPS_NEMP_PERIOD" precision="126" scale="0" />
+        </property>
+        <property name="incsrcJointNempMonthly" type="java.lang.Double">
+            <column name="INCSRC_JOINT_NEMP_MONTHLY" precision="126" scale="0" />
+        </property>
+        <property name="incsrcJointNempIncr" type="java.lang.Double">
+            <column name="INCSRC_JOINT_NEMP_INCR" precision="126" scale="0" />
+        </property>
+        <property name="incsrcJointNempPeriod" type="java.lang.Double">
+            <column name="INCSRC_JOINT_NEMP_PERIOD" precision="126" scale="0" />
+        </property>
+        <property name="incsrcSelfNempRentamt" type="java.lang.Double">
+            <column name="INCSRC_SELF_NEMP_RENTAMT" precision="126" scale="0" />
+        </property>
+        <property name="incsrcSelfNempRentincr" type="java.lang.Double">
+            <column name="INCSRC_SELF_NEMP_RENTINCR" precision="126" scale="0" />
+        </property>
+        <property name="incsrcSelfNempRentperd" type="java.lang.Double">
+            <column name="INCSRC_SELF_NEMP_RENTPERD" precision="126" scale="0" />
+        </property>
+        <property name="incsrcSpsNempRentamt" type="java.lang.Double">
+            <column name="INCSRC_SPS_NEMP_RENTAMT" precision="126" scale="0" />
+        </property>
+        <property name="incsrcSpsNempRentincr" type="java.lang.Double">
+            <column name="INCSRC_SPS_NEMP_RENTINCR" precision="126" scale="0" />
+        </property>
+        <property name="incsrcSpsNempRentperd" type="java.lang.Double">
+            <column name="INCSRC_SPS_NEMP_RENTPERD" precision="126" scale="0" />
+        </property>
+        <property name="incsrcJointNempRentamt" type="java.lang.Double">
+            <column name="INCSRC_JOINT_NEMP_RENTAMT" precision="126" scale="0" />
+        </property>
+        <property name="incsrcJointNempRentincr" type="java.lang.Double">
+            <column name="INCSRC_JOINT_NEMP_RENTINCR" precision="126" scale="0" />
+        </property>
+        <property name="incsrcJointNempRentperd" type="java.lang.Double">
+            <column name="INCSRC_JOINT_NEMP_RENTPERD" precision="126" scale="0" />
+        </property>
+        <property name="incsrcSelfNempDivdamt" type="java.lang.Double">
+            <column name="INCSRC_SELF_NEMP_DIVDAMT" precision="126" scale="0" />
+        </property>
+        <property name="incsrcSelfNempDivdincr" type="java.lang.Double">
+            <column name="INCSRC_SELF_NEMP_DIVDINCR" precision="126" scale="0" />
+        </property>
+        <property name="incsrcSelfNempDivdperd" type="java.lang.Double">
+            <column name="INCSRC_SELF_NEMP_DIVDPERD" precision="126" scale="0" />
+        </property>
+        <property name="incsrcSpsNempDivdamt" type="java.lang.Double">
+            <column name="INCSRC_SPS_NEMP_DIVDAMT" precision="126" scale="0" />
+        </property>
+        <property name="incsrcSpsNempDivdincr" type="java.lang.Double">
+            <column name="INCSRC_SPS_NEMP_DIVDINCR" precision="126" scale="0" />
+        </property>
+        <property name="incsrcSpsNempDivdperd" type="java.lang.Double">
+            <column name="INCSRC_SPS_NEMP_DIVDPERD" precision="126" scale="0" />
+        </property>
+        <property name="incsrcJointNempDivdamt" type="java.lang.Double">
+            <column name="INCSRC_JOINT_NEMP_DIVDAMT" precision="126" scale="0" />
+        </property>
+        <property name="incsrcJointNempDivdincr" type="java.lang.Double">
+            <column name="INCSRC_JOINT_NEMP_DIVDINCR" precision="126" scale="0" />
+        </property>
+        <property name="incsrcJointNempDivdperd" type="java.lang.Double">
+            <column name="INCSRC_JOINT_NEMP_DIVDPERD" precision="126" scale="0" />
+        </property>
+        <property name="incsrcSelfNempOthamt" type="java.lang.Double">
+            <column name="INCSRC_SELF_NEMP_OTHAMT" precision="126" scale="0" />
+        </property>
+        <property name="incsrcSelfNempOthincr" type="java.lang.Double">
+            <column name="INCSRC_SELF_NEMP_OTHINCR" precision="126" scale="0" />
+        </property>
+        <property name="incsrcSelfNempOthperd" type="java.lang.Double">
+            <column name="INCSRC_SELF_NEMP_OTHPERD" precision="126" scale="0" />
+        </property>
+        <property name="incsrcSpsNempOthamt" type="java.lang.Double">
+            <column name="INCSRC_SPS_NEMP_OTHAMT" precision="126" scale="0" />
+        </property>
+        <property name="incsrcSpsNempOthincr" type="java.lang.Double">
+            <column name="INCSRC_SPS_NEMP_OTHINCR" precision="126" scale="0" />
+        </property>
+        <property name="incsrcSpsNempOthperd" type="java.lang.Double">
+            <column name="INCSRC_SPS_NEMP_OTHPERD" precision="126" scale="0" />
+        </property>
+        <property name="incsrcJointNempOthamt" type="java.lang.Double">
+            <column name="INCSRC_JOINT_NEMP_OTHAMT" precision="126" scale="0" />
+        </property>
+        <property name="incsrcJointNempOthincr" type="java.lang.Double">
+            <column name="INCSRC_JOINT_NEMP_OTHINCR" precision="126" scale="0" />
+        </property>
+        <property name="incsrcJointNempOthperd" type="java.lang.Double">
+            <column name="INCSRC_JOINT_NEMP_OTHPERD" precision="126" scale="0" />
+        </property>
+        <property name="insrcSelfTotannl" type="java.lang.Double">
+            <column name="INSRC_SELF_TOTANNL" precision="126" scale="0" />
+        </property>
+        <property name="insrcSelfTotannlincr" type="java.lang.Double">
+            <column name="INSRC_SELF_TOTANNLINCR" precision="126" scale="0" />
+        </property>
+        <property name="insrcSelfTotannlperd" type="java.lang.Double">
+            <column name="INSRC_SELF_TOTANNLPERD" precision="126" scale="0" />
+        </property>
+        <property name="insrcSpsTotannl" type="java.lang.Double">
+            <column name="INSRC_SPS_TOTANNL" precision="126" scale="0" />
+        </property>
+        <property name="insrcSpsTotannlincr" type="java.lang.Double">
+            <column name="INSRC_SPS_TOTANNLINCR" precision="126" scale="0" />
+        </property>
+        <property name="insrcSpsTotannlperd" type="java.lang.Double">
+            <column name="INSRC_SPS_TOTANNLPERD" precision="126" scale="0" />
+        </property>
+        <property name="insrcJointTotannl" type="java.lang.Double">
+            <column name="INSRC_JOINT_TOTANNL" precision="126" scale="0" />
+        </property>
+        <property name="insrcJointTotannlincr" type="java.lang.Double">
+            <column name="INSRC_JOINT_TOTANNLINCR" precision="126" scale="0" />
+        </property>
+        <property name="insrcJointTotannlperd" type="java.lang.Double">
+            <column name="INSRC_JOINT_TOTANNLPERD" precision="126" scale="0" />
+        </property>
+        <property name="incsrcSelfAbility" type="java.lang.Double">
+            <column name="INCSRC_SELF_ABILITY" precision="126" scale="0" />
+        </property>
+        <property name="incsrcSpsAbility" type="java.lang.Double">
+            <column name="INCSRC_SPS_ABILITY" precision="126" scale="0" />
+        </property>
+        <property name="incsrcJointAbility" type="java.lang.Double">
+            <column name="INCSRC_JOINT_ABILITY" precision="126" scale="0" />
+        </property>
+        <property name="incsrcSelfAbilityincr" type="java.lang.Double">
+            <column name="INCSRC_SELF_ABILITYINCR" precision="126" scale="0" />
+        </property>
+        <property name="incsrcSpsAbilityincr" type="java.lang.Double">
+            <column name="INCSRC_SPS_ABILITYINCR" precision="126" scale="0" />
+        </property>
+        <property name="incsrcJointAbilityincr" type="java.lang.Double">
+            <column name="INCSRC_JOINT_ABILITYINCR" precision="126" scale="0" />
+        </property>
+        <property name="incsrcRemarks" type="string">
+            <column name="INCSRC_REMARKS" length="300" />
+        </property>
+        <property name="insrcSelfAnnlBusiincome" type="java.lang.Double">
+            <column name="INSRC_SELF_ANNL_BUSIINCOME" precision="126" scale="0" />
+        </property>
+        <property name="insrcSpsAnnlBusiincome" type="java.lang.Double">
+            <column name="INSRC_SPS_ANNL_BUSIINCOME" precision="126" scale="0" />
+        </property>
+        <property name="insrcSelfAnnlOthincome" type="java.lang.Double">
+            <column name="INSRC_SELF_ANNL_OTHINCOME" precision="126" scale="0" />
+        </property>
+        <property name="insrcSpsAnnlOthincome" type="java.lang.Double">
+            <column name="INSRC_SPS_ANNL_OTHINCOME" precision="126" scale="0" />
+        </property>
+        <property name="insrcSelfNempOthincome" type="java.lang.Double">
+            <column name="INSRC_SELF_NEMP_OTHINCOME" precision="126" scale="0" />
+        </property>
+        <property name="insrcSpsNempOthincome" type="java.lang.Double">
+            <column name="INSRC_SPS_NEMP_OTHINCOME" precision="126" scale="0" />
+        </property>
+        <property name="incsrcCreatedBy" type="string">
+            <column name="INCSRC_CREATED_BY" length="20" />
+        </property>
+        <property name="incsrcCreatedDate" type="date">
+            <column name="INCSRC_CREATED_DATE" length="7" />
+        </property>
+        <property name="incsrcModifiedBy" type="string">
+            <column name="INCSRC_MODIFIED_BY" length="20" />
+        </property>
+        <property name="incsrcModifiedDate" type="date">
+            <column name="INCSRC_MODIFIED_DATE" length="7" />
+        </property>
+    </class>
+</hibernate-mapping>

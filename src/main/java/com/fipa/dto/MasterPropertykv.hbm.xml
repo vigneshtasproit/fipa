@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated May 25, 2018 4:51:31 PM by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.fipa.dto.MasterPropertykv" table="MASTER_PROPERTYKV"  >
+        <id name="propId" type="string">
+            <column name="PROP_ID" length="20" />
+            <generator class="assigned" />
+        </id>
+        <property name="propKey" type="string">
+            <column name="PROP_KEY" length="150" />
+        </property>
+        <property name="propValue" type="string">
+            <column name="PROP_VALUE" length="150" />
+        </property>
+        <property name="propStatus" type="string">
+            <column name="PROP_STATUS" length="20" />
+        </property>
+        <property name="propRemarks" type="string">
+            <column name="PROP_REMARKS" length="500" />
+        </property>
+        <property name="propCrtdDate" type="date">
+            <column name="PROP_CRTD_DATE" length="7" />
+        </property>
+        <property name="propCrtdBy" type="string">
+            <column name="PROP_CRTD_BY" length="20" />
+        </property>
+        <property name="propModBy" type="string">
+            <column name="PROP_MOD_BY" length="20" />
+        </property>
+        <property name="propModDate" type="date">
+            <column name="PROP_MOD_DATE" length="7" />
+        </property>
+    </class>
+</hibernate-mapping>

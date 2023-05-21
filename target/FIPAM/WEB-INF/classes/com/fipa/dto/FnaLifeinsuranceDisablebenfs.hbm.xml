@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated May 17, 2018 11:20:37 AM by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.fipa.dto.FnaLifeinsuranceDisablebenfs" table="FNA_LIFEINSURANCE_DISABLEBENFS" >
+        <id name="benfId" type="string">
+            <column name="BENF_ID" length="20" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="fnaLifeinsuranceDets" class="com.fipa.dto.FnaLifeinsuranceDets" fetch="select">
+            <column name="LIP_ID" length="20" />
+        </many-to-one>
+        <many-to-one name="fnaSelfspouseDets" class="com.fipa.dto.FnaSelfspouseDets" fetch="select">
+            <column name="FNA_ID" length="20" />
+        </many-to-one>
+        <property name="befType" type="string">
+            <column name="BEF_TYPE" length="60" />
+        </property>
+        <property name="startYr" type="string">
+            <column name="START_YR" length="20" />
+        </property>
+        <property name="endYr" type="string">
+            <column name="END_YR" length="20" />
+        </property>
+        <property name="benfSa" type="java.lang.Double">
+            <column name="BENF_SA" precision="126" scale="0" />
+        </property>
+        <property name="benfValue" type="java.lang.Double">
+            <column name="BENF_VALUE" precision="126" scale="0" />
+        </property>
+        <property name="bnefIncr" type="java.lang.Double">
+            <column name="BNEF_INCR" precision="126" scale="0" />
+        </property>
+        <property name="benfCrtdBy" type="string">
+            <column name="BENF_CRTD_BY" length="20" />
+        </property>
+        <property name="benfCrtdDate" type="date">
+            <column name="BENF_CRTD_DATE" length="7" />
+        </property>
+        <property name="benfModBy" type="string">
+            <column name="BENF_MOD_BY" length="20" />
+        </property>
+        <property name="benfModDate" type="date">
+            <column name="BENF_MOD_DATE" length="7" />
+        </property>
+         <property name="benfPlanName" type="string">
+            <column name="BENF_PLANNAME" length="20" />
+        </property>
+         <property name="benfIncepDate" type="date">
+            <column name="BENF_INCEPDATE" length="7" />
+        </property>
+         <property name="benfExpDate" type="date">
+            <column name="BENF_EXPDATE" length="7" />
+        </property>
+        
+        
+
+
+    </class>
+</hibernate-mapping>

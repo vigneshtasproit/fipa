@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated May 17, 2018 11:20:37 AM by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.fipa.dto.FnaLoginpageMsg" table="FNA_LOGINPAGE_MSG" >
+        <id name="id" type="string">
+            <column name="ID" length="20" />
+            <generator class="assigned" />
+        </id>
+        <property name="loginMsg" type="string">
+            <column name="LOGIN_MSG" length="1200" not-null="true" />
+        </property>
+        <property name="msgAuthor" type="string">
+            <column name="MSG_AUTHOR" length="150" />
+        </property>
+        <property name="dispDateFrom" type="date">
+            <column name="DISP_DATE_FROM" length="7" />
+        </property>
+        <property name="dispDateTo" type="date">
+            <column name="DISP_DATE_TO" length="7" />
+        </property>
+        <property name="thisWeekQuote" type="string">
+            <column name="THIS_WEEK_QUOTE" length="20" />
+        </property>
+    </class>
+</hibernate-mapping>

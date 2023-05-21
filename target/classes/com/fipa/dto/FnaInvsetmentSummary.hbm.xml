@@ -1,0 +1,117 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated May 17, 2018 11:20:37 AM by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.fipa.dto.FnaInvsetmentSummary" table="FNA_INVSETMENT_SUMMARY" >
+        <id name="invstId" type="string">
+            <column name="INVST_ID" length="20" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="fnaSelfspouseDets" class="com.fipa.dto.FnaSelfspouseDets" fetch="select">
+            <column name="FNA_ID" length="20" />
+        </many-to-one>
+        <property name="invSelfBondCurr" type="java.lang.Double">
+            <column name="INV_SELF_BOND_CURR" precision="126" scale="0" />
+        </property>
+        <property name="invSelfBondReg" type="java.lang.Double">
+            <column name="INV_SELF_BOND_REG" precision="126" scale="0" />
+        </property>
+        <property name="invSpsBondCurr" type="java.lang.Double">
+            <column name="INV_SPS_BOND_CURR" precision="126" scale="0" />
+        </property>
+        <property name="invSpsBondReg" type="java.lang.Double">
+            <column name="INV_SPS_BOND_REG" precision="126" scale="0" />
+        </property>
+        <property name="invFamBondCurr" type="java.lang.Double">
+            <column name="INV_FAM_BOND_CURR" precision="126" scale="0" />
+        </property>
+        <property name="invFamBondReg" type="java.lang.Double">
+            <column name="INV_FAM_BOND_REG" precision="126" scale="0" />
+        </property>
+        <property name="invSelfIlputCurr" type="java.lang.Double">
+            <column name="INV_SELF_ILPUT_CURR" precision="126" scale="0" />
+        </property>
+        <property name="invSelfIlputReg" type="java.lang.Double">
+            <column name="INV_SELF_ILPUT_REG" precision="126" scale="0" />
+        </property>
+        <property name="invSpsIlputCurr" type="java.lang.Double">
+            <column name="INV_SPS_ILPUT_CURR" precision="126" scale="0" />
+        </property>
+        <property name="invSpsIlputReg" type="java.lang.Double">
+            <column name="INV_SPS_ILPUT_REG" precision="126" scale="0" />
+        </property>
+        <property name="invFamIlputCurr" type="java.lang.Double">
+            <column name="INV_FAM_ILPUT_CURR" precision="126" scale="0" />
+        </property>
+        <property name="invFamIlputReg" type="java.lang.Double">
+            <column name="INV_FAM_ILPUT_REG" precision="126" scale="0" />
+        </property>
+        <property name="invSelfShareCurr" type="java.lang.Double">
+            <column name="INV_SELF_SHARE_CURR" precision="126" scale="0" />
+        </property>
+        <property name="invSelfShareReg" type="java.lang.Double">
+            <column name="INV_SELF_SHARE_REG" precision="126" scale="0" />
+        </property>
+        <property name="invSpsShareCurr" type="java.lang.Double">
+            <column name="INV_SPS_SHARE_CURR" precision="126" scale="0" />
+        </property>
+        <property name="invSpsShareReg" type="java.lang.Double">
+            <column name="INV_SPS_SHARE_REG" precision="126" scale="0" />
+        </property>
+        <property name="invFamShareCurr" type="java.lang.Double">
+            <column name="INV_FAM_SHARE_CURR" precision="126" scale="0" />
+        </property>
+        <property name="invFamShareReg" type="java.lang.Double">
+            <column name="INV_FAM_SHARE_REG" precision="126" scale="0" />
+        </property>
+        <property name="invSelfOthinvCurr" type="java.lang.Double">
+            <column name="INV_SELF_OTHINV_CURR" precision="126" scale="0" />
+        </property>
+        <property name="invSelfOthinvReg" type="java.lang.Double">
+            <column name="INV_SELF_OTHINV_REG" precision="126" scale="0" />
+        </property>
+        <property name="invSpsOthinvCurr" type="java.lang.Double">
+            <column name="INV_SPS_OTHINV_CURR" precision="126" scale="0" />
+        </property>
+        <property name="invSpsOthinvReg" type="java.lang.Double">
+            <column name="INV_SPS_OTHINV_REG" precision="126" scale="0" />
+        </property>
+        <property name="invFamOthinvCurr" type="java.lang.Double">
+            <column name="INV_FAM_OTHINV_CURR" precision="126" scale="0" />
+        </property>
+        <property name="invFamOthinvReg" type="java.lang.Double">
+            <column name="INV_FAM_OTHINV_REG" precision="126" scale="0" />
+        </property>
+        <property name="invSelfDivdCurr" type="java.lang.Double">
+            <column name="INV_SELF_DIVID_CURR" precision="126" scale="0" />
+        </property>
+        <property name="invSelfDivdReg" type="java.lang.Double">
+            <column name="INV_SELF_DIVID_REG" precision="126" scale="0" />
+        </property>
+        <property name="invSpsDivdCurr" type="java.lang.Double">
+            <column name="INV_SPS_DIVID_CURR" precision="126" scale="0" />
+        </property>
+        <property name="invSpsDivdReg" type="java.lang.Double">
+            <column name="INV_SPS_DIVID_REG" precision="126" scale="0" />
+        </property>
+        <property name="invFamDivdCurr" type="java.lang.Double">
+            <column name="INV_FAM_DIVID_CURR" precision="126" scale="0" />
+        </property>
+        <property name="invFamDivdReg" type="java.lang.Double">
+            <column name="INV_FAM_DIVID_REG" precision="126" scale="0" />
+        </property>
+        <property name="invCreatedBy" type="string">
+            <column name="INV_CREATED_BY" length="20" />
+        </property>
+        <property name="invCreatedDate" type="date">
+            <column name="INV_CREATED_DATE" length="7" />
+        </property>
+        <property name="invModifiedBy" type="string">
+            <column name="INV_MODIFIED_BY" length="20" />
+        </property>
+        <property name="invModifiedDate" type="date">
+            <column name="INV_MODIFIED_DATE" length="7" />
+        </property>
+    </class>
+</hibernate-mapping>

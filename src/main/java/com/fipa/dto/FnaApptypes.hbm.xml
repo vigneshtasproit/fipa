@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated May 17, 2018 11:20:37 AM by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.fipa.dto.FnaApptypes" table="FNA_APPTYPES" >
+        <id name="appTypeid" type="string">
+            <column name="APP_TYPEID" length="20" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="masterAnalysisTypes" class="com.fipa.dto.MasterAnalysisTypes" fetch="select">
+            <column name="ANALYSIS_ID" length="20" />
+        </many-to-one>
+        <many-to-one name="fnaSelfspouseDets" class="com.fipa.dto.FnaSelfspouseDets" fetch="select">
+            <column name="FNA_ID" length="20" />
+        </many-to-one>
+        <property name="anaCrtdBy" type="string">
+            <column name="ANA_CRTD_BY" length="20" not-null="true" />
+        </property>
+        <property name="anaCrtdDate" type="date">
+            <column name="ANA_CRTD_DATE" length="7" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

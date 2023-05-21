@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 10, 2018 11:57:54 AM by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.fipa.dto.FnaAutoAlter" table="FNA_AUTO_ALTER" >
+        <id name="altId" type="string">
+            <column name="ALT_ID" length="20" />
+            <generator class="assigned" />
+        </id>
+        <property name="fnaId" type="string">
+            <column name="FNA_ID" length="20" not-null="true" />
+        </property>
+        <property name="modelUid" type="string">
+            <column name="MODEL_UID" length="75" />
+        </property>
+        <property name="attrName" type="string">
+            <column name="ATTR_NAME" length="150" />
+        </property>
+        <property name="attrOrgValue" type="string">
+            <column name="ATTR_ORG_VALUE" length="150" />
+        </property>
+        <property name="attrNewValue" type="string">
+            <column name="ATTR_NEW_VALUE" length="150" />
+        </property>
+        <property name="attrCrtdBy" type="string">
+            <column name="ATTR_CRTD_BY" length="20" />
+        </property>
+        <property name="attrCrtdDate" type="date">
+            <column name="ATTR_CRTD_DATE" length="7" />
+        </property>
+    </class>
+</hibernate-mapping>

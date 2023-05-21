@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated May 17, 2018 11:20:37 AM by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.fipa.dto.FnaSavingsinvDets" table="FNA_SAVINGSINV_DETS" >
+        <id name="sainvId" type="string">
+            <column name="SAINV_ID" length="20" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="fnaSelfspouseDets" class="com.fipa.dto.FnaSelfspouseDets" fetch="select">
+            <column name="FNA_ID" length="20" />
+        </many-to-one>
+        <property name="sainvPurpose" type="string">
+            <column name="SAINV_PURPOSE" length="300" />
+        </property>
+        <property name="sainvWhen" type="java.lang.Double">
+            <column name="SAINV_WHEN" precision="126" scale="0" />
+        </property>
+        <property name="sainvAmount" type="java.lang.Double">
+            <column name="SAINV_AMOUNT" precision="126" scale="0" />
+        </property>
+        <property name="saivnPriority" type="string">
+            <column name="SAIVN_PRIORITY" length="10" />
+        </property>
+        <property name="savinvRisklvl" type="string">
+            <column name="SAVINV_RISKLVL" length="20" />
+        </property>
+        <property name="sainvCreatedBy" type="string">
+            <column name="SAINV_CREATED_BY" length="20" />
+        </property>
+        <property name="sainvCreatedDate" type="date">
+            <column name="SAINV_CREATED_DATE" length="7" />
+        </property>
+        <property name="sainvModifiedBy" type="string">
+            <column name="SAINV_MODIFIED_BY" length="20" />
+        </property>
+        <property name="sainvModifiedDate" type="date">
+            <column name="SAINV_MODIFIED_DATE" length="7" />
+        </property>
+    </class>
+</hibernate-mapping>

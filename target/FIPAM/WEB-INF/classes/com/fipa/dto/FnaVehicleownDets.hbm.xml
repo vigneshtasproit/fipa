@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated May 17, 2018 11:20:37 AM by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.fipa.dto.FnaVehicleownDets" table="FNA_VEHICLEOWN_DETS" >
+        <id name="vehiId" type="string">
+            <column name="VEHI_ID" length="20" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="fnaSelfspouseDets" class="com.fipa.dto.FnaSelfspouseDets" fetch="select">
+            <column name="FNA_ID" length="20" />
+        </many-to-one>
+        <property name="vehiOwner" type="string">
+            <column name="VEHI_OWNER" length="60" />
+        </property>
+        <property name="vehiMktvalue" type="java.lang.Double">
+            <column name="VEHI_MKTVALUE" precision="126" scale="0" />
+        </property>
+        <property name="vehiLoanval" type="java.lang.Double">
+            <column name="VEHI_LOANVAL" precision="126" scale="0" />
+        </property>
+        <property name="vehiLoanbank" type="string">
+            <column name="VEHI_LOANBANK" length="150" />
+        </property>
+        <property name="vehiPeriod" type="java.lang.Double">
+            <column name="VEHI_PERIOD" precision="126" scale="0" />
+        </property>
+        <property name="vehiMonthInstall" type="java.lang.Double">
+            <column name="VEHI_MONTH_INSTALL" precision="126" scale="0" />
+        </property>
+        <property name="vehiSoldOnDeath" type="string">
+            <column name="VEHI_SOLD_ON_DEATH" length="3" />
+        </property>
+        <property name="vehiRemark" type="string">
+            <column name="VEHI_REMARK" length="300" />
+        </property>
+        <property name="createdBy" type="string">
+            <column name="CREATED_BY" length="20" />
+        </property>
+        <property name="createdDate" type="date">
+            <column name="CREATED_DATE" length="7" />
+        </property>
+    </class>
+</hibernate-mapping>

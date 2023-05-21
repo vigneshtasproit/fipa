@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated May 17, 2018 11:20:37 AM by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.fipa.dto.FnaPersprio" table="FNA_PERSPRIO" >
+        <id name="persprioId" type="string">
+            <column name="PERSPRIO_ID" length="20" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="fnaSelfspouseDets" class="com.fipa.dto.FnaSelfspouseDets" fetch="select">
+            <column name="FNA_ID" length="20" />
+        </many-to-one>
+        <property name="ppHospexp" type="string">
+            <column name="PP_HOSPEXP" length="20" />
+        </property>
+        <property name="ppOutpexp" type="string">
+            <column name="PP_OUTPEXP" length="20" />
+        </property>
+        <property name="ppMajorill" type="string">
+            <column name="PP_MAJORILL" length="20" />
+        </property>
+        <property name="ppDentalexp" type="string">
+            <column name="PP_DENTALEXP" length="20" />
+        </property>
+        <property name="ppOldagedisable" type="string">
+            <column name="PP_OLDAGEDISABLE" length="20" />
+        </property>
+        <property name="ppLossincome" type="string">
+            <column name="PP_LOSSINCOME" length="20" />
+        </property>
+        <property name="ppInspolicyflg" type="string">
+            <column name="PP_INSPOLICYFLG" length="1" />
+        </property>
+        <property name="ppInspolicydets" type="string">
+            <column name="PP_INSPOLICYDETS" length="300" />
+        </property>
+        <property name="ppCreatedBy" type="string">
+            <column name="PP_CREATED_BY" length="20" />
+        </property>
+        <property name="ppCreatedDate" type="date">
+            <column name="PP_CREATED_DATE" length="7" />
+        </property>
+        <property name="ppModifiedBy" type="string">
+            <column name="PP_MODIFIED_BY" length="20" />
+        </property>
+        <property name="ppModifiedDate" type="date">
+            <column name="PP_MODIFIED_DATE" length="7" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated May 17, 2018 11:20:37 AM by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.fipa.dto.FnaSwtchrepPlanDet" table="FNA_SWTCHREP_PLAN_DET" >
+        <id name="swrepPpId" type="string">
+            <column name="SWREP_PP_ID" length="20" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="fnaSelfspouseDets" class="com.fipa.dto.FnaSelfspouseDets" fetch="select">
+            <column name="FNA_ID" length="20" />
+        </many-to-one>
+        <property name="swrepPpProdtype" type="string">
+            <column name="SWREP_PP_PRODTYPE" length="10" />
+        </property>
+        <property name="swrepPpProdname" type="string">
+            <column name="SWREP_PP_PRODNAME" length="20" />
+        </property>
+        <property name="swrepPpSumassr" type="java.lang.Double">
+            <column name="SWREP_PP_SUMASSR" precision="126" scale="0" />
+        </property>
+        <property name="swrepPpTransind" type="string">
+            <column name="SWREP_PP_TRANSIND" length="20" />
+        </property>
+        <property name="swrepPpPaymentmode" type="string">
+            <column name="SWREP_PP_PAYMENTMODE" length="20" />
+        </property>
+        <property name="swrepPpPlanterm" type="string">
+            <column name="SWREP_PP_PLANTERM" length="30" />
+        </property>
+        <property name="swrepPpPayterm" type="string">
+            <column name="SWREP_PP_PAYTERM" length="30" />
+        </property>
+        <property name="swrepPpPremium" type="java.lang.Double">
+            <column name="SWREP_PP_PREMIUM" precision="126" scale="0" />
+        </property>
+        <property name="createdBy" type="string">
+            <column name="CREATED_BY" length="20" />
+        </property>
+        <property name="createdDate" type="date">
+            <column name="CREATED_DATE" length="7" />
+        </property>
+        <property name="swrepPpPrin" type="string">
+            <column name="SWREP_PP_PRIN" length="60" />
+        </property>
+        <property name="swrepPpPlan" type="string">
+            <column name="SWREP_PP_PLAN" length="300" />
+        </property>
+        <property name="swrepPpBasrid" type="string">
+            <column name="SWREP_PP_BASRID" length="20" />
+        </property>
+        <property name="swrepPpOpt" type="string">
+            <column name="SWREP_PP_OPT" length="20" />
+        </property>
+    </class>
+</hibernate-mapping>

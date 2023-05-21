@@ -1,0 +1,135 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated May 17, 2018 11:20:37 AM by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.fipa.dto.FnaInputinvestmentsDets" table="FNA_INPUTINVESTMENTS_DETS" >
+        <id name="owninvstId" type="string">
+            <column name="OWNINVST_ID" length="20" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="fnaSelfspouseDets" class="com.fipa.dto.FnaSelfspouseDets" fetch="select">
+            <column name="FNA_ID" length="20" />
+        </many-to-one>
+        <property name="invOwner" type="string">
+            <column name="INV_OWNER" length="75" />
+        </property>
+        <property name="invType" type="string">
+            <column name="INV_TYPE" length="20" />
+        </property>
+        <property name="invFa" type="string">
+            <column name="INV_FA" length="150" />
+        </property>
+         <property name="invAnlysByPtflio" type="string">
+            <column name="INV_ANLYBY_PFLIO" length="3" />
+        </property> 
+        <property name="invInstname" type="string">
+            <column name="INV_INSTNAME" length="250" />
+        </property>
+        <property name="invDesc" type="string">
+            <column name="INV_DESC" length="250" />
+        </property>
+        <property name="invEstrate" type="java.lang.Double">
+            <column name="INV_ESTRATE" precision="126" scale="0" />
+        </property>
+        <property name="invAmount" type="java.lang.Double">
+            <column name="INV_AMOUNT" precision="126" scale="0" />
+        </property>
+        <property name="invPaymethod" type="string">
+            <column name="INV_PAYMETHOD" length="20" />
+        </property>
+        <property name="invDate" type="date">
+            <column name="INV_DATE" length="7" />
+        </property>
+        <property name="invCurrbid" type="java.lang.Double">
+            <column name="INV_CURRBID" precision="126" scale="0" />
+        </property>
+        <property name="invUnitsalloc" type="java.lang.Double">
+            <column name="INV_UNITSALLOC" precision="126" scale="0" />
+        </property> 
+        <property name="invCurrentNAV" type="java.lang.Double">
+            <column name="INV_CURRNAV" precision="126" scale="0" />
+        </property>
+        <property name="invAnyregplan" type="string">
+            <column name="INV_ANYREGPLAN" length="3" />
+        </property>
+        <property name="invRegplanAmount" type="java.lang.Double">
+            <column name="INV_REGPLAN_AMOUNT" precision="126" scale="0" />
+        </property>
+        <property name="invRegplanFreq" type="string">
+            <column name="INV_REGPLAN_FREQ" length="60" />
+        </property>
+        <property name="invRegplanFromyrs" type="java.lang.Double">
+            <column name="INV_REGPLAN_FROMYRS" precision="126" scale="0" />
+        </property>
+        <property name="invRegplanToyrs" type="java.lang.Double">
+            <column name="INV_REGPLAN_TOYRS" precision="126" scale="0" />
+        </property>
+        <property name="invObjective" type="string">
+            <column name="INV_OBJECTIVE" length="300" />
+        </property>
+        <property name="invYrstoret" type="java.lang.Double">
+            <column name="INV_YRSTORET" precision="126" scale="0" />
+        </property>
+        <property name="invChildname" type="string">
+            <column name="INV_CHILDNAME" length="75" />
+        </property>
+        <property name="invAccprcnt" type="java.lang.Double">
+            <column name="INV_ACCPRCNT" precision="126" scale="0" />
+        </property>
+        <property name="invRemarks" type="string">
+            <column name="INV_REMARKS" length="300" />
+        </property>
+         <property name="invAnnlDividPrct" type="java.lang.Double">
+            <column name="INV_ANNLDIVD_PRCNT" precision="126" scale="0" />
+        </property> 
+           <property name="invDividPaymode" type="string">
+            <column name="INV_DIVI_PAYMODE" length="60"/>
+        </property>
+        
+        <property name="invCreatedBy" type="string">
+            <column name="INV_CREATED_BY" length="20" />
+        </property>
+        <property name="invCreatedDate" type="date">
+            <column name="INV_CREATED_DATE" length="7" />
+        </property>
+        <property name="invModifiedBy" type="string">
+            <column name="INV_MODIFIED_BY" length="20" />
+        </property>
+        <property name="invModifiedDate" type="date">
+            <column name="INV_MODIFIED_DATE" length="7" />
+        </property>
+         <property name="invReferenceId" type="string">
+            <column name="INV_REFID" length="20" />
+        </property>
+         
+		 	<property name="invDividendAmt" type="java.lang.Double">
+		            <column name="DIVIDEND_AMT" precision="126" scale="0" />
+		    </property>		        
+		  	<property name="invDividendBasdOn" type="string">
+		            <column name="DIV_BASEDON" length="20" />
+		    </property>		        
+	        <property name="invDividendReInv" type="string">
+	            <column name="DIV_REINVEST" length="20" />
+	        </property>	        		
+	         <property name="invDivPeriod" type="java.lang.Double">
+	            <column name="DIV_PERIODINV" precision="126" scale="0" />
+	         </property>
+        	<property name="invDivPARAmt" type="java.lang.Double">
+		            <column name="DIV_PARVAL" precision="126" scale="0" />
+		    </property>
+		     
+		     <property name="invBasisOfDisbursement" type="string">
+	            <column name="INV_BAS_DISBURSE" length="20" />
+	        </property>	
+	         <property name="invDisburseAmount" type="java.lang.Double">
+	            <column name="INV_DISBURSE_AMOUNT" precision="126" scale="0" />
+	        </property> 
+		     <property name="invDisburseYears" type="java.lang.Double">
+            	<column name="INV_DISBURSE_YEARS" precision="126" scale="0" />
+        	</property>
+		    
+
+
+    </class>
+</hibernate-mapping>

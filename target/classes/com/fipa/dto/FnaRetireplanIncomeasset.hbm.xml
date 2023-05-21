@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jun 21, 2018 6:10:02 PM by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.fipa.dto.FnaRetireplanIncomeasset" table="FNA_RETIREPLAN_INCOMEASSET">
+        <id name="iaId" type="string">
+            <column name="IA_ID" length="20" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="fnaSelfspouseDets" class="com.fipa.dto.FnaSelfspouseDets" fetch="select">
+            <column name="FNA_ID" length="20" />
+        </many-to-one>
+        <property name="retIaType" type="string">
+            <column name="RET_IA_TYPE" length="30" />
+        </property>
+        <property name="retIaClass" type="string">
+            <column name="RET_IA_CLASS" length="150" />
+        </property>
+        <property name="retIaDesc" type="string">
+            <column name="RET_IA_DESC" length="150" />
+        </property>
+        <property name="retIaFrequency" type="string">
+            <column name="RET_IA_FREQUENCY" length="30" />
+        </property>
+        <property name="retIaAmout" type="java.lang.Double">
+            <column name="RET_IA_AMOUT" precision="126" scale="0" />
+        </property>
+        <property name="retIaEscrate" type="java.lang.Double">
+            <column name="RET_IA_ESCRATE" precision="126" scale="0" />
+        </property>
+        <property name="retIaRoi" type="java.lang.Double">
+            <column name="RET_IA_ROI" precision="126" scale="0" />
+        </property>
+        <property name="retIaAgebasedon" type="string">
+            <column name="RET_IA_AGEBASEDON" length="20" />
+        </property>
+        <property name="retIaAgestart" type="string">
+            <column name="RET_IA_AGESTART" length="20" />
+        </property>
+        <property name="retIaAgeend" type="string">
+            <column name="RET_IA_AGEEND" length="20" />
+        </property>
+        <property name="retIaCrtdBy" type="string">
+            <column name="RET_IA_CRTD_BY" length="20" />
+        </property>
+        <property name="retIaCrtdDate" type="date">
+            <column name="RET_IA_CRTD_DATE" length="7" />
+        </property>
+        <property name="retIaModBy" type="string">
+            <column name="RET_IA_MOD_BY" length="20" />
+        </property>
+        <property name="retIaModDate" type="date">
+            <column name="RET_IA_MOD_DATE" length="7" />
+        </property>
+        <property name="retReferenceId" type="string">
+            <column name="RET_REFID" length="20" />
+        </property>
+    </class>
+</hibernate-mapping>

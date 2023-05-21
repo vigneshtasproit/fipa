@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated May 17, 2018 11:20:37 AM by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.fipa.dto.FnaHealthinsInfo" table="FNA_HEALTHINS_INFO" >
+        <id name="hiId" type="string">
+            <column name="HI_ID" length="20" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="fnaSelfspouseDets" class="com.fipa.dto.FnaSelfspouseDets" fetch="select">
+            <column name="FNA_ID" length="20" />
+        </many-to-one>
+        <property name="hiPolicytype" type="string">
+            <column name="HI_POLICYTYPE" length="20" />
+        </property>
+        <property name="hiInsured" type="string">
+            <column name="HI_INSURED" length="60" />
+        </property>
+        <property name="hiBenftype" type="string">
+            <column name="HI_BENFTYPE" length="150" />
+        </property>
+        <property name="hiAmount" type="java.lang.Double">
+            <column name="HI_AMOUNT" precision="126" scale="0" />
+        </property>
+        <property name="hiExpiry" type="date">
+            <column name="HI_EXPIRY" length="7" />
+        </property>
+        <property name="hiAnnprem" type="java.lang.Double">
+            <column name="HI_ANNPREM" precision="126" scale="0" />
+        </property>
+        <property name="hiRemarks" type="string">
+            <column name="HI_REMARKS" length="300" />
+        </property>
+        <property name="hiCreatedBy" type="string">
+            <column name="HI_CREATED_BY" length="20" />
+        </property>
+        <property name="hiCreatedDate" type="date">
+            <column name="HI_CREATED_DATE" length="7" />
+        </property>
+        <property name="hiModifiedBy" type="string">
+            <column name="HI_MODIFIED_BY" length="20" />
+        </property>
+        <property name="hiModifiedDate" type="date">
+            <column name="HI_MODIFIED_DATE" length="7" />
+        </property>
+    </class>
+</hibernate-mapping>

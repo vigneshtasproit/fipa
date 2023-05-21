@@ -1,0 +1,216 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated May 17, 2018 11:20:37 AM by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.fipa.dto.FnaAdvDeclare" table="FNA_ADV_DECLARE" >
+        <id name="advDecId" type="string">
+            <column name="ADV_DEC_ID" length="20" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="fnaSelfspouseDets" class="com.fipa.dto.FnaSelfspouseDets" fetch="select">
+            <column name="FNA_ID" length="20" />
+        </many-to-one>
+        <property name="appAnalysisFor" type="string">
+            <column name="APP_ANALYSIS_FOR" length="200" />
+        </property>
+        <property name="appPurpose" type="string">
+            <column name="APP_PURPOSE" length="200" />
+        </property>
+        <property name="appClientChoice" type="string">
+            <column name="APP_CLIENT_CHOICE" length="200" />
+        </property>
+        <property name="appReplacePrdt" type="string">
+            <column name="APP_REPLACE_PRDT" length="20" />
+        </property>
+        <property name="amlLanguageUse" type="string">
+            <column name="AML_LANGUAGE_USE" length="300" />
+        </property>
+        <property name="amlIntprtExist" type="string">
+            <column name="AML_INTPRT_EXIST" length="5" />
+        </property>
+        <property name="amlIntprtName" type="string">
+            <column name="AML_INTPRT_NAME" length="75" />
+        </property>
+        <property name="amlIntprtRelat" type="string">
+            <column name="AML_INTPRT_RELAT" length="60" />
+        </property>
+        <property name="amlIntprtNric" type="string">
+            <column name="AML_INTPRT_NRIC" length="60" />
+        </property>
+        <property name="amlIntprtMobile" type="string">
+            <column name="AML_INTPRT_MOBILE" length="60" />
+        </property>
+        <property name="amlIntprtHome" type="string">
+            <column name="AML_INTPRT_HOME" length="60" />
+        </property>
+        <property name="amlIntprtBenfflg" type="string">
+            <column name="AML_INTPRT_BENFFLG" length="10" />
+        </property>
+        <property name="amlIntprtTppflg" type="string">
+            <column name="AML_INTPRT_TPPFLG" length="10" />
+        </property>
+        <property name="amlIntprtPepflg" type="string">
+            <column name="AML_INTPRT_PEPFLG" length="10" />
+        </property>
+        <property name="amlIntprtRemarks" type="string">
+            <column name="AML_INTPRT_REMARKS" length="300" />
+        </property>
+        <property name="amlBenfName" type="string">
+            <column name="AML_BENF_NAME" length="75" />
+        </property>
+        <property name="amlBenfRelat" type="string">
+            <column name="AML_BENF_RELAT" length="60" />
+        </property>
+        <property name="amlBenfNric" type="string">
+            <column name="AML_BENF_NRIC" length="60" />
+        </property>
+        <property name="amlBenfIncno" type="string">
+            <column name="AML_BENF_INCNO" length="60" />
+        </property>
+        <property name="amlBenfJob" type="string">
+            <column name="AML_BENF_JOB" length="150" />
+        </property>
+        <property name="amlBenfJobconty" type="string">
+            <column name="AML_BENF_JOBCONTY" length="60" />
+        </property>
+        <property name="amlBenfAddr1" type="string">
+            <column name="AML_BENF_ADDR1" length="150" />
+        </property>
+        <property name="amlBenfAddr2" type="string">
+            <column name="AML_BENF_ADDR2" length="150" />
+        </property>
+        <property name="amlBenfPostal" type="string">
+            <column name="AML_BENF_POSTAL" length="30" />
+        </property>
+        <property name="amlBenfConty" type="string">
+            <column name="AML_BENF_CONTY" length="60" />
+        </property>
+        <property name="amlTppName" type="string">
+            <column name="AML_TPP_NAME" length="75" />
+        </property>
+        <property name="amlTppRelat" type="string">
+            <column name="AML_TPP_RELAT" length="60" />
+        </property>
+        <property name="amlTppNric" type="string">
+            <column name="AML_TPP_NRIC" length="60" />
+        </property>
+        <property name="amlTppIncno" type="string">
+            <column name="AML_TPP_INCNO" length="60" />
+        </property>
+        <property name="amlTppJob" type="string">
+            <column name="AML_TPP_JOB" length="150" />
+        </property>
+        <property name="amlTppJobconty" type="string">
+            <column name="AML_TPP_JOBCONTY" length="60" />
+        </property>
+        <property name="amlTppAddr1" type="string">
+            <column name="AML_TPP_ADDR1" length="150" />
+        </property>
+        <property name="amlTppAddr2" type="string">
+            <column name="AML_TPP_ADDR2" length="150" />
+        </property>
+        <property name="amlTppPostal" type="string">
+            <column name="AML_TPP_POSTAL" length="30" />
+        </property>
+        <property name="amlTppConty" type="string">
+            <column name="AML_TPP_CONTY" length="60" />
+        </property>
+        <property name="amlTppPaymode" type="string">
+            <column name="AML_TPP_PAYMODE" length="30" />
+        </property>
+        <property name="amlTppBank" type="string">
+            <column name="AML_TPP_BANK" length="150" />
+        </property>
+        <property name="amlTppChqno" type="string">
+            <column name="AML_TPP_CHQNO" length="60" />
+        </property>
+        <property name="amlTppMobile" type="string">
+            <column name="AML_TPP_MOBILE" length="60" />
+        </property>
+        <property name="amlPepName" type="string">
+            <column name="AML_PEP_NAME" length="75" />
+        </property>
+        <property name="amlPepRelat" type="string">
+            <column name="AML_PEP_RELAT" length="60" />
+        </property>
+        <property name="amlPepNric" type="string">
+            <column name="AML_PEP_NRIC" length="60" />
+        </property>
+        <property name="amlPepIncno" type="string">
+            <column name="AML_PEP_INCNO" length="60" />
+        </property>
+        <property name="amlPepJob" type="string">
+            <column name="AML_PEP_JOB" length="150" />
+        </property>
+        <property name="amlPepJobconty" type="string">
+            <column name="AML_PEP_JOBCONTY" length="60" />
+        </property>
+        <property name="amlPepAddr1" type="string">
+            <column name="AML_PEP_ADDR1" length="150" />
+        </property>
+        <property name="amlPepAddr2" type="string">
+            <column name="AML_PEP_ADDR2" length="150" />
+        </property>
+        <property name="amlPepPostal" type="string">
+            <column name="AML_PEP_POSTAL" length="30" />
+        </property>
+        <property name="amlPepConty" type="string">
+            <column name="AML_PEP_CONTY" length="60" />
+        </property>
+        <property name="arNewRecomm" type="string">
+            <column name="AR_NEW_RECOMM" length="300" />
+        </property>
+        <property name="srQ1Flg" type="string">
+            <column name="SR_Q1_FLG" length="3" />
+        </property>
+        <property name="srQ2Flg" type="string">
+            <column name="SR_Q2_FLG" length="3" />
+        </property>
+        <property name="srQ3Flg" type="string">
+            <column name="SR_Q3_FLG" length="3" />
+        </property>
+        <property name="srQ4Flg" type="string">
+            <column name="SR_Q4_FLG" length="3" />
+        </property>
+        <property name="srQ1Dets" type="string">
+            <column name="SR_Q1_DETS" length="150" />
+        </property>
+        <property name="srRemarks" type="string">
+            <column name="SR_REMARKS" length="300" />
+        </property>
+        <property name="cdAgreeFlg" type="string">
+            <column name="CD_AGREE_FLG" length="3" />
+        </property>
+        <property name="cdCcRemarks" type="string">
+            <column name="CD_CC_REMARKS" length="500" />
+        </property>
+        <property name="cdMrktPostal" type="string">
+            <column name="CD_MRKT_POSTAL" length="10" />
+        </property>
+        <property name="cdMrktEmail" type="string">
+            <column name="CD_MRKT_EMAIL" length="10" />
+        </property>
+        <property name="mgrAgreeFlag" type="string">
+            <column name="MGR_AGREE_FLAG" length="10" />
+        </property>
+        <property name="mgrFollowupRemarks" type="string">
+            <column name="MGR_FOLLOWUP_REMARKS" length="500" />
+        </property>
+        <property name="mgrName" type="string">
+            <column name="MGR_NAME" length="75" />
+        </property>
+        <property name="advDecCrtdBy" type="string">
+            <column name="ADV_DEC_CRTD_BY" length="20" />
+        </property>
+        <property name="advDecCrtdDate" type="date">
+            <column name="ADV_DEC_CRTD_DATE" length="7" />
+        </property>
+        <property name="advDecModBy" type="string">
+            <column name="ADV_DEC_MOD_BY" length="20" />
+        </property>
+        <property name="advDecModDate" type="date">
+            <column name="ADV_DEC_MOD_DATE" length="7" />
+        </property>
+    </class>
+</hibernate-mapping>

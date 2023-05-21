@@ -1,0 +1,111 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated May 17, 2018 11:20:37 AM by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.fipa.dto.FnaLifeinsuranceBasicriders" table="FNA_LIFEINSURANCE_BASICRIDERS" >
+        <id name="riderId" type="string">
+            <column name="RIDER_ID" length="20" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="fnaLifeinsuranceDets" class="com.fipa.dto.FnaLifeinsuranceDets" fetch="select">
+            <column name="LIP_ID" length="20" />
+        </many-to-one>
+        <many-to-one name="fnaSelfspouseDets" class="com.fipa.dto.FnaSelfspouseDets" fetch="select">
+            <column name="FNA_ID" length="20" />
+        </many-to-one>
+        <property name="planName" type="string">
+            <column name="PLAN_NAME" length="150" />
+        </property>
+        <property name="basorrid" type="string">
+            <column name="BASORRID" length="10" />
+        </property>
+        <property name="premTerm" type="string">
+            <column name="PREM_TERM" length="20" />
+        </property>
+        <property name="sumAssured" type="java.lang.Double">
+            <column name="SUM_ASSURED" precision="126" scale="0" />
+        </property>
+        <property name="premAmount" type="java.lang.Double">
+            <column name="PREM_AMOUNT" precision="126" scale="0" />
+        </property>
+        <property name="paymentMode" type="string">
+            <column name="PAYMENT_MODE" length="30" />
+        </property>
+        <property name="paymentMethod" type="string">
+            <column name="PAYMENT_METHOD" length="30" />
+        </property>
+        <property name="coverageTypes" type="string">
+            <column name="COVERAGE_TYPES" length="300" />
+        </property>
+        <property name="planRemarks" type="string">
+            <column name="PLAN_REMARKS" length="300" />
+        </property>
+        <property name="planCrtdBy" type="string">
+            <column name="PLAN_CRTD_BY" length="20" not-null="true" />
+        </property>
+        <property name="planCrtdDate" type="date">
+            <column name="PLAN_CRTD_DATE" length="7" not-null="true" />
+        </property>
+        <property name="planModBy" type="string">
+            <column name="PLAN_MOD_BY" length="20" />
+        </property>
+        <property name="planModDate" type="date">
+            <column name="PLAN_MOD_DATE" length="7"/>
+        </property>
+         <property name="planExpDate" type="date">
+            <column name="PLAN_EXPDATE" length="7"/>
+        </property>
+         <property name="planIncepDate" type="date">
+            <column name="PLAN_INCDATE" length="7"/>
+        </property>
+        <property name="planReferenceId" type="string">
+            <column name="LIP_REFID" length="20"/>
+        </property>
+        <property name="benfRaidRefId" type="string">
+            <column name="PLAN_REFID" length="20"/>
+        </property> 
+        <property name="plnlfretYrstoret" type="java.lang.Integer">
+            <column name="RET_YRSTORET" precision="5" scale="0" />
+        </property>
+        <property name="plnretSelfretage" type="java.lang.Integer">
+            <column name="RET_SELFRETAGE" precision="5" scale="0" />
+        </property>
+        <property name="plnretSpouseretage" type="java.lang.Integer">
+            <column name="RET_SPOUSERETAGE" precision="5" scale="0" />
+        </property>
+        <property name="plnretMultionret" type="string">
+            <column name="RET_MULTIONRET" length="5" />
+        </property>
+        <property name="plnretCashvalonret" type="java.lang.Double">
+            <column name="RET_CASHVALONRET" precision="22" scale="4" />
+        </property>
+            <property name="plnretIntrateused" type="java.lang.Double">
+            <column name="RET_INTRATEUSED" precision="126" scale="0" />
+        </property>
+        <property name="plnretPrcnttoused" type="java.lang.Double">
+            <column name="RET_PRCNTTOUSED" precision="126" scale="0" />
+        </property>
+        <property name="plncashvalRetAge" type="java.lang.Integer">
+            <column name="CASHVAL_AGERET" precision="5" scale="0" />
+        </property>  
+         <property name="cashValRefId" type="string">
+            <column name="CASHVAL_REFID" length="20"/>
+        </property>
+         <property name="planPremTrDate" type="date">
+            <column name="PREM_TERM_DATE" length="7"/>
+        </property>
+	
+	        <property name="insurCashval" type="java.lang.Double">
+            <column name="INSUR_CASHVAL" precision="126" scale="0" />
+        </property>
+        <property name="lifeInsLoans" type="java.lang.Double">
+            <column name="LIFE_INS_LOANS" precision="126" scale="0" />
+        </property>  
+        
+         <property name="paymentMethodBy" type="string">
+            <column name="PAYMETOHD_BY" length="30"/>
+        </property>
+
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Aug 2, 2018 5:16:47 PM by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.fipa.dto.FnaAttachments" table="FNA_ATTACHMENTS">
+        <id name="docid" type="string">
+            <column name="DOCID" precision="30" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="fnaId" type="string">
+            <column name="FNA_ID" length="20" />
+        </property> 
+<!--           <property name="document" type="serializable"> -->
+<!--             <column name="DOCUMENT" not-null="true" /> -->
+<!--         </property> -->
+        <property name="attachCategId" type="string">
+            <column name="ATTACH_CATEG_ID" length="5" />
+        </property>
+        <property name="attachCategName" type="string">
+            <column name="ATTACH_CATEG_NAME" length="60" />
+        </property>
+        <property name="documentTitle" type="string">
+            <column name="DOCUMENT_TITLE" length="200" not-null="true" />
+        </property>
+        <property name="pageNo" type="string">
+            <column name="PAGE_NO" length="4" />
+        </property>
+        <property name="filename" type="string">
+            <column name="FILENAME" length="200" />
+        </property>
+        <property name="filesize" type="string">
+            <column name="FILESIZE" length="50" />
+        </property>
+        <property name="filetype" type="string">
+            <column name="FILETYPE" length="50" />
+        </property>
+        <property name="createdBy" type="string">
+            <column name="CREATED_BY" length="20" />
+        </property>
+        <property name="attachDate" type="date">
+            <column name="ATTACH_DATE" length="7" not-null="true" />
+        </property>
+        <property name="remarks" type="string">
+            <column name="REMARKS" length="300" />
+        </property>
+        <property name="createdDate" type="date">
+            <column name="CREATED_DATE" length="7" />
+        </property>
+        <property name="moduleRef" type="string">
+            <column name="MODULE_REF" length="20" />
+        </property>
+        <property name="referenceId" type="string">
+            <column name="REFERENCE_ID" length="20" />
+        </property>
+    </class>
+</hibernate-mapping>

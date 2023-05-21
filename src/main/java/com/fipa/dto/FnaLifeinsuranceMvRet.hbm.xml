@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated May 17, 2018 11:20:37 AM by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.fipa.dto.FnaLifeinsuranceMvRet" table="FNA_LIFEINSURANCE_MV_RET" >
+        <id name="mvretId" type="string">
+            <column name="MVRET_ID" length="20" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="fnaLifeinsuranceDets" class="com.fipa.dto.FnaLifeinsuranceDets" fetch="select">
+            <column name="LIP_ID" length="20" />
+        </many-to-one>
+        <many-to-one name="fnaSelfspouseDets" class="com.fipa.dto.FnaSelfspouseDets" fetch="select">
+            <column name="FNA_ID" length="20" />
+        </many-to-one>
+        <property name="commenceAge" type="string">
+            <column name="COMMENCE_AGE" length="20" />
+        </property>
+        <property name="endAge" type="string">
+            <column name="END_AGE" length="20" />
+        </property>
+        <property name="esclationRate" type="java.lang.Double">
+            <column name="ESCLATION_RATE" precision="126" scale="0" />
+        </property>
+        <property name="gtdIncome" type="java.lang.Double">
+            <column name="GTD_INCOME" precision="126" scale="0" />
+        </property>
+        <property name="nongtdIncome" type="java.lang.Double">
+            <column name="NONGTD_INCOME" precision="126" scale="0" />
+        </property>
+        <property name="incomeStream" type="java.lang.Double">
+            <column name="INCOME_STREAM" precision="126" scale="0" />
+        </property>
+        <property name="pvfvOnRet" type="java.lang.Double">
+            <column name="PVFV_ON_RET" precision="126" scale="0" />
+        </property>
+        <property name="assumedBankInt" type="java.lang.Double">
+            <column name="ASSUMED_BANK_INT" precision="126" scale="0" />
+        </property>
+        <property name="mvrettotinc" type="java.lang.Double">
+            <column name="TOT_INCOMERVD" precision="126" scale="0" />
+        </property>
+        <property name="mvretRemarks" type="string">
+            <column name="MVRET_REMARKS" length="300" />
+        </property>
+        <property name="mvretCrtdBy" type="string">
+            <column name="MVRET_CRTD_BY" length="20" not-null="true" />
+        </property>
+        <property name="mvretCrtdDate" type="date">
+            <column name="MVRET_CRTD_DATE" length="7" not-null="true" />
+        </property>
+        <property name="mvretModBy" type="string">
+            <column name="MVRET_MOD_BY" length="20" />
+        </property>
+        <property name="mvretModDate" type="date">
+            <column name="MVRET_MOD_DATE" length="7" />
+        </property> 
+        <property name="mvrefId" type="string">
+            <column name="RET_REFID" length="20" />
+        </property> 
+        <property name="mvretPlanName" type="string">
+            <column name="MVRET_PLANNAME" length="150" />
+        </property>
+        <property name="mvretIncDate" type="date">
+            <column name="MVRET_INCEPDATE" length="7" />
+        </property> 
+        <property name="mvretExpDate" type="date">
+            <column name="MVRET_EXPDATE" length="7" />
+        </property> 
+    </class>
+</hibernate-mapping>

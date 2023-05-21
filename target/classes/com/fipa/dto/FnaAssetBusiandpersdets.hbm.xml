@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated May 17, 2018 11:20:37 AM by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.fipa.dto.FnaAssetBusiandpersdets" table="FNA_ASSET_BUSIANDPERSDETS" >
+        <id name="busipersId" type="string">
+            <column name="BUSIPERS_ID" length="20" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="fnaSelfspouseDets" class="com.fipa.dto.FnaSelfspouseDets" fetch="select">
+            <column name="FNA_ID" length="20" />
+        </many-to-one>
+        <property name="assetCateg" type="string">
+            <column name="ASSET_CATEG" length="20" />
+        </property>
+        <property name="acctHolder" type="string">
+            <column name="ACCT_HOLDER" length="75" />
+        </property>
+        <property name="typeOfAsset" type="string">
+            <column name="TYPE_OF_ASSET" length="60" />
+        </property>
+        <property name="nameOfAsset" type="string">
+            <column name="NAME_OF_ASSET" length="75" />
+        </property>
+        <property name="purInvValue" type="java.lang.Double">
+            <column name="PUR_INV_VALUE" precision="126" scale="0" />
+        </property>
+        <property name="currValue" type="java.lang.Double">
+            <column name="CURR_VALUE" precision="126" scale="0" />
+        </property>
+        <property name="osValue" type="java.lang.Double">
+            <column name="OS_VALUE" precision="126" scale="0" />
+        </property>
+        <property name="estApprValue" type="java.lang.Double">
+            <column name="EST_APPR_VALUE" precision="126" scale="0" />
+        </property>
+        <property name="yrs2keep" type="string">
+            <column name="YRS2KEEP" length="20" />
+        </property>
+        <property name="childEdnPrcnt" type="java.lang.Double">
+            <column name="CHILD_EDN_PRCNT" precision="126" scale="0" />
+        </property>
+        <property name="retPlanPrcnt" type="java.lang.Double">
+            <column name="RET_PLAN_PRCNT" precision="126" scale="0" />
+        </property>
+        <property name="remarks" type="string">
+            <column name="REMARKS" length="300" />
+        </property>
+        <property name="crtdBy" type="string">
+            <column name="CRTD_BY" length="20" />
+        </property>
+        <property name="crtdDate" type="date">
+            <column name="CRTD_DATE" length="7" />
+        </property>
+        <property name="modBy" type="string">
+            <column name="MOD_BY" length="20" />
+        </property>
+        <property name="modDate" type="date">
+            <column name="MOD_DATE" length="7" />
+        </property>
+    </class>
+</hibernate-mapping>

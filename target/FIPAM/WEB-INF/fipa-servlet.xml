@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:util="http://www.springframework.org/schema/util"
+	
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+						http://www.springframework.org/schema/beans/spring-beans.xsd 
+						http://www.springframework.org/schema/context
+						http://www.springframework.org/schema/context/spring-context.xsd
+						http://www.springframework.org/schema/util 
+						http://www.springframework.org/schema/util/spring-util.xsd
+						http://www.springframework.org/schema/mvc 
+						http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+
+	<context:component-scan base-package="com.fipa.controller" />
+
+	<context:property-placeholder location="classpath:dataSource.properties" />
+	
+	 
+	
+	<util:properties id="props"
+		location="classpath*:ApplicationResource.properties" />
+
+<!-- File Uploads -->
+	<bean id="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+	</bean>
+	<!-- End of File Uploads -->
+	
+	<bean id="messageSource"
+		class="org.springframework.context.support.ResourceBundleMessageSource">
+		<property name="basename" value="Labels" />
+	</bean>
+
+
+	<bean id="PROP_BEAN" class="com.fipa.util.PropContextUtils">
+		<property name="properties" ref="props" />
+	</bean>
+
+
+	<bean id="applicationContext" class="com.fipa.util.ApplicationContextUtils">
+	</bean>
+
+	<bean id="tilesviewResolver"
+		class="org.springframework.web.servlet.view.tiles3.TilesViewResolver" />
+
+	<bean id="tilesConfigurer"
+		class="org.springframework.web.servlet.view.tiles3.TilesConfigurer">
+		<property name="definitions">
+			<list>
+				<value>/WEB-INF/tiles.xml</value>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="dataSource"
+		class="org.apache.commons.dbcp.BasicDataSource">
+		<property name="driverClassName" value="${oracle.driverClassName}" />
+		<property name="url" value="${oracle.url}" />
+		<property name="username" value="${oracle.username}" />
+		<property name="password" value="${oracle.password}" />
+	</bean>
+
+	
+
+	<bean id="transactionManager"
+		class="org.springframework.orm.hibernate5.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<bean id="dbTransactionManager"
+		class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean">
+		<property name="transactionManager" ref="transactionManager" />
+		<property name="target" ref="dbImplBean" />
+		<property name="transactionAttributes">
+			<props>
+				<prop key="save*">PROPAGATION_REQUIRES_NEW</prop>
+				<prop key="insert*">PROPAGATION_REQUIRES_NEW</prop>
+				<prop key="update*">PROPAGATION_REQUIRES_NEW,-HibernateException</prop>
+				<prop key="select*">PROPAGATION_REQUIRED,readOnly</prop>
+				<prop key="delete*">PROPAGATION_REQUIRES_NEW</prop>
+				<!-- <prop key="*">PROPAGATION_REQUIRES_NEW</prop> -->
+			</props>
+		</property>
+	</bean>
+
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">${oracle.dialect}</prop> 
+				<prop key="hibernate.show_sql">true</prop>
+		 		 <!-- <prop key="hibernate.format_sql">true</prop> -->
+				<!-- <prop key="hibernate.use_sql_comments">true</prop> -->
+				<prop key="cache.use_second_level_cache">true</prop>
+				<prop key="cache.region.factory_class">org.hibernate.cache.ehcache.EhCacheRegionFactory</prop>
+				<prop key="hibernate.generate_statistics">false</prop>
+			</props>
+		</property>
+		
+		
+		<property name="mappingResources">
+			<list> 
+				<value>/com/fipa/dto/FnaAdvDeclare.hbm.xml</value>
+				<value>/com/fipa/dto/FnaApptypes.hbm.xml</value> 
+				<value>/com/fipa/dto/FnaAssetBusiandpersdets.hbm.xml</value>
+				<value>/com/fipa/dto/FnaAssetCashdets.hbm.xml</value>
+				<value>/com/fipa/dto/FnaAssetOtherdets.hbm.xml</value>
+				<value>/com/fipa/dto/FnaCashAtBank.hbm.xml</value>
+				<value>/com/fipa/dto/FnaChilddetails.hbm.xml</value>
+				<value>/com/fipa/dto/FnaContingencyDets.hbm.xml</value>
+				<value>/com/fipa/dto/FnaCpfBalanceDets.hbm.xml</value>
+				<value>/com/fipa/dto/FnaCpfDeductions.hbm.xml</value>
+				<value>/com/fipa/dto/FnaCpfMonthcontDets.hbm.xml</value>
+				<value>/com/fipa/dto/FnaCurassDets.hbm.xml</value>
+				<value>/com/fipa/dto/FnaDependantDets.hbm.xml</value>
+				<value>/com/fipa/dto/FnaEstatePlan.hbm.xml</value>
+				<value>/com/fipa/dto/FnaExpenditureDets.hbm.xml</value>
+				<value>/com/fipa/dto/FnaFingoalsconcern.hbm.xml</value>
+				<value>/com/fipa/dto/FnaFinLiability.hbm.xml</value>
+				<value>/com/fipa/dto/FnaHealthinsInfo.hbm.xml</value>
+				<value>/com/fipa/dto/FnaInputinvestmentsDets.hbm.xml</value>
+				<value>/com/fipa/dto/FnaInvsetmentSummary.hbm.xml</value>
+				<value>/com/fipa/dto/FnaLifeinsuranceBasicriders.hbm.xml</value>
+				<value>/com/fipa/dto/FnaLifeinsuranceChildedc.hbm.xml</value>
+				<value>/com/fipa/dto/FnaLifeinsuranceCoverages.hbm.xml</value>
+				<value>/com/fipa/dto/FnaLifeinsuranceDets.hbm.xml</value>
+				<value>/com/fipa/dto/FnaLifeinsuranceDisablebenfs.hbm.xml</value>
+				<value>/com/fipa/dto/FnaLifeinsuranceMvRet.hbm.xml</value>
+				<value>/com/fipa/dto/FnaLifeinsuranceNominees.hbm.xml</value>
+				<value>/com/fipa/dto/FnaLoginpageMsg.hbm.xml</value>
+				<value>/com/fipa/dto/FnaOthareaconcern.hbm.xml</value>
+				<value>/com/fipa/dto/FnaPersprio.hbm.xml</value>
+				<value>/com/fipa/dto/FnaPropownDets.hbm.xml</value>
+				<value>/com/fipa/dto/FnaRecomFundDet.hbm.xml</value>
+				<value>/com/fipa/dto/FnaRecomPrdtplanDet.hbm.xml</value>
+				<value>/com/fipa/dto/FnaRecomReasons.hbm.xml</value>
+				<value>/com/fipa/dto/FnaRetireplanDets.hbm.xml</value>
+				<value>/com/fipa/dto/FnaRetireplanIncome.hbm.xml</value>
+				<value>/com/fipa/dto/FnaRiskprefDets.hbm.xml</value>
+				<value>/com/fipa/dto/FnaSavingsinvDets.hbm.xml</value>
+				<value>/com/fipa/dto/FnaSelfspouseDets.hbm.xml</value>
+				<value>/com/fipa/dto/FnaSrcofincome.hbm.xml</value>
+				<value>/com/fipa/dto/FnaSummaryAnalysis.hbm.xml</value>
+				<value>/com/fipa/dto/FnaSwtchrepFundDet.hbm.xml</value>
+				<value>/com/fipa/dto/FnaSwtchrepPlanDet.hbm.xml</value>
+				<value>/com/fipa/dto/FnaVehicleownDets.hbm.xml</value>
+				<value>/com/fipa/dto/MasterAnalysisTypes.hbm.xml</value>
+				<value>/com/fipa/dto/MasterCpfAcctype.hbm.xml</value> 
+				<value>/com/fipa/dto/MasterPropertykv.hbm.xml</value>
+				<value>/com/fipa/dto/MasterCpfAllocRates.hbm.xml</value>
+				<value>/com/fipa/dto/MasterCpfIntrates.hbm.xml</value>
+				<value>/com/fipa/dto/MasterCpfContribRates.hbm.xml</value>
+				<value>/com/fipa/dto/FnaRetireplanIncomeasset.hbm.xml</value>
+				<value>/com/fipa/dto/FnaRetireplanOthpayment.hbm.xml</value>
+				<value>/com/fipa/dto/FnaAttachments.hbm.xml</value> 
+				<value>/com/fipa/dto/FnaAutoAlter.hbm.xml</value> 
+				<value>/com/fipa/dto/FnaRetireplanCpflife.hbm.xml</value> 
+				<value>/com/fipa/dto/MasterCpflifePayout.hbm.xml</value> 
+				<value>/com/fipa/dto/MasterCpflifePlans.hbm.xml</value>
+				<value>/com/fipa/dto/MasterRetSchemeLimits.hbm.xml</value>  
+				<value>/com/fipa/dto/FnaSrs.hbm.xml</value>  
+				
+				
+				</list>
+		</property>
+	</bean>
+
+	<bean id="dbImplBean" class="com.fipa.dbinterface.DBInterfaceImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+
+	<bean id="dataSourceFpms" class="org.apache.commons.dbcp.BasicDataSource" 
+		destroy-method="close">
+	<property name="driverClassName" value="${con.fpms.driverClassName}"/>
+	<property name="url" value="${con.fpms.url}" />
+	<property name="username" value="${con.fpms.username}"/>
+	<property name="password" value="${con.fpms.password}"/>
+	</bean>	
+	
+	<bean id="sessionFactoryFpms"
+		class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
+		<property name="dataSource" ref="dataSourceFpms" />
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">${con.fpms.dialect}</prop> 
+				<prop key="hibernate.show_sql">true</prop>
+ 		 		 <!-- <prop key="hibernate.format_sql">true</prop> -->
+				<!-- <prop key="hibernate.use_sql_comments">true</prop> -->
+				<prop key="cache.use_second_level_cache">true</prop>
+				<prop key="cache.region.factory_class">org.hibernate.cache.ehcache.EhCacheRegionFactory</prop>
+				<prop key="hibernate.generate_statistics">false</prop>
+			</props>
+		</property>
+	</bean>
+	
+	<bean id="transactionManagerFpms"
+		class="org.springframework.orm.hibernate5.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactoryFpms" />
+	</bean>
+	
+	
+	<bean id="dbTransactionManagerFpms"
+		class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean">
+		<property name="transactionManager" ref="transactionManagerFpms" />
+		<property name="target" ref="fpmsDbImplBean" />
+		<property name="transactionAttributes">
+			<props>
+				<prop key="save*">PROPAGATION_REQUIRES_NEW</prop>
+				<prop key="insert*">PROPAGATION_REQUIRES_NEW</prop>
+				<prop key="update*">PROPAGATION_REQUIRES_NEW,-HibernateException</prop>
+				<prop key="select*">PROPAGATION_REQUIRED,readOnly</prop>
+				<prop key="delete*">PROPAGATION_REQUIRES_NEW</prop>
+				<!-- <prop key="*">PROPAGATION_REQUIRES_NEW</prop> -->
+			</props>
+		</property>
+	</bean>
+	
+	<bean id="fpmsDbImplBean" class="com.fipa.dbinterface.DBInterfaceFpmsImpl">
+		<property name="sessionFactory" ref="sessionFactoryFpms" />
+	</bean>
+	
+	
+
+
+</beans>  

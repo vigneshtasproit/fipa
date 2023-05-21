@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated May 17, 2018 11:20:37 AM by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.fipa.dto.FnaChilddetails" table="FNA_CHILDDETAILS" >
+        <id name="fnaChildId" type="string">
+            <column name="FNA_CHILD_ID" length="20" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="fnaSelfspouseDets" class="com.fipa.dto.FnaSelfspouseDets" fetch="select">
+            <column name="FNA_ID" length="20" />
+        </many-to-one>
+        <property name="childName" type="string">
+            <column name="CHILD_NAME" length="75" />
+        </property>
+        <property name="childDob" type="date">
+            <column name="CHILD_DOB" length="7" />
+        </property>
+        <property name="childAge" type="string">
+            <column name="CHILD_AGE" length="3" />
+        </property>
+        <property name="childRelation" type="string">
+            <column name="CHILD_RELATION" length="60" />
+        </property>
+        <property name="childGender" type="string">
+            <column name="CHILD_GENDER" length="20" />
+        </property>
+        <property name="childYrs2tertiary" type="string">
+            <column name="CHILD_YRS2TERTIARY" length="20" />
+        </property>
+        <property name="childCource" type="string">
+            <column name="CHILD_COURCE" length="60" />
+        </property>
+        <property name="childUniversity" type="string">
+            <column name="CHILD_UNIVERSITY" length="60" />
+        </property>
+        <property name="childYrsofeducation" type="string">
+            <column name="CHILD_YRSOFEDUCATION" length="3" />
+        </property>
+        <property name="childPerannEducost" type="java.lang.Double">
+            <column name="CHILD_PERANN_EDUCOST" precision="126" scale="0" />
+        </property>
+        <property name="childPerannLivingcost" type="java.lang.Double">
+            <column name="CHILD_PERANN_LIVINGCOST" precision="126" scale="0" />
+        </property>
+        <property name="childAvailEdnfund" type="java.lang.Double">
+            <column name="CHILD_AVAIL_EDNFUND" precision="126" scale="0" />
+        </property>
+        <property name="childRemarks" type="string">
+            <column name="CHILD_REMARKS" length="300" />
+        </property>
+        <property name="childCrtdBy" type="string">
+            <column name="CHILD_CRTD_BY" length="20" not-null="true" />
+        </property>
+        <property name="childCrtdDate" type="date">
+            <column name="CHILD_CRTD_DATE" length="7" not-null="true" />
+        </property>
+        <property name="childModifiedBy" type="string">
+            <column name="CHILD_MODIFIED_BY" length="20" />
+        </property>
+        <property name="childModifiedDate" type="date">
+            <column name="CHILD_MODIFIED_DATE" length="7" />
+        </property>
+        <property name="childRb" type="string">
+            <column name="CHILD_RB" length="20" />
+        </property>
+        <property name="childWard" type="string">
+            <column name="CHILD_WARD" length="20" />
+        </property>
+        <property name="childHosptype" type="string">
+            <column name="CHILD_HOSPTYPE" length="20" />
+        </property>
+    </class>
+</hibernate-mapping>

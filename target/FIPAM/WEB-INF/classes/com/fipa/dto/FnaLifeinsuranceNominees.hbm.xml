@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated May 17, 2018 11:20:37 AM by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.fipa.dto.FnaLifeinsuranceNominees" table="FNA_LIFEINSURANCE_NOMINEES" >
+        <id name="nomineeId" type="string">
+            <column name="NOMINEE_ID" length="20" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="fnaLifeinsuranceDets" class="com.fipa.dto.FnaLifeinsuranceDets" fetch="select">
+            <column name="LIP_ID" length="20" />
+        </many-to-one>
+        <many-to-one name="fnaSelfspouseDets" class="com.fipa.dto.FnaSelfspouseDets" fetch="select">
+            <column name="FNA_ID" length="20" />
+        </many-to-one>
+        <property name="nomineeName" type="string">
+            <column name="NOMINEE_NAME" length="75" />
+        </property>
+        <property name="nomineeCrtdBy" type="string">
+            <column name="NOMINEE_CRTD_BY" length="20" />
+        </property>
+        <property name="nomineeCrtdDate" type="date">
+            <column name="NOMINEE_CRTD_DATE" length="7" />
+        </property>
+        <property name="nomineeModBy" type="string">
+            <column name="NOMINEE_MOD_BY" length="20" />
+        </property>
+        <property name="nomineeModDate" type="date">
+            <column name="NOMINEE_MOD_DATE"  length="7"  />
+        </property>
+        <property name="nomineePrcnt" type="java.lang.Double">
+            <column name="NOMINEE_PRCNT" precision="126" scale="0" />
+        </property>
+    </class>
+</hibernate-mapping>

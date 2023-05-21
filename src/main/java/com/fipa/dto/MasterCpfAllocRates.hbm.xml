@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE  hibernate-mapping  SYSTEM 
+    "classpath://com/fipa/util/hibernate-mapping.dtd">
+<!-- Generated Mar 20, 2017 11:10:19 AM by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.fipa.dto.MasterCpfAllocRates" table="MASTER_CPF_ALLOC_RATES">
+        <id name="txtFldCPFAllocId" type="string">
+            <column name="ALLOC_ID" length="20" />
+            <generator class="assigned" />
+        </id>
+        <property name="txtFldCPFAllocEffFrom" type="string">
+            <column name="EFF_FROM" length="20" />
+        </property>
+        <property name="selCPFAllocAgeGrp" type="string">
+            <column name="AGE_GRP" length="150" />
+        </property>
+        <property name="selCPFAllocAccType" type="string">
+            <column name="ACC_TYPE" length="60" />
+        </property>
+        <property name="txtFldCPFAllocRate" type="string">
+            <column name="ALLOC_RATE" length="30" />
+        </property>
+        <property name="txtFldCPFAllocRemarks" type="string">
+            <column name="REMARKS" length="300" />
+        </property>
+        <property name="txtFldCPFCreatedBy" type="string">
+            <column name="CREATED_BY" length="20" />
+        </property>
+        <property name="txtFldCPFCreatedDate" type="date">
+            <column name="CREATED_DATE" length="7" />
+        </property>
+        <property name="txtFldCPFModifiedBy" type="string">
+            <column name="MODIFIED_BY" length="20" />
+        </property>
+        <property name="txtFldCPFModifiedDate" type="date">
+            <column name="MODIFIED_DATE" length="7" />
+        </property>
+    </class>
+</hibernate-mapping>

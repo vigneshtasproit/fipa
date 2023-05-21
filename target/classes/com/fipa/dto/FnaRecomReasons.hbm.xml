@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated May 17, 2018 11:20:37 AM by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.fipa.dto.FnaRecomReasons" table="FNA_RECOM_REASONS" >
+        <id name="fnaReasId" type="string">
+            <column name="FNA_REAS_ID" length="20" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="fnaSelfspouseDets" class="com.fipa.dto.FnaSelfspouseDets" fetch="select">
+            <column name="FNA_ID" length="20" />
+        </many-to-one>
+        <property name="reasons" type="string">
+            <column name="REASONS" length="500" />
+        </property>
+        <property name="recCreatedBy" type="string">
+            <column name="REC_CREATED_BY" length="20" />
+        </property>
+        <property name="recCreatedDate" type="date">
+            <column name="REC_CREATED_DATE" length="7" />
+        </property>
+        <property name="recModifiedBy" type="string">
+            <column name="REC_MODIFIED_BY" length="20" />
+        </property>
+        <property name="recModifiedDate" type="date">
+            <column name="REC_MODIFIED_DATE" length="7" />
+        </property>
+    </class>
+</hibernate-mapping>

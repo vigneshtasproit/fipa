@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated May 17, 2018 11:20:37 AM by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.fipa.dto.FnaRiskprefDets" table="FNA_RISKPREF_DETS" >
+        <id name="riskId" type="string">
+            <column name="RISK_ID" length="20" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="fnaSelfspouseDets" class="com.fipa.dto.FnaSelfspouseDets" fetch="select">
+            <column name="FNA_ID" length="20" />
+        </many-to-one>
+        <property name="crInvstobj" type="string">
+            <column name="CR_INVSTOBJ" length="300" />
+        </property>
+        <property name="crInvstamt" type="java.lang.Double">
+            <column name="CR_INVSTAMT" precision="126" scale="0" />
+        </property>
+        <property name="crInvsttimehorizon" type="string">
+            <column name="CR_INVSTTIMEHORIZON" length="20" />
+        </property>
+        <property name="crRiskpref" type="string">
+            <column name="CR_RISKPREF" length="10" />
+        </property>
+        <property name="crRiskclass" type="string">
+            <column name="CR_RISKCLASS" length="10" />
+        </property>
+        <property name="crRoi" type="java.lang.Double">
+            <column name="CR_ROI" precision="126" scale="0" />
+        </property>
+        <property name="crAdeqfund" type="string">
+            <column name="CR_ADEQFUND" length="1" />
+        </property>
+        <property name="crOthconcern" type="string">
+            <column name="CR_OTHCONCERN" length="300" />
+        </property>
+        <property name="crCreatedBy" type="string">
+            <column name="CR_CREATED_BY" length="20" />
+        </property>
+        <property name="crCreatedDate" type="date">
+            <column name="CR_CREATED_DATE" length="7" />
+        </property>
+        <property name="crModifiedBy" type="string">
+            <column name="CR_MODIFIED_BY" length="20" />
+        </property>
+        <property name="crModifiedDate" type="date">
+            <column name="CR_MODIFIED_DATE" length="7" />
+        </property>
+    </class>
+</hibernate-mapping>

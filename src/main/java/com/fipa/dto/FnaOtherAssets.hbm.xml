@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated May 17, 2018 11:20:37 AM by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.fipa.dto.FnaOtherAssetdets" table="FNA_OTHERASSETDETAILS" >
+        <id name="othId" type="string">
+            <column name="FNA_OTHERASSET_ID" length="20" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="fnaSelfspouseDets" class="com.fipa.dto.FnaSelfspouseDets" fetch="select">
+            <column name="FNA_ID" length="20" />
+        </many-to-one>
+         <property name="otherasstItems" type="string">
+            <column name="OTHERASSET_ITEMS" length="60" />
+        </property>
+        <property name="otherasstDescription" type="string">
+            <column name="OTHERASSET_DESCRIPTION" length="60" />
+        </property>
+        <property name="otherasstSelf" type="java.lang.Double">
+            <column name="OTHERASSET_SELF" precision="126" scale="0" />
+        </property>
+        <property name="otherasstSpouse" type="java.lang.Double">
+            <column name="OTHERASSET_SPOUSE" precision="126" scale="0" />
+        </property>
+        <property name="otherasstJoint" type="java.lang.Double">
+            <column name="OTHERASSET_JOINT" precision="126" scale="0" />
+        </property>
+        <property name="otherasstLoans" type="java.lang.Double">
+            <column name="OTHERASSET_LOANS" precision="126" scale="0" />
+        </property>
+        <property name="otherasstCreatedBy" type="string">
+            <column name="OTHERASSET_CREATED_BY" length="20" />
+        </property>
+        <property name="otherasstCreatedDate" type="date">
+            <column name="OTHERASSET_CREATED_DATE" length="7" />
+        </property>
+        <property name="otherasstModifiedBy" type="string">
+            <column name="OTHERASSET_MODIFIED_BY" length="20" />
+        </property>
+        <property name="otherasstModifiedDate" type="date">
+            <column name="OTHERASSET_MODIFIED_DATE" length="7" />
+        </property>
+    </class>
+</hibernate-mapping>

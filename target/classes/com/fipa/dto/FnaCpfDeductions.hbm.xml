@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated May 17, 2018 11:20:37 AM by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.fipa.dto.FnaCpfDeductions" table="FNA_CPF_DEDUCTIONS" >
+        <id name="cdPkid" type="string">
+            <column name="CD_PKID" length="20" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="masterCpfAcctype" class="com.fipa.dto.MasterCpfAcctype" fetch="select">
+            <column name="CPF_AC_ID" length="20" />
+        </many-to-one>
+        <many-to-one name="fnaSelfspouseDets" class="com.fipa.dto.FnaSelfspouseDets" fetch="select">
+            <column name="FNA_ID" length="20" />
+        </many-to-one>
+        <property name="cdApplicant" type="string">
+            <column name="CD_APPLICANT" length="75" />
+        </property>
+        <property name="cdApplicantType" type="string">
+            <column name="CD_APPLICANT_TYPE" length="20" />
+        </property>
+        <property name="transType" type="string">
+            <column name="TRANS_TYPE" length="20" />
+        </property>
+        <property name="cdDeductionType" type="string">
+            <column name="CD_DEDUCTION_TYPE" length="60" />
+        </property>
+        <property name="periodFrom" type="date">
+            <column name="PERIOD_FROM" length="7" />
+        </property>
+        <property name="periodTo" type="date">
+            <column name="PERIOD_TO" length="7" />
+        </property>
+        <property name="cdDeductionAmt" type="java.lang.Double">
+            <column name="CD_DEDUCTION_AMT" precision="126" scale="0" />
+        </property>
+        <property name="cdPaymentTerm" type="string">
+            <column name="CD_PAYMENT_TERM" length="20" />
+        </property>
+        <property name="cdType" type="string">
+            <column name="CD_TYPE" length="60" />
+        </property>
+        <property name="cdBalanceTerm" type="java.lang.Double">
+            <column name="CD_BALANCE_TERM" precision="126" scale="0" />
+        </property>
+        <property name="cdTransReference" type="string">
+            <column name="CD_TRANS_REFERENCE" length="30" />
+        </property>
+        <property name="sumTransToRetirement" type="string">
+            <column name="SUM_TRANS_TO_RETIREMENT" length="20" />
+        </property>
+        <property name="cdCrtdBy" type="string">
+            <column name="CD_CRTD_BY" length="20" />
+        </property>
+        <property name="cdCrtdDate" type="date">
+            <column name="CD_CRTD_DATE" length="7" />
+        </property>
+        <property name="cdModBy" type="string">
+            <column name="CD_MOD_BY" length="20" />
+        </property>
+        <property name="cdModDate" type="date">
+            <column name="CD_MOD_DATE" length="7" />
+        </property>
+            <property name="cdRefId" type="string">
+            <column name="CD_REFID" length="20" />
+        </property>
+        <!--changes done 19/06/2019 -->
+         <property name="lifePlanName" type="string">
+            <column name="LIFE_PLN_NAME" length="150" />
+        </property>
+        <property name="lifePolNo" type="string">
+            <column name="LIFE_POL_NO" length="20" />
+        </property>
+        
+        <property name="ageFrom" type="string">
+            <column name="AGE_FROM" length="150" />
+        </property>
+        <property name="ageTo" type="string">
+            <column name="AGE_TO" length="20" />
+        </property>
+        
+         <property name="yrsToRetOrTer" type="string">
+            <column name="YRS_TO_RET_OR_TER" length="20" />
+        </property>
+        <property name="cpfChildName" type="string">
+            <column name="CHILD_NAME" length="90" />
+        </property>
+        
+        
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated May 17, 2018 11:20:37 AM by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.fipa.dto.FnaPropownDets" table="FNA_PROPOWN_DETS" >
+        <id name="propownId" type="string">
+            <column name="PROPOWN_ID" length="20" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="fnaSelfspouseDets" class="com.fipa.dto.FnaSelfspouseDets" fetch="select">
+            <column name="FNA_ID" length="20" />
+        </many-to-one>
+        <property name="propCateg" type="string">
+            <column name="PROP_CATEG" length="20" />
+        </property>
+        <property name="propDescription" type="string">
+            <column name="PROP_DESCRIPTION" length="300" />
+        </property>
+        <property name="propOwnership" type="string">
+            <column name="PROP_OWNERSHIP" length="60" />
+        </property>
+        <property name="propMktvalue" type="java.lang.Double">
+            <column name="PROP_MKTVALUE" precision="126" scale="0" />
+        </property>
+        <property name="propMortageos" type="java.lang.Double">
+            <column name="PROP_MORTAGEOS" precision="126" scale="0" />
+        </property>
+        <property name="propObj" type="string">
+            <column name="PROP_OBJ" length="60" />
+        </property>
+        <property name="propApprecrate" type="java.lang.Double">
+            <column name="PROP_APPRECRATE" precision="126" scale="0" />
+        </property>
+        <property name="propOsloanperd" type="java.lang.Double">
+            <column name="PROP_OSLOANPERD" precision="126" scale="0" />
+        </property>
+        <property name="propLoanBySelfcash" type="java.lang.Double">
+            <column name="PROP_LOAN_BY_SELFCASH" precision="126" scale="0" />
+        </property>
+        <property name="propLoanBySpscash" type="java.lang.Double">
+            <column name="PROP_LOAN_BY_SPSCASH" precision="126" scale="0" />
+        </property>
+        <property name="propLoanBySelfcpf" type="java.lang.Double">
+            <column name="PROP_LOAN_BY_SELFCPF" precision="126" scale="0" />
+        </property>
+        <property name="propLoanBySpscpf" type="java.lang.Double">
+            <column name="PROP_LOAN_BY_SPSCPF" precision="126" scale="0" />
+        </property>
+        <property name="propMonthRentincome" type="java.lang.Double">
+            <column name="PROP_MONTH_RENTINCOME" precision="126" scale="0" />
+        </property>
+        <property name="propYrstopay" type="java.lang.Double">
+            <column name="PROP_YRSTOPAY" precision="126" scale="0" />
+        </property>
+        <property name="propSold" type="string">
+            <column name="PROP_SOLD" length="5" />
+        </property>
+        <property name="propRentOnret" type="string">
+            <column name="PROP_RENT_ONRET" length="5" />
+        </property>
+        <property name="propLoancash" type="java.lang.Double">
+            <column name="PROP_LOANCASH" precision="126" scale="0" />
+        </property>
+        <property name="propLoancpf" type="java.lang.Double">
+            <column name="PROP_LOANCPF" precision="126" scale="0" />
+        </property>
+        <property name="propCurRetInc" type="java.lang.Double">
+            <column name="PROP_RENT_INCOME" precision="126" scale="0" />
+        </property>
+          <property name="propAnlRetInc" type="java.lang.Double">
+            <column name="PROP_ANNL_RENTINCOME" precision="126" scale="0" />
+        </property>
+         <property name="propYrsToRent" type="java.lang.Double">
+            <column name="PROP_YRSTORENT"  precision="126" scale="0" />
+        </property>
+        <property name="propCreatedBy" type="string">
+            <column name="PROP_CREATED_BY" length="20" />
+        </property>
+        <property name="propCreatedDate" type="date">
+            <column name="PROP_CREATED_DATE" length="7" />
+        </property>
+        <property name="propModifiedBy" type="string">
+            <column name="PROP_MODIFIED_BY" length="20" />
+        </property>
+        <property name="propModifiedDate" type="date">
+            <column name="PROP_MODIFIED_DATE" length="7" />
+        </property>
+        <property name="propRefId" type="string">
+            <column name="PROP_REFID" length="20" />
+        </property> 
+         <property name="propFvOnrent" type="java.lang.Double">
+            <column name="PROP_FV_ONRENT" precision="126" scale="0" />
+        </property>
+          <property name="propRentPerd" type="java.lang.Double">
+            <column name="PROP_RENT_PERIOD" precision="126" scale="0" />
+        </property>
+        
+        
+        
+    </class>
+</hibernate-mapping>

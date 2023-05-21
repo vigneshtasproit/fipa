@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated May 17, 2018 11:20:37 AM by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.fipa.dto.FnaSwtchrepFundDet" table="FNA_SWTCHREP_FUND_DET" >
+        <id name="swrepFfId" type="string">
+            <column name="SWREP_FF_ID" length="20" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="fnaSelfspouseDets" class="com.fipa.dto.FnaSelfspouseDets" fetch="select">
+            <column name="FNA_ID" length="20" />
+        </many-to-one>
+        <property name="swrepFfProdtype" type="string">
+            <column name="SWREP_FF_PRODTYPE" length="10" />
+        </property>
+        <property name="swrepFfProdname" type="string">
+            <column name="SWREP_FF_PRODNAME" length="20" />
+        </property>
+        <property name="swrepFfFundriskrate" type="java.lang.Double">
+            <column name="SWREP_FF_FUNDRISKRATE" precision="126" scale="0" />
+        </property>
+        <property name="swrepFfPaymentmode" type="string">
+            <column name="SWREP_FF_PAYMENTMODE" length="20" />
+        </property>
+        <property name="swrepFfSoredmunits" type="java.lang.Double">
+            <column name="SWREP_FF_SOREDMUNITS" precision="126" scale="0" />
+        </property>
+        <property name="swrepFfSoredprcnt" type="java.lang.Short">
+            <column name="SWREP_FF_SOREDPRCNT" precision="3" scale="0" />
+        </property>
+        <property name="swrepFfSirepsaleschrg" type="java.lang.Double">
+            <column name="SWREP_FF_SIREPSALESCHRG" precision="126" scale="0" />
+        </property>
+        <property name="swrepFfSirepamt" type="java.lang.Double">
+            <column name="SWREP_FF_SIREPAMT" precision="126" scale="0" />
+        </property>
+        <property name="swrepFfSirepprcnt" type="java.lang.Short">
+            <column name="SWREP_FF_SIREPPRCNT" precision="3" scale="0" />
+        </property>
+        <property name="swrepFfIaffee" type="string">
+            <column name="SWREP_FF_IAFFEE" length="60" />
+        </property>
+        <property name="createdBy" type="string">
+            <column name="CREATED_BY" length="20" />
+        </property>
+        <property name="createdDate" type="date">
+            <column name="CREATED_DATE" length="7" />
+        </property>
+        <property name="swrepPpPrin" type="string">
+            <column name="SWREP_PP_PRIN" length="60" />
+        </property>
+        <property name="swrepPpPlan" type="string">
+            <column name="SWREP_PP_PLAN" length="300" />
+        </property>
+        <property name="swrepFfBsrid" type="string">
+            <column name="SWREP_FF_BSRID" length="20" />
+        </property>
+        <property name="swrepFfOpt" type="string">
+            <column name="SWREP_FF_OPT" length="20" />
+        </property>
+    </class>
+</hibernate-mapping>

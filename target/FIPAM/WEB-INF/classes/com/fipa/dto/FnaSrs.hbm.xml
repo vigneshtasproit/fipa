@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jun 20, 2019 6:22:00 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.fipa.dto.FnaSrs" table="FNA_SRS">
+        <id name="srsId" type="string">
+            <column name="SRS_ID" length="20" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="fnaSelfspouseDets" class="com.fipa.dto.FnaSelfspouseDets" fetch="select">
+            <column name="FNA_ID" length="80" />
+        </many-to-one>
+        <property name="srsRefId" type="string">
+            <column name="SRS_REF_ID" length="20" />
+        </property>
+        <property name="srsClassfy" type="string">
+            <column name="SRS_CLASSFY" length="150" />
+        </property>
+        <property name="srsDesc" type="string">
+            <column name="SRS_DESC" length="150" />
+        </property>
+        <property name="srsFreq" type="string">
+            <column name="SRS_FREQ" length="30" />
+        </property>
+        <property name="srsAmount" type="java.lang.Double">
+            <column name="SRS_AMOUNT" precision="126" scale="0" />
+        </property>
+        <property name="srsPerdFrom" type="date">
+            <column name="SRS_PERD_FROM" length="7" />
+        </property>
+        <property name="srsPerdTo" type="date">
+            <column name="SRS_PERD_TO" length="7" />
+        </property>
+        <property name="srsAgestart" type="string">
+            <column name="SRS_AGESTART" length="20" />
+        </property>
+        <property name="srsPayoutPerd" type="string">
+            <column name="SRS_PAYOUT_PERD" length="20" />
+        </property>
+        <property name="srsCrtdBy" type="string">
+            <column name="SRS_CRTD_BY" length="20" />
+        </property>
+        <property name="srsCrtdDate" type="date">
+            <column name="SRS_CRTD_DATE" length="7" />
+        </property>
+        <property name="srsModBy" type="string">
+            <column name="SRS_MOD_BY" length="20" />
+        </property>
+        <property name="srsModDate" type="date">
+            <column name="SRS_MOD_DATE" length="7" />
+        </property>
+    </class>
+</hibernate-mapping>

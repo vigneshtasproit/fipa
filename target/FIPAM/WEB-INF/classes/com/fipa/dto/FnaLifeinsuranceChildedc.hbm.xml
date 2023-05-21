@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated May 17, 2018 11:20:37 AM by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.fipa.dto.FnaLifeinsuranceChildedc" table="FNA_LIFEINSURANCE_CHILDEDC" >
+        <id name="chliId" type="string">
+            <column name="CHLI_ID" length="20" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="fnaLifeinsuranceDets" class="com.fipa.dto.FnaLifeinsuranceDets" fetch="select">
+            <column name="LIP_ID" length="20" />
+        </many-to-one>
+        <many-to-one name="fnaSelfspouseDets" class="com.fipa.dto.FnaSelfspouseDets" fetch="select">
+            <column name="FNA_ID" length="20" />
+        </many-to-one>
+        <property name="childName" type="string">
+            <column name="CHILD_NAME" length="75" not-null="true" />
+        </property>
+           <property name="childAge" type="string">
+            <column name="CHILD_AGE" length="20" />
+        </property>
+        <property name="terEdcAge" type="string">
+            <column name="TER_EDC_AGE" length="20" />
+        </property>
+        <property name="bankIntRate" type="java.lang.Double">
+            <column name="BANK_INT_RATE" precision="126" scale="0" />
+        </property>
+        <property name="loanIntRate" type="java.lang.Double">
+            <column name="LOAN_INT_RATE" precision="126" scale="0" />
+        </property>
+        <property name="inflationRate" type="java.lang.Double">
+            <column name="INFLATION_RATE" precision="126" scale="0" />
+        </property>
+        <property name="startAge" type="string">
+            <column name="START_AGE" length="20" />
+        </property>
+        <property name="paidByPolicy" type="java.lang.Double">
+            <column name="PAID_BY_POLICY" precision="126" scale="0" />
+        </property>
+        <property name="convertVal" type="java.lang.Double">
+            <column name="CONVERT_VAL" precision="126" scale="0" />
+        </property>
+        <property name="chliRemarks" type="string">
+            <column name="CHLI_REMARKS" length="300" />
+        </property>
+        <property name="chliCrtdBy" type="string">
+            <column name="CHLI_CRTD_BY" length="20" not-null="true" />
+        </property>
+        <property name="chliCrtdDate" type="date">
+            <column name="CHLI_CRTD_DATE" length="7" not-null="true" />
+        </property>
+        <property name="chliModBy" type="string">
+            <column name="CHLI_MOD_BY" length="20" />
+        </property>
+        <property name="chliModDate" type="date">
+            <column name="CHLI_MOD_DATE" length="7" />
+        </property>
+        <property name="chliRefId" type="string">
+            <column name="REF_ID" length="20"  />
+        </property>
+        <property name="chliPlanName" type="string">
+            <column name="EDC_PLANNAME" length="150" />
+        </property>
+        <property name="chliIncDate" type="date">
+            <column name="EDC_INCEPDATE" length="7" />
+        </property> 
+        <property name="chliExpDate" type="date">
+            <column name="EDC_EXPDATE" length="7" />
+        </property> 
+    </class>
+</hibernate-mapping>

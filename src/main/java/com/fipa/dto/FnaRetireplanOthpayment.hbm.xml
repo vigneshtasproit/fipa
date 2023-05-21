@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jun 21, 2018 6:10:02 PM by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.fipa.dto.FnaRetireplanOthpayment" table="FNA_RETIREPLAN_OTHPAYMENT">
+        <id name="opId" type="string">
+            <column name="OP_ID" length="20" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="fnaSelfspouseDets" class="com.fipa.dto.FnaSelfspouseDets" fetch="select">
+            <column name="FNA_ID" length="20" />
+        </many-to-one>
+        <property name="retPaytype" type="string">
+            <column name="RET_PAYTYPE" length="150" />
+        </property>
+        <property name="retFrequency" type="string">
+            <column name="RET_FREQUENCY" length="30" />
+        </property>
+        <property name="retAnnualexp" type="java.lang.Double">
+            <column name="RET_ANNUALEXP" precision="126" scale="0" />
+        </property>
+        <property name="retEscarate" type="java.lang.Double">
+            <column name="RET_ESCARATE" precision="126" scale="0" />
+        </property>
+        <property name="retAgebasedon" type="string">
+            <column name="RET_AGEBASEDON" length="20" />
+        </property>
+        <property name="retAgestart" type="string">
+            <column name="RET_AGESTART" length="20" />
+        </property>
+        <property name="retAgeend" type="string">
+            <column name="RET_AGEEND" length="20" />
+        </property>
+        <property name="retOthRemarks" type="string">
+            <column name="RET_OTH_REMARKS" length="300" />
+        </property>
+        <property name="retCrtdBy" type="string">
+            <column name="RET_CRTD_BY" length="20" />
+        </property>
+        <property name="retCrtdDate" type="date">
+            <column name="RET_CRTD_DATE" length="7" />
+        </property>
+        <property name="retModBy" type="string">
+            <column name="RET_MOD_BY" length="20" />
+        </property>
+        <property name="retModDate" type="date">
+            <column name="RET_MOD_DATE" length="7" />
+        </property>
+    </class>
+</hibernate-mapping>

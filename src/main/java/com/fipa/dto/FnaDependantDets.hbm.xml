@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated May 17, 2018 11:20:37 AM by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.fipa.dto.FnaDependantDets" table="FNA_DEPENDANT_DETS" >
+        <id name="depnId" type="string">
+            <column name="DEPN_ID" length="20" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="fnaSelfspouseDets" class="com.fipa.dto.FnaSelfspouseDets" fetch="select">
+            <column name="FNA_ID" length="20" />
+        </many-to-one>
+        <property name="depnName" type="string">
+            <column name="DEPN_NAME" length="75" />
+        </property>
+        <property name="depnRelationship" type="string">
+            <column name="DEPN_RELATIONSHIP" length="60" />
+        </property>
+        <property name="depnDob" type="date">
+            <column name="DEPN_DOB" length="7" />
+        </property>
+        <property name="depnAge" type="string">
+            <column name="DEPN_AGE" length="5" />
+        </property>
+        <property name="depnGender" type="string">
+            <column name="DEPN_GENDER" length="10" />
+        </property>
+        <property name="depnYrssupport" type="string">
+            <column name="DEPN_YRSSUPPORT" length="5" />
+        </property>
+        <property name="depnMonthcontr" type="java.lang.Double">
+            <column name="DEPN_MONTHCONTR" precision="126" scale="0" />
+        </property>
+        <property name="depnProvSelf" type="java.lang.Double">
+            <column name="DEPN_PROV_SELF" precision="126" scale="0" />
+        </property>
+        <property name="depnProvSpouse" type="java.lang.Double">
+            <column name="DEPN_PROV_SPOUSE" precision="126" scale="0" />
+        </property>
+        <property name="depnCreatedBy" type="string">
+            <column name="DEPN_CREATED_BY" length="20" />
+        </property>
+        <property name="depnCreatedDate" type="date">
+            <column name="DEPN_CREATED_DATE" length="7" />
+        </property>
+        <property name="depnModifiedBy" type="string">
+            <column name="DEPN_MODIFIED_BY" length="20" />
+        </property>
+        <property name="depnModifiedDate" type="date">
+            <column name="DEPN_MODIFIED_DATE" length="7" />
+        </property>
+    </class>
+</hibernate-mapping>

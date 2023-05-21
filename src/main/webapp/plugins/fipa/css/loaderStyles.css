@@ -1,0 +1,86 @@
+@CHARSET "UTF-8"; 
+.disable{
+	
+	pointer-events:none;
+}
+
+.nondisable{
+pointer-events:block;
+}
+
+
+.loading {
+    overflow: hidden; 
+    position:fixed;  
+    z-index: 100000; 
+	left: 0;
+	top: 0;
+	 height: 100%;
+	width: 100%; 
+	/* height: 100vh;
+	width: 100vw; */
+	background: #c2dae8 50% 50%  no-repeat; 
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";       /* IE 8 */
+	filter: alpha(opacity=70);  /* IE 5-7 */
+	-moz-opacity: 0.6;          /* Netscape */
+	-khtml-opacity: 0.6;        /* Safari 1.x */
+	opacity: 0.6;               /* Good browsers */
+	
+	
+} 
+.loading   {
+     /* display: block;     */  
+ /*    visibility: visible; */
+}
+.overlay {
+    background: #e9e9e9;           
+    position:fixed  
+    top: 0;               
+    right: 0;             
+    bottom: 0;
+    left: 0;
+    opacity: 0.5;
+}
+ 
+.imageloader{
+ position: fixed;
+ top: 48%;
+ left: 50%;
+ width: 27%;/* bring your own prefixes */
+ transform: translate(-50%, -50%);
+}
+
+
+
+/* Start by setting display:none to make this hidden.
+   Then we position it in relation to the viewport window
+   with position:fixed. Width, height, top and left speak
+   speak for themselves. Background we set to 80% white with
+   our animation centered, and no-repeating */
+/* .modal { */
+/*     display:    none; */
+/*     position:   fixed; */
+/*     z-index:    10000; */
+/*     top:        0; */
+/*     left:       0; */
+/*     height:     100%; */
+/*     width:      100%; */
+/*     background: rgba( 255, 255, 255, .5 ) */
+/*                 url('../images/loading-circle.gif')  */
+/*                 50% 50%  */
+/*                 no-repeat; */
+/* } */
+
+/* When the body has the loading class, we turn
+   the scrollbar off with overflow:hidden */
+body.loading {
+    overflow: hidden;   
+}
+
+/* Anytime the body has the loading class, our
+   modal element will be visible */
+body.loading .modal {
+    display:inline-block;
+}
+ 
+ 

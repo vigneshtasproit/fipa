@@ -1,0 +1,525 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated May 17, 2018 11:20:37 AM by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.fipa.dto.FnaSelfspouseDets" table="FNA_SELFSPOUSE_DETS" >
+        <id name="fnaId" type="string">
+            <column name="FNA_ID" length="20" />
+            <generator class="assigned" />
+        </id>
+        <property name="mgrId" type="string">
+            <column name="MGR_ID" length="20" not-null="true" />
+        </property>
+        <property name="advstfId" type="string">
+            <column name="ADVSTF_ID" length="20" not-null="true" />
+        </property>
+        <property name="fpmsCustid" type="string">
+            <column name="FPMS_CUSTID" length="20" />
+        </property>
+        <property name="fnaType" type="string">
+            <column name="FNA_TYPE" length="10" />
+        </property>
+        <property name="dfSelfName" type="string">
+            <column name="DF_SELF_NAME" length="75" />
+        </property>
+        <property name="dfSelfDob" type="date">
+            <column name="DF_SELF_DOB" length="7" />
+        </property>
+        <property name="dfSelfAge" type="string">
+            <column name="DF_SELF_AGE" length="3" />
+        </property>
+        <property name="dfSelfNationality" type="string">
+            <column name="DF_SELF_NATIONALITY" length="30" />
+        </property>
+        <property name="dfSelfIdtype" type="string">
+            <column name="DF_SELF_IDTYPE" length="20" />
+        </property>
+        <property name="dfSelfNric" type="string">
+            <column name="DF_SELF_NRIC" length="20" />
+        </property>
+        <property name="dfSelfMartsts" type="string">
+            <column name="DF_SELF_MARTSTS" length="20" />
+        </property>
+        <property name="dfSelfOccpn" type="string">
+            <column name="DF_SELF_OCCPN" length="60" />
+        </property>
+        <property name="dfSelfGender" type="string">
+            <column name="DF_SELF_GENDER" length="10" />
+        </property>
+        <property name="dfSelfEmpsts" type="string">
+            <column name="DF_SELF_EMPSTS" length="20" />
+        </property>
+        <property name="dfSelfSmoking" type="string">
+            <column name="DF_SELF_SMOKING" length="10" />
+        </property>
+        <property name="dfSelfHomeaddr" type="string">
+            <column name="DF_SELF_HOMEADDR" length="450" />
+        </property>
+        <property name="dfSelfHomeaddr2" type="string">
+            <column name="DF_SELF_HOMEADDR2" length="150" />
+        </property>
+        <property name="dfSelfHomepostal" type="string">
+            <column name="DF_SELF_HOMEPOSTAL" length="60" />
+        </property>
+        <property name="dfSelfHomecntry" type="string">
+            <column name="DF_SELF_HOMECNTRY" length="60" />
+        </property>
+        <property name="dfSelfRegmailaddrSame" type="string">
+            <column name="DF_SELF_REGMAILADDR_SAME" length="1" />
+        </property>
+        <property name="dfSelfMailaddr" type="string">
+            <column name="DF_SELF_MAILADDR" length="450" />
+        </property>
+        <property name="dfSelfMailaddr2" type="string">
+            <column name="DF_SELF_MAILADDR2" length="150" />
+        </property>
+        <property name="dfSelfMailpostal" type="string">
+            <column name="DF_SELF_MAILPOSTAL" length="60" />
+        </property>
+        <property name="dfSelfMailcntry" type="string">
+            <column name="DF_SELF_MAILCNTRY" length="20" />
+        </property>
+        <property name="dfSelfAddrreason" type="string">
+            <column name="DF_SELF_ADDRREASON" length="150" />
+        </property>
+        <property name="dfSelfOffaddr" type="string">
+            <column name="DF_SELF_OFFADDR" length="450" />
+        </property>
+        <property name="dfSelfPersemail" type="string">
+            <column name="DF_SELF_PERSEMAIL" length="60" />
+        </property>
+        <property name="dfSelfOffemail" type="string">
+            <column name="DF_SELF_OFFEMAIL" length="60" />
+        </property>
+        <property name="dfSelfMobile" type="string">
+            <column name="DF_SELF_MOBILE" length="60" />
+        </property>
+        <property name="dfSelfHome" type="string">
+            <column name="DF_SELF_HOME" length="60" />
+        </property>
+        <property name="dfSelfOffice" type="string">
+            <column name="DF_SELF_OFFICE" length="60" />
+        </property>
+        <property name="dfSelfFax" type="string">
+            <column name="DF_SELF_FAX" length="60" />
+        </property>
+        <property name="dfSelfAnnlincome" type="java.lang.Double">
+            <column name="DF_SELF_ANNLINCOME" precision="126" scale="0" />
+        </property>
+        <property name="dfSelfSrcFd" type="string">
+            <column name="DF_SELF_SRCFUND" length="150" />
+        </property>
+        <property name="dfSelfempcat" type="string">
+            <column name="DF_SELF_EMPCATEGORY" length="150" />
+        </property>
+        
+        <property name="dfSelfCompname" type="string">
+            <column name="DF_SELF_COMPNAME" length="150" />
+        </property>
+        <property name="dfSelfBusinatr" type="string">
+            <column name="DF_SELF_BUSINATR" length="60" />
+        </property>
+        <property name="dfSelfBusinatrDets" type="string">
+            <column name="DF_SELF_BUSINATR_DETS" length="150" />
+        </property>
+        <property name="dfSelfUsnotifyflg" type="string">
+            <column name="DF_SELF_USNOTIFYFLG" length="1" />
+        </property>
+        <property name="dfSelfUspersonflg" type="string">
+            <column name="DF_SELF_USPERSONFLG" length="1" />
+        </property>
+        <property name="dfSelfUstaxno" type="string">
+            <column name="DF_SELF_USTAXNO" length="60" />
+        </property>
+        <property name="dfSelfRescountry" type="string">
+            <column name="DF_SELF_RESCOUNTRY" length="30" />
+        </property>
+        <property name="dfSpsName" type="string">
+            <column name="DF_SPS_NAME" length="75" />
+        </property>
+        <property name="dfSpsDob" type="date">
+            <column name="DF_SPS_DOB" length="7" />
+        </property>
+        <property name="dfSpsAge" type="string">
+            <column name="DF_SPS_AGE" length="3" />
+        </property>
+        <property name="dfSpsNationality" type="string">
+            <column name="DF_SPS_NATIONALITY" length="30" />
+        </property>
+        <property name="dfSpsIdtype" type="string">
+            <column name="DF_SPS_IDTYPE" length="20" />
+        </property>
+        <property name="dfSpsNric" type="string">
+            <column name="DF_SPS_NRIC" length="20" />
+        </property>
+        <property name="dfSpsMartsts" type="string">
+            <column name="DF_SPS_MARTSTS" length="20" />
+        </property>
+        <property name="dfSpsOccpn" type="string">
+            <column name="DF_SPS_OCCPN" length="60" />
+        </property>
+        <property name="dfSpsGender" type="string">
+            <column name="DF_SPS_GENDER" length="10" />
+        </property>
+        <property name="dfSpsEmpsts" type="string">
+            <column name="DF_SPS_EMPSTS" length="20" />
+        </property>
+        <property name="dfSpsSmoking" type="string">
+            <column name="DF_SPS_SMOKING" length="10" />
+        </property>
+        <property name="dfSpsPersemail" type="string">
+            <column name="DF_SPS_PERSEMAIL" length="150" />
+        </property>
+        <property name="dfSpsHp" type="string">
+            <column name="DF_SPS_HP" length="150" />
+        </property>
+        <property name="dfSpsOffice" type="string">
+            <column name="DF_SPS_OFFICE" length="60" />
+        </property>
+        <property name="dfSpsHome" type="string">
+            <column name="DF_SPS_HOME" length="60" />
+        </property>
+        <property name="dfSpsFax" type="string">
+            <column name="DF_SPS_FAX" length="60" />
+        </property>
+        <property name="dfSpsHomeaddr" type="string">
+            <column name="DF_SPS_HOMEADDR" length="450" />
+        </property>
+        <property name="dfSpsHomeaddr2" type="string">
+            <column name="DF_SPS_HOMEADDR2" length="150" />
+        </property>
+        <property name="dfSpsHomepostalcode" type="string">
+            <column name="DF_SPS_HOMEPOSTALCODE" length="20" />
+        </property>
+        <property name="dfSpsHomecntry" type="string">
+            <column name="DF_SPS_HOMECNTRY" length="60" />
+        </property>
+        <property name="dfSpsRegmailaddrSame" type="string">
+            <column name="DF_SPS_REGMAILADDR_SAME" length="1" />
+        </property>
+        <property name="dfSpsRegaddrAsSelf" type="string">
+            <column name="DF_SPS_REGADDR_AS_SELF" length="1" />
+        </property>
+        <property name="dfSpsMailaddrAsSelf" type="string">
+            <column name="DF_SPS_MAILADDR_AS_SELF" length="1" />
+        </property>
+        <property name="dfSpsMailaddr" type="string">
+            <column name="DF_SPS_MAILADDR" length="450" />
+        </property>
+        <property name="dfSpsMailaddr2" type="string">
+            <column name="DF_SPS_MAILADDR2" length="150" />
+        </property>
+        <property name="dfSpsMailpostal" type="string">
+            <column name="DF_SPS_MAILPOSTAL" length="20" />
+        </property>
+        <property name="dfSpsMailcntry" type="string">
+            <column name="DF_SPS_MAILCNTRY" length="150" />
+        </property>
+        <property name="dfSpsAddrreason" type="string">
+            <column name="DF_SPS_ADDRREASON" length="60" />
+        </property>
+        <property name="dfSpsSrcfund" type="string">
+            <column name="DF_SPS_SRCFUND" length="150" />
+        </property>
+        <property name="dfSpsAnnlincome" type="java.lang.Double">
+            <column name="DF_SPS_ANNLINCOME" precision="126" scale="0" />
+        </property>
+         <property name="dfSpsempcat" type="string">
+            <column name="DF_SPS_EMPCATEGORY" length="150" />
+        </property>
+        <property name="dfSpsCompname" type="string">
+            <column name="DF_SPS_COMPNAME" length="150" />
+        </property>
+        <property name="dfSpsBusinatr" type="string">
+            <column name="DF_SPS_BUSINATR" length="60" />
+        </property>
+        <property name="dfSpsBusinatrDets" type="string">
+            <column name="DF_SPS_BUSINATR_DETS" length="150" />
+        </property>
+        <property name="dfSpsUsnotifyflg" type="string">
+            <column name="DF_SPS_USNOTIFYFLG" length="1" />
+        </property>
+        <property name="dfSpsUspersonflg" type="string">
+            <column name="DF_SPS_USPERSONFLG" length="1" />
+        </property>
+        <property name="dfSpsUstaxno" type="string">
+            <column name="DF_SPS_USTAXNO" length="60" />
+        </property>
+        <property name="dfSpsRescountry" type="string">
+            <column name="DF_SPS_RESCOUNTRY" length="30" />
+        </property>
+        <property name="dfCreatedDatetime" type="timestamp">
+            <column name="DF_CREATED_DATETIME" />
+        </property>
+        <property name="dfCreatedBy" type="string" update="false">
+            <column name="DF_CREATED_BY" length="20" />
+        </property>
+        <property name="dfCreatedDate" type="date" update="false">
+            <column name="DF_CREATED_DATE" length="7" />
+        </property>
+        <property name="dfModifiedBy" type="string">
+            <column name="DF_MODIFIED_BY" length="20" />
+        </property>
+        <property name="dfModifiedDate" type="date">
+            <column name="DF_MODIFIED_DATE" length="7" />
+        </property>
+          <property name="dfRemarks" type="string">
+            <column name="DF_REMARKS" length="1000" />
+        </property>
+        
+        
+        <set name="fnaLifeinsuranceNomineeses" table="FNA_LIFEINSURANCE_NOMINEES" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="FNA_ID" length="20" />
+            </key>
+            <one-to-many class="com.fipa.dto.FnaLifeinsuranceNominees" />
+        </set>
+        <set name="fnaAssetCashdetses" table="FNA_ASSET_CASHDETS" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="FNA_ID" length="20" />
+            </key>
+            <one-to-many class="com.fipa.dto.FnaAssetCashdets" />
+        </set>
+        <set name="fnaLifeinsuranceCoverageses" table="FNA_LIFEINSURANCE_COVERAGES" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="FNA_ID" length="20" />
+            </key>
+            <one-to-many class="com.fipa.dto.FnaLifeinsuranceCoverages" />
+        </set>
+        <set name="fnaSummaryAnalysises" table="FNA_SUMMARY_ANALYSIS" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="FNA_ID" length="20" />
+            </key>
+            <one-to-many class="com.fipa.dto.FnaSummaryAnalysis" />
+        </set>
+        <set name="fnaCpfMonthcontDetses" table="FNA_CPF_MONTHCONT_DETS" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="FNA_ID" length="20" />
+            </key>
+            <one-to-many class="com.fipa.dto.FnaCpfMonthcontDets" />
+        </set>
+        <set name="fnaRetireplanIncomes" table="FNA_RETIREPLAN_INCOME" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="FNA_ID" length="20" />
+            </key>
+            <one-to-many class="com.fipa.dto.FnaRetireplanIncome" />
+        </set>
+        <set name="fnaLifeinsuranceDetses" table="FNA_LIFEINSURANCE_DETS" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="FNA_ID" length="20" />
+            </key>
+            <one-to-many class="com.fipa.dto.FnaLifeinsuranceDets" />
+        </set>
+        <set name="fnaContingencyDetses" table="FNA_CONTINGENCY_DETS" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="FNA_ID" length="20" />
+            </key>
+            <one-to-many class="com.fipa.dto.FnaContingencyDets" />
+        </set>
+        <set name="fnaAssetOtherdetses" table="FNA_ASSET_OTHERDETS" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="FNA_ID" length="20" />
+            </key>
+            <one-to-many class="com.fipa.dto.FnaAssetOtherdets" />
+        </set>
+        <set name="fnaDependantDetses" table="FNA_DEPENDANT_DETS" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="FNA_ID" length="20" />
+            </key>
+            <one-to-many class="com.fipa.dto.FnaDependantDets" />
+        </set>
+        <set name="fnaCpfDeductionses" table="FNA_CPF_DEDUCTIONS" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="FNA_ID" length="20" />
+            </key>
+            <one-to-many class="com.fipa.dto.FnaCpfDeductions" />
+        </set>
+        <set name="fnaFingoalsconcerns" table="FNA_FINGOALSCONCERN" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="FNA_ID" length="20" />
+            </key>
+            <one-to-many class="com.fipa.dto.FnaFingoalsconcern" />
+        </set>
+        <set name="fnaOthareaconcerns" table="FNA_OTHAREACONCERN" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="FNA_ID" length="20" />
+            </key>
+            <one-to-many class="com.fipa.dto.FnaOthareaconcern" />
+        </set>
+        <set name="fnaAssetBusiandpersdetses" table="FNA_ASSET_BUSIANDPERSDETS" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="FNA_ID" length="20" />
+            </key>
+            <one-to-many class="com.fipa.dto.FnaAssetBusiandpersdets" />
+        </set>
+        <set name="fnaInputinvestmentsDetses" table="FNA_INPUTINVESTMENTS_DETS" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="FNA_ID" length="20" />
+            </key>
+            <one-to-many class="com.fipa.dto.FnaInputinvestmentsDets" />
+        </set>
+        <set name="fnaSavingsinvDetses" table="FNA_SAVINGSINV_DETS" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="FNA_ID" length="20" />
+            </key>
+            <one-to-many class="com.fipa.dto.FnaSavingsinvDets" />
+        </set>
+        <set name="fnaCurassDetses" table="FNA_CURASS_DETS" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="FNA_ID" length="20" />
+            </key>
+            <one-to-many class="com.fipa.dto.FnaCurassDets" />
+        </set>
+        <set name="fnaLifeinsuranceMvRets" table="FNA_LIFEINSURANCE_MV_RET" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="FNA_ID" length="20" />
+            </key>
+            <one-to-many class="com.fipa.dto.FnaLifeinsuranceMvRet" />
+        </set>
+        <set name="fnaLifeinsuranceDisablebenfses" table="FNA_LIFEINSURANCE_DISABLEBENFS" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="FNA_ID" length="20" />
+            </key>
+            <one-to-many class="com.fipa.dto.FnaLifeinsuranceDisablebenfs" />
+        </set>
+        <set name="fnaPropownDetses" table="FNA_PROPOWN_DETS" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="FNA_ID" length="20" />
+            </key>
+            <one-to-many class="com.fipa.dto.FnaPropownDets" />
+        </set>
+        <set name="fnaCpfBalanceDetses" table="FNA_CPF_BALANCE_DETS" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="FNA_ID" length="20" />
+            </key>
+            <one-to-many class="com.fipa.dto.FnaCpfBalanceDets" />
+        </set>
+        <set name="fnaRecomReasonses" table="FNA_RECOM_REASONS" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="FNA_ID" length="20" />
+            </key>
+            <one-to-many class="com.fipa.dto.FnaRecomReasons" />
+        </set>
+        <set name="fnaLifeinsuranceBasicriderses" table="FNA_LIFEINSURANCE_BASICRIDERS" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="FNA_ID" length="20" />
+            </key>
+            <one-to-many class="com.fipa.dto.FnaLifeinsuranceBasicriders" />
+        </set>
+        <set name="fnaVehicleownDetses" table="FNA_VEHICLEOWN_DETS" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="FNA_ID" length="20" />
+            </key>
+            <one-to-many class="com.fipa.dto.FnaVehicleownDets" />
+        </set>
+        <set name="fnaEstatePlans" table="FNA_ESTATE_PLAN" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="FNA_ID" length="20" />
+            </key>
+            <one-to-many class="com.fipa.dto.FnaEstatePlan" />
+        </set>
+        <set name="fnaRiskprefDetses" table="FNA_RISKPREF_DETS" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="FNA_ID" length="20" />
+            </key>
+            <one-to-many class="com.fipa.dto.FnaRiskprefDets" />
+        </set>
+        <set name="fnaHealthinsInfos" table="FNA_HEALTHINS_INFO" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="FNA_ID" length="20" />
+            </key>
+            <one-to-many class="com.fipa.dto.FnaHealthinsInfo" />
+        </set>
+        <set name="fnaAdvDeclares" table="FNA_ADV_DECLARE" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="FNA_ID" length="20" />
+            </key>
+            <one-to-many class="com.fipa.dto.FnaAdvDeclare" />
+        </set>
+        <set name="fnaCashAtBanks" table="FNA_CASH_AT_BANK" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="FNA_ID" length="20" />
+            </key>
+            <one-to-many class="com.fipa.dto.FnaCashAtBank" />
+        </set>
+        <set name="fnaLifeinsuranceChildedcs" table="FNA_LIFEINSURANCE_CHILDEDC" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="FNA_ID" length="20" />
+            </key>
+            <one-to-many class="com.fipa.dto.FnaLifeinsuranceChildedc" />
+        </set>
+        <set name="fnaExpenditureDetses" table="FNA_EXPENDITURE_DETS" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="FNA_ID" length="20" />
+            </key>
+            <one-to-many class="com.fipa.dto.FnaExpenditureDets" />
+        </set>
+        <set name="fnaPersprios" table="FNA_PERSPRIO" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="FNA_ID" length="20" />
+            </key>
+            <one-to-many class="com.fipa.dto.FnaPersprio" />
+        </set>
+        <set name="fnaFinLiabilities" table="FNA_FIN_LIABILITY" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="FNA_ID" length="20" />
+            </key>
+            <one-to-many class="com.fipa.dto.FnaFinLiability" />
+        </set>
+        <set name="fnaSwtchrepPlanDets" table="FNA_SWTCHREP_PLAN_DET" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="FNA_ID" length="20" />
+            </key>
+            <one-to-many class="com.fipa.dto.FnaSwtchrepPlanDet" />
+        </set>
+        <set name="fnaSrcofincomes" table="FNA_SRCOFINCOME" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="FNA_ID" length="20" />
+            </key>
+            <one-to-many class="com.fipa.dto.FnaSrcofincome" />
+        </set>
+        <set name="fnaRecomPrdtplanDets" table="FNA_RECOM_PRDTPLAN_DET" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="FNA_ID" length="20" />
+            </key>
+            <one-to-many class="com.fipa.dto.FnaRecomPrdtplanDet" />
+        </set>
+        <set name="fnaRecomFundDets" table="FNA_RECOM_FUND_DET" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="FNA_ID" length="20" />
+            </key>
+            <one-to-many class="com.fipa.dto.FnaRecomFundDet" />
+        </set>
+        <set name="fnaSwtchrepFundDets" table="FNA_SWTCHREP_FUND_DET" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="FNA_ID" length="20" />
+            </key>
+            <one-to-many class="com.fipa.dto.FnaSwtchrepFundDet" />
+        </set>
+        <set name="fnaRetireplanDetses" table="FNA_RETIREPLAN_DETS" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="FNA_ID" length="20" />
+            </key>
+            <one-to-many class="com.fipa.dto.FnaRetireplanDets" />
+        </set>
+        <set name="fnaApptypeses" table="FNA_APPTYPES" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="FNA_ID" length="20" />
+            </key>
+            <one-to-many class="com.fipa.dto.FnaApptypes" />
+        </set>
+        <set name="fnaChilddetailses" table="FNA_CHILDDETAILS" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="FNA_ID" length="20" />
+            </key>
+            <one-to-many class="com.fipa.dto.FnaChilddetails" />
+        </set>
+        <set name="fnaInvsetmentSummaries" table="FNA_INVSETMENT_SUMMARY" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="FNA_ID" length="20" />
+            </key>
+            <one-to-many class="com.fipa.dto.FnaInvsetmentSummary" />
+        </set>
+    </class>
+</hibernate-mapping>

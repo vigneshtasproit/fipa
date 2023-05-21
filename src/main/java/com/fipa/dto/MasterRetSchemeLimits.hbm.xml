@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Mar 5, 2019 9:27:04 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.fipa.dto.MasterRetSchemeLimits" table="MASTER_RETSCHEME_LIMITS">
+        <id name="schId" type="java.lang.Double">
+            <column name="SCHID" precision="126" scale="0"/>
+            <generator class="assigned" />
+        </id>
+         <property name="brthYr" type="java.lang.Double">
+            <column name="BIRTH_YEAR" precision="4" scale="0" />
+        </property>
+      <property name="brsLimit" type="java.lang.Double">
+            <column name="BRS_LIMIT" precision="126" scale="0" />
+        </property>
+        <property name="frsLimit" type="java.lang.Double">
+            <column name="FRS_LIMIT" precision="126" scale="0" />
+        </property>
+        <property name="ersLimit" type="java.lang.Double">
+            <column name="ERS_LIMIT" precision="126" scale="0" />
+        </property>
+        <property name="bhcSum" type="java.lang.Double">
+            <column name="BHC_SUM" precision="126" scale="0" />
+        </property>
+    </class>
+</hibernate-mapping>

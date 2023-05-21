@@ -1,0 +1,111 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated May 17, 2018 11:20:37 AM by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.fipa.dto.FnaSummaryAnalysis" table="FNA_SUMMARY_ANALYSIS" >
+        <id name="saId" type="string">
+            <column name="SA_ID" length="20" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="fnaSelfspouseDets" class="com.fipa.dto.FnaSelfspouseDets" fetch="select">
+            <column name="FNA_ID" length="20" />
+        </many-to-one>
+        <property name="saSelfFamprot" type="java.lang.Double">
+            <column name="SA_SELF_FAMPROT" precision="126" scale="0" />
+        </property>
+        <property name="saSelfAnnldisability" type="java.lang.Double">
+            <column name="SA_SELF_ANNLDISABILITY" precision="126" scale="0" />
+        </property>
+        <property name="saSelfMajorill" type="java.lang.Double">
+            <column name="SA_SELF_MAJORILL" precision="126" scale="0" />
+        </property>
+        <property name="saSpsFamprot" type="java.lang.Double">
+            <column name="SA_SPS_FAMPROT" precision="126" scale="0" />
+        </property>
+        <property name="saSpsAnnldisability" type="java.lang.Double">
+            <column name="SA_SPS_ANNLDISABILITY" precision="126" scale="0" />
+        </property>
+        <property name="saSpsMajorill" type="java.lang.Double">
+            <column name="SA_SPS_MAJORILL" precision="126" scale="0" />
+        </property>
+        <property name="saSelfHosptype" type="string">
+            <column name="SA_SELF_HOSPTYPE" length="20" />
+        </property>
+        <property name="saSelfWardtype" type="string">
+            <column name="SA_SELF_WARDTYPE" length="20" />
+        </property>
+        <property name="saSelfExisthosptype" type="string">
+            <column name="SA_SELF_EXISTHOSPTYPE" length="20" />
+        </property>
+        <property name="saSelfExistpoltype" type="string">
+            <column name="SA_SELF_EXISTPOLTYPE" length="20" />
+        </property>
+        <property name="saSpsHosptype" type="string">
+            <column name="SA_SPS_HOSPTYPE" length="20" />
+        </property>
+        <property name="saSpsWardtype" type="string">
+            <column name="SA_SPS_WARDTYPE" length="20" />
+        </property>
+        <property name="saSpsExisthosptype" type="string">
+            <column name="SA_SPS_EXISTHOSPTYPE" length="20" />
+        </property>
+        <property name="saSpsExistpoltype" type="string">
+            <column name="SA_SPS_EXISTPOLTYPE" length="20" />
+        </property>
+        <property name="saSelfLumpsumret" type="java.lang.Double">
+            <column name="SA_SELF_LUMPSUMRET" precision="126" scale="0" />
+        </property>
+        <property name="saSpsLumpsumret" type="java.lang.Double">
+            <column name="SA_SPS_LUMPSUMRET" precision="126" scale="0" />
+        </property>
+        <property name="saSelfEdntotsaving" type="java.lang.Double">
+            <column name="SA_SELF_EDNTOTSAVING" precision="126" scale="0" />
+        </property>
+        <property name="saSelfEdncursaving" type="java.lang.Double">
+            <column name="SA_SELF_EDNCURSAVING" precision="126" scale="0" />
+        </property>
+        <property name="saSelfEdnestsaving" type="java.lang.Double">
+            <column name="SA_SELF_EDNESTSAVING" precision="126" scale="0" />
+        </property>
+        <property name="saSpsEdntotsaving" type="java.lang.Double">
+            <column name="SA_SPS_EDNTOTSAVING" precision="126" scale="0" />
+        </property>
+        <property name="saSpsEdncursaving" type="java.lang.Double">
+            <column name="SA_SPS_EDNCURSAVING" precision="126" scale="0" />
+        </property>
+        <property name="saSpsEdnestsaving" type="java.lang.Double">
+            <column name="SA_SPS_EDNESTSAVING" precision="126" scale="0" />
+        </property>
+        <property name="saSelfOthtotsaving" type="java.lang.Double">
+            <column name="SA_SELF_OTHTOTSAVING" precision="126" scale="0" />
+        </property>
+        <property name="saSelfOthcursaving" type="java.lang.Double">
+            <column name="SA_SELF_OTHCURSAVING" precision="126" scale="0" />
+        </property>
+        <property name="saSelfOthestsaving" type="java.lang.Double">
+            <column name="SA_SELF_OTHESTSAVING" precision="126" scale="0" />
+        </property>
+        <property name="saSpsOthtotsaving" type="java.lang.Double">
+            <column name="SA_SPS_OTHTOTSAVING" precision="126" scale="0" />
+        </property>
+        <property name="saSpsOthcursaving" type="java.lang.Double">
+            <column name="SA_SPS_OTHCURSAVING" precision="126" scale="0" />
+        </property>
+        <property name="saSpsOthestsaving" type="java.lang.Double">
+            <column name="SA_SPS_OTHESTSAVING" precision="126" scale="0" />
+        </property>
+        <property name="saCreatedBy" type="string">
+            <column name="SA_CREATED_BY" length="20" />
+        </property>
+        <property name="saCreatedDate" type="date">
+            <column name="SA_CREATED_DATE" length="7" />
+        </property>
+        <property name="saModifiedBy" type="string">
+            <column name="SA_MODIFIED_BY" length="20" />
+        </property>
+        <property name="saModifiedDate" type="date">
+            <column name="SA_MODIFIED_DATE" length="7" />
+        </property>
+    </class>
+</hibernate-mapping>

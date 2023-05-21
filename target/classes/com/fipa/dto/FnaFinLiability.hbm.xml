@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated May 17, 2018 11:20:37 AM by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.fipa.dto.FnaFinLiability" table="FNA_FIN_LIABILITY" >
+        <id name="liabId" type="string">
+            <column name="LIAB_ID" length="20" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="fnaSelfspouseDets" class="com.fipa.dto.FnaSelfspouseDets" fetch="select">
+            <column name="FNA_ID" length="20" />
+        </many-to-one>
+        <property name="liabSelfOverdraft" type="java.lang.Double">
+            <column name="LIAB_SELF_OVERDRAFT" precision="126" scale="0" />
+        </property>
+        <property name="liabSpsOverdraft" type="java.lang.Double">
+            <column name="LIAB_SPS_OVERDRAFT" precision="126" scale="0" />
+        </property>
+        <property name="liabSelfShortloan" type="java.lang.Double">
+            <column name="LIAB_SELF_SHORTLOAN" precision="126" scale="0" />
+        </property>
+        <property name="liabSpsShortloan" type="java.lang.Double">
+            <column name="LIAB_SPS_SHORTLOAN" precision="126" scale="0" />
+        </property>
+        <property name="liabSelfTaxes" type="java.lang.Double">
+            <column name="LIAB_SELF_TAXES" precision="126" scale="0" />
+        </property>
+        <property name="liabSpsTaxes" type="java.lang.Double">
+            <column name="LIAB_SPS_TAXES" precision="126" scale="0" />
+        </property>
+        <property name="liabSelfOthers" type="java.lang.Double">
+            <column name="LIAB_SELF_OTHERS" precision="126" scale="0" />
+        </property>
+        <property name="liabSpsOthers" type="java.lang.Double">
+            <column name="LIAB_SPS_OTHERS" precision="126" scale="0" />
+        </property>
+        <property name="liabCreatedBy" type="string">
+            <column name="LIAB_CREATED_BY" length="20" />
+        </property>
+        <property name="liabCreatedDate" type="date">
+            <column name="LIAB_CREATED_DATE" length="7" />
+        </property>
+        <property name="liabModifiedBy" type="string">
+            <column name="LIAB_MODIFIED_BY" length="20" />
+        </property>
+        <property name="liabModifiedDate" type="date">
+            <column name="LIAB_MODIFIED_DATE" length="7" />
+        </property>
+        <property name="liabSelfCcLoan" type="java.lang.Double">
+            <column name="LIAB_SELF_CC_LOAN" precision="126" scale="0" />
+        </property>
+        <property name="liabSpsCcLoan" type="java.lang.Double">
+            <column name="LIAB_SPS_CC_LOAN" precision="126" scale="0" />
+        </property>
+        <property name="liabSelfShortmort" type="java.lang.Double">
+            <column name="LIAB_SELF_SHORTMORT" precision="126" scale="0" />
+        </property>
+        <property name="liabSpsShortmort" type="java.lang.Double">
+            <column name="LIAB_SPS_SHORTMORT" precision="126" scale="0" />
+        </property>
+        <property name="liabSelfContigent" type="java.lang.Double">
+            <column name="LIAB_SELF_CONTIGENT" precision="126" scale="0" />
+        </property>
+        <property name="liabSpsContigent" type="java.lang.Double">
+            <column name="LIAB_SPS_CONTIGENT" precision="126" scale="0" />
+        </property>  
+         <property name="liabFamOverdraft" type="java.lang.Double">
+            <column name="LIAB_FAM_OVERDRAFT" precision="126" scale="0" />
+        </property>
+         <property name="liabFamShortloan" type="java.lang.Double">
+            <column name="LIAB_FAM_SHORTLOAN" precision="126" scale="0" />
+        </property>
+         <property name="liabFamTaxes" type="java.lang.Double">
+            <column name="LIAB_FAM_TAXES" precision="126" scale="0" />
+        </property>
+         <property name="liabFamOthers" type="java.lang.Double">
+            <column name="LIAB_FAM_OTHERS" precision="126" scale="0" />
+        </property>
+         <property name="liabFamCCLoan" type="java.lang.Double">
+            <column name="LIAB_FAM_CC_LOAN" precision="126" scale="0" />
+        </property>
+         <property name="liabFamShortmort" type="java.lang.Double">
+            <column name="LIAB_FAM_SHORTMORT" precision="126" scale="0" />
+        </property>
+         <property name="liabFamContigent" type="java.lang.Double">
+            <column name="LIAB_FAM_CONTIGENT" precision="126" scale="0" />
+        </property> 
+    </class>
+</hibernate-mapping>

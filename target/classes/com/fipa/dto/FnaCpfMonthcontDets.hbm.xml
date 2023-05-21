@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated May 17, 2018 11:20:37 AM by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.fipa.dto.FnaCpfMonthcontDets" table="FNA_CPF_MONTHCONT_DETS" >
+        <id name="ccPkId" type="string">
+            <column name="CC_PK_ID" length="20" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="fnaSelfspouseDets" class="com.fipa.dto.FnaSelfspouseDets" fetch="select">
+            <column name="FNA_ID" length="20" />
+        </many-to-one>
+        <property name="ccSelfOrSps" type="string">
+            <column name="CC_SELF_OR_SPS" length="20" />
+        </property>
+        <property name="ccEmpleContrb" type="java.lang.Double">
+            <column name="CC_EMPLE_CONTRB" precision="126" scale="0" />
+        </property>
+        <property name="ccEmplrContrb" type="java.lang.Double">
+            <column name="CC_EMPLR_CONTRB" precision="126" scale="0" />
+        </property>
+        <property name="ccCrtdBy" type="string">
+            <column name="CC_CRTD_BY" length="20" />
+        </property>
+        <property name="ccCrtdDate" type="date">
+            <column name="CC_CRTD_DATE" length="7" />
+        </property>
+        <property name="ccModBy" type="string">
+            <column name="CC_MOD_BY" length="20" />
+        </property>
+        <property name="ccModDate" type="date">
+            <column name="CC_MOD_DATE" length="7" />
+        </property>
+    </class>
+</hibernate-mapping>

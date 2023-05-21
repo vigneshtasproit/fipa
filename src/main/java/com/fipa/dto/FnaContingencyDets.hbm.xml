@@ -1,0 +1,322 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated May 17, 2018 11:20:37 AM by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.fipa.dto.FnaContingencyDets" table="FNA_CONTINGENCY_DETS" >
+        <id name="conId" type="string">
+            <column name="CON_ID" length="20" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="fnaSelfspouseDets" class="com.fipa.dto.FnaSelfspouseDets" fetch="select">
+            <column name="FNA_ID" length="20" />
+        </many-to-one>
+        <property name="tpdSelfAmt" type="java.lang.Double">
+            <column name="TPD_SELF_AMT" precision="126" scale="0">
+                <comment>In the event of your death, Total Permanent Disability or diagnosis with critical illness, how much money would you like to have annually for yourself and
+                love ones?</comment>
+            </column>
+        </property>
+        <property name="tpdSpsAmt" type="java.lang.Double">
+            <column name="TPD_SPS_AMT" precision="126" scale="0">
+                <comment>-do -</comment>
+            </column>
+        </property>
+        <property name="tpdChildAmt" type="java.lang.Double">
+            <column name="TPD_CHILD_AMT" precision="126" scale="0">
+                <comment>-do -</comment>
+            </column>
+        </property>
+        <property name="tpdFamilyAmt" type="java.lang.Double">
+            <column name="TPD_FAMILY_AMT" precision="126" scale="0">
+                <comment>-do -</comment>
+            </column>
+        </property>
+        
+         <property name="tpdSpsSelfAmt" type="java.lang.Double">
+            <column name="TPD_SPS_SELF_AMT" precision="126" scale="0">
+               <!--  <comment>In the event of your death, Total Permanent Disability or diagnosis with critical illness, how much money would you like to have annually for yourself and
+                love ones?</comment> -->
+            </column>
+        </property>
+        <property name="tpdSpsSpsAmt" type="java.lang.Double">
+            <column name="TPD_SPS_SPS_AMT" precision="126" scale="0">
+               <!--  <comment>-do -</comment> -->
+            </column>
+        </property>
+        <property name="tpdSpsChildAmt" type="java.lang.Double">
+            <column name="TPD_SPS_CHILD_AMT" precision="126" scale="0">
+                <!-- <comment>-do -</comment> -->
+            </column>
+        </property>
+        <property name="tpdSpsFamilyAmt" type="java.lang.Double">
+            <column name="TPD_SPS_FAMILY_AMT" precision="126" scale="0">
+               <!--  <comment>-do -</comment> -->
+            </column>
+        </property>
+        
+        
+        <property name="sdLivingneedSpsPrcnt" type="java.lang.Double">
+            <column name="SD_LIVINGNEED_SPS_PRCNT" precision="126" scale="0">
+                <comment>What is the % of living needs you would like to provide for your love ones annually in order to live comfortably after you are gone?</comment>
+            </column>
+        </property>
+        <property name="sdLivingneedChildPrcnt" type="java.lang.Double">
+            <column name="SD_LIVINGNEED_CHILD_PRCNT" precision="126" scale="0">
+                <comment>-do-</comment>
+            </column>
+        </property>
+        <property name="sdLivingneedFamilyPrcnt" type="java.lang.Double">
+            <column name="SD_LIVINGNEED_FAMILY_PRCNT" precision="126" scale="0">
+                <comment>-do-</comment>
+            </column>
+        </property>
+        <property name="sdIntendSpsYrs" type="string">
+            <column name="SD_INTEND_SPS_YRS" length="20">
+                <comment>How many years do you intend to provide for your love ones?</comment>
+            </column>
+        </property>
+        <property name="sdIntendChildYrs" type="string">
+            <column name="SD_INTEND_CHILD_YRS" length="20">
+                <comment>-do-</comment>
+            </column>
+        </property>
+        <property name="sdIntendFamilyYrs" type="string">
+            <column name="SD_INTEND_FAMILY_YRS" length="20">
+                <comment>-do-</comment>
+            </column>
+        </property>
+        <property name="sdSpsAnnlIncome" type="java.lang.Double">
+            <column name="SD_SPS_ANNL_INCOME" precision="126" scale="0">
+                <comment>Would your spouse be receiving any income in the event of your death?</comment>
+            </column>
+        </property>
+        <property name="sdSpsAnnlIncomeYrs" type="string">
+            <column name="SD_SPS_ANNL_INCOME_YRS" length="20">
+                <comment>-do-</comment>
+            </column>
+        </property>
+        <property name="sdLivingneedSelfRemark" type="string">
+            <column name="SD_LIVINGNEED_SELF_REMARK" length="300" />
+        </property>
+        <property name="spdLivingneedSpsPrcnt" type="java.lang.Double">
+            <column name="SPD_LIVINGNEED_SPS_PRCNT" precision="126" scale="0" />
+        </property>
+        <property name="spdLivingneedChildPrcnt" type="java.lang.Double">
+            <column name="SPD_LIVINGNEED_CHILD_PRCNT" precision="126" scale="0" />
+        </property>
+        <property name="spdLivingneedFamilyPrcnt" type="java.lang.Double">
+            <column name="SPD_LIVINGNEED_FAMILY_PRCNT" precision="126" scale="0" />
+        </property>
+        <property name="spdIntendSelfYrs" type="string">
+            <column name="SPD_INTEND_SELF_YRS" length="20" />
+        </property>
+        <property name="spdIntendChildYrs" type="string">
+            <column name="SPD_INTEND_CHILD_YRS" length="20" />
+        </property>
+        <property name="spdIntendFamilyYrs" type="string">
+            <column name="SPD_INTEND_FAMILY_YRS" length="20" />
+        </property>
+        <property name="spdSelfAnnlIncome" type="java.lang.Double">
+            <column name="SPD_SELF_ANNL_INCOME" precision="126" scale="0" />
+        </property>
+        <property name="spdSelfAnnlIncomeYrs" type="string">
+            <column name="SPD_SELF_ANNL_INCOME_YRS" length="20" />
+        </property>
+        <property name="sdLivingneedSpsRemark" type="string">
+            <column name="SD_LIVINGNEED_SPS_REMARK" length="300" />
+        </property>
+        <property name="tpdSelfLivingneedPrcnt" type="java.lang.Double">
+            <column name="TPD_SELF_LIVINGNEED_PRCNT" precision="126" scale="0" />
+        </property>
+        <property name="tpdSpsLivingneedPrcnt" type="java.lang.Double">
+            <column name="TPD_SPS_LIVINGNEED_PRCNT" precision="126" scale="0" />
+        </property>
+        <property name="tpdChildLivingneedPrcnt" type="java.lang.Double">
+            <column name="TPD_CHILD_LIVINGNEED_PRCNT" precision="126" scale="0" />
+        </property>
+        <property name="tpdFamilyLivingneedPrcnt" type="java.lang.Double">
+            <column name="TPD_FAMILY_LIVINGNEED_PRCNT" precision="126" scale="0" />
+        </property>
+        <property name="tpdSelfIntendYrs" type="string">
+            <column name="TPD_SELF_INTEND_YRS" length="20" />
+        </property>
+        <property name="tpdSpsIntendYrs" type="string">
+            <column name="TPD_SPS_INTEND_YRS" length="20" />
+        </property>
+        <property name="tpdChildIntendYrs" type="string">
+            <column name="TPD_CHILD_INTEND_YRS" length="20" />
+        </property>
+        <property name="tpdFamilyIntendYrs" type="string">
+            <column name="TPD_FAMILY_INTEND_YRS" length="20" />
+        </property>
+        <property name="tpdSelfAnnlincome" type="java.lang.Double">
+            <column name="TPD_SELF_ANNLINCOME" precision="126" scale="0" />
+        </property>
+        <property name="tpdSelfAnnlincomeYr" type="string">
+            <column name="TPD_SELF_ANNLINCOME_YR" length="20" />
+        </property>
+        <property name="tpdSelfMedicalexpannl" type="java.lang.Double">
+            <column name="TPD_SELF_MEDICALEXPANNL" precision="126" scale="0" />
+        </property>
+        <property name="tpdSelfMedicalexpannlYr" type="string">
+            <column name="TPD_SELF_MEDICALEXPANNL_YR" length="20" />
+        </property>
+        <property name="tpdSelfRemark" type="string">
+            <column name="TPD_SELF_REMARK" length="300" />
+        </property>
+        <property name="tpdsSelfLivingneedPrcnt" type="java.lang.Double">
+            <column name="TPDS_SELF_LIVINGNEED_PRCNT" precision="126" scale="0" />
+        </property>
+        <property name="tpdsSpsLivingneedPrcnt" type="java.lang.Double">
+            <column name="TPDS_SPS_LIVINGNEED_PRCNT" precision="126" scale="0" />
+        </property>
+        <property name="tpdsChildLivingneedPrcnt" type="java.lang.Double">
+            <column name="TPDS_CHILD_LIVINGNEED_PRCNT" precision="126" scale="0" />
+        </property>
+        <property name="tpdsFamilyLivingneedPrcnt" type="java.lang.Double">
+            <column name="TPDS_FAMILY_LIVINGNEED_PRCNT" precision="126" scale="0" />
+        </property>
+        <property name="tpdsSelfIntendYrs" type="string">
+            <column name="TPDS_SELF_INTEND_YRS" length="20" />
+        </property>
+        <property name="tpdsSpsIntendYrs" type="string">
+            <column name="TPDS_SPS_INTEND_YRS" length="20" />
+        </property>
+        <property name="tpdsChildIntendYrs" type="string">
+            <column name="TPDS_CHILD_INTEND_YRS" length="20" />
+        </property>
+        <property name="tpdsFamilyIntendYrs" type="string">
+            <column name="TPDS_FAMILY_INTEND_YRS" length="20" />
+        </property>
+        <property name="tpdsSpsAnnlincome" type="java.lang.Double">
+            <column name="TPDS_SPS_ANNLINCOME" precision="126" scale="0" />
+        </property>
+        <property name="tpdsSpsAnnlincomeYr" type="string">
+            <column name="TPDS_SPS_ANNLINCOME_YR" length="20" />
+        </property>
+        <property name="tpdsSpsMedicalexpannl" type="java.lang.Double">
+            <column name="TPDS_SPS_MEDICALEXPANNL" precision="126" scale="0" />
+        </property>
+        <property name="tpdsSpsMedicalexpannlYr" type="string">
+            <column name="TPDS_SPS_MEDICALEXPANNL_YR" length="20" />
+        </property>
+        <property name="tpdSpsRemark" type="string">
+            <column name="TPD_SPS_REMARK" length="300" />
+        </property>
+        <property name="ciSelfLivingneedPrcnt" type="java.lang.Double">
+            <column name="CI_SELF_LIVINGNEED_PRCNT" precision="126" scale="0" />
+        </property>
+        <property name="ciSpsLivingneedPrcnt" type="java.lang.Double">
+            <column name="CI_SPS_LIVINGNEED_PRCNT" precision="126" scale="0" />
+        </property>
+        <property name="ciChildLivingneedPrcnt" type="java.lang.Double">
+            <column name="CI_CHILD_LIVINGNEED_PRCNT" precision="126" scale="0" />
+        </property>
+        <property name="ciFamilyLivingneedPrcnt" type="java.lang.Double">
+            <column name="CI_FAMILY_LIVINGNEED_PRCNT" precision="126" scale="0" />
+        </property>
+        <property name="ciSelfIntendYrs" type="string">
+            <column name="CI_SELF_INTEND_YRS" length="20" />
+        </property>
+        <property name="ciSpsIntendYrs" type="string">
+            <column name="CI_SPS_INTEND_YRS" length="20" />
+        </property>
+        <property name="ciChildIntendYrs" type="string">
+            <column name="CI_CHILD_INTEND_YRS" length="20" />
+        </property>
+        <property name="ciFamilyIntendYrs" type="string">
+            <column name="CI_FAMILY_INTEND_YRS" length="20" />
+        </property>
+        <property name="ciSelfAnnlincome" type="java.lang.Double">
+            <column name="CI_SELF_ANNLINCOME" precision="126" scale="0" />
+        </property>
+        <property name="ciSelfAnnlincomeYr" type="java.lang.Short">
+            <column name="CI_SELF_ANNLINCOME_YR" precision="3" scale="0" />
+        </property>
+        <property name="ciSelfOthannlexp" type="java.lang.Double">
+            <column name="CI_SELF_OTHANNLEXP" precision="126" scale="0" />
+        </property>
+        <property name="ciSelfOthannlexpYr" type="string">
+            <column name="CI_SELF_OTHANNLEXP_YR" length="20" />
+        </property>
+        <property name="ciSelfLumpsummc" type="java.lang.Double">
+            <column name="CI_SELF_LUMPSUMMC" precision="126" scale="0" />
+        </property>
+        <property name="ciSelfRemark" type="string">
+            <column name="CI_SELF_REMARK" length="300" />
+        </property>
+        <property name="cisSelfLivingneedPrcnt" type="java.lang.Double">
+            <column name="CIS_SELF_LIVINGNEED_PRCNT" precision="126" scale="0" />
+        </property>
+        <property name="cisSpsLivingneedPrcnt" type="java.lang.Double">
+            <column name="CIS_SPS_LIVINGNEED_PRCNT" precision="126" scale="0" />
+        </property>
+        <property name="cisChildLivingneedPrcnt" type="java.lang.Double">
+            <column name="CIS_CHILD_LIVINGNEED_PRCNT" precision="126" scale="0" />
+        </property>
+        <property name="cisFamilyLivingneedPrcnt" type="java.lang.Double">
+            <column name="CIS_FAMILY_LIVINGNEED_PRCNT" precision="126" scale="0" />
+        </property>
+        <property name="cisSelfIntendYrs" type="string">
+            <column name="CIS_SELF_INTEND_YRS" length="20" />
+        </property>
+        <property name="cisSpsIntendYrs" type="string">
+            <column name="CIS_SPS_INTEND_YRS" length="20" />
+        </property>
+        <property name="cisChildIntendYrs" type="string">
+            <column name="CIS_CHILD_INTEND_YRS" length="20" />
+        </property>
+        <property name="cisFamilyIntendYrs" type="string">
+            <column name="CIS_FAMILY_INTEND_YRS" length="20" />
+        </property>
+        <property name="cisSpsAnnlincome" type="java.lang.Double">
+            <column name="CIS_SPS_ANNLINCOME" precision="126" scale="0" />
+        </property>
+        <property name="cisSpsAnnlincomeYr" type="java.lang.Double">
+            <column name="CIS_SPS_ANNLINCOME_YR" precision="126" scale="0" />
+        </property>
+        <property name="cisSpsOthannlexp" type="java.lang.Double">
+            <column name="CIS_SPS_OTHANNLEXP" precision="126" scale="0" />
+        </property>
+        <property name="cisSpsOthannlexpYr" type="string">
+            <column name="CIS_SPS_OTHANNLEXP_YR" length="20" />
+        </property>
+        <property name="cisSpsLumpsummc" type="java.lang.Double">
+            <column name="CIS_SPS_LUMPSUMMC" precision="126" scale="0" />
+        </property>
+        <property name="ciSpsRemark" type="string">
+            <column name="CI_SPS_REMARK" length="300" />
+        </property>
+        <property name="eduFund" type="java.lang.Double">
+            <column name="EDU_FUND" precision="126" scale="0" />
+        </property>
+        <property name="spseduFund" type="java.lang.Double">
+            <column name="SPS_EDU_FUND" precision="126" scale="0" />
+        </property>
+        <property name="liaboffsetSelfPrcnt" type="java.lang.Double">
+            <column name="LIABOFFSET_SELF_PRCNT" precision="126" scale="0" />
+        </property>
+        <property name="liaboffsetSpsPrcnt" type="java.lang.Double">
+            <column name="LIABOFFSET_SPS_PRCNT" precision="126" scale="0" />
+        </property>
+        <property name="lastexpSelfAmt" type="java.lang.Double">
+            <column name="LASTEXP_SELF_AMT" precision="126" scale="0" />
+        </property>
+        <property name="lastexpSpsAmt" type="java.lang.Double">
+            <column name="LASTEXP_SPS_AMT" precision="126" scale="0" />
+        </property>
+        <property name="contCrtdBy" type="string">
+            <column name="CONT_CRTD_BY" length="20" />
+        </property>
+        <property name="contCrtdDate" type="date">
+            <column name="CONT_CRTD_DATE" length="7" />
+        </property>
+        <property name="contModBy" type="string">
+            <column name="CONT_MOD_BY" length="20" />
+        </property>
+        <property name="contModDate" type="date">
+            <column name="CONT_MOD_DATE" length="7" />
+        </property>
+    </class>
+</hibernate-mapping>

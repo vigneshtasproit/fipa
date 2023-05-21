@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated May 17, 2018 11:20:37 AM by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.fipa.dto.MasterAnalysisTypes" table="MASTER_ANALYSIS_TYPES" >
+        <id name="anaPkid" type="string">
+            <column name="ANA_PKID" length="20" />
+            <generator class="assigned" />
+        </id>
+        <property name="analysis" type="string">
+            <column name="ANALYSIS" length="300" not-null="true" />
+        </property>
+        <property name="anaReportId" type="string">
+            <column name="ANA_REPORT_ID" length="20" />
+        </property>
+        <property name="anaCrtdBy" type="string">
+            <column name="ANA_CRTD_BY" length="20" not-null="true" />
+        </property>
+        <property name="anaCrtdDate" type="date">
+            <column name="ANA_CRTD_DATE" length="7" not-null="true" />
+        </property>
+        <property name="anaModifiedBy" type="string">
+            <column name="ANA_MODIFIED_BY" length="20" />
+        </property>
+        <property name="anaModifiedDate" type="date">
+            <column name="ANA_MODIFIED_DATE" length="7" />
+        </property>
+        <set name="fnaApptypeses" table="FNA_APPTYPES" inverse="false" lazy="true" fetch="select">
+            <key>
+                <column name="ANALYSIS_ID" length="20" />
+            </key>
+            <one-to-many class="com.fipa.dto.FnaApptypes" />
+        </set>
+    </class>
+</hibernate-mapping>

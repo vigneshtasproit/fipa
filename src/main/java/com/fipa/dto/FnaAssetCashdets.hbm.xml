@@ -1,0 +1,144 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated May 21, 2018 6:03:09 PM by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.fipa.dto.FnaAssetCashdets" table="FNA_ASSET_CASHDETS" >
+        <id name="casstId" type="string">
+            <column name="CASST_ID" length="20" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="fnaSelfspouseDets" class="com.fipa.dto.FnaSelfspouseDets" fetch="select">
+            <column name="FNA_ID" length="20" />
+        </many-to-one>
+        <property name="casstSelfSavingfd" type="java.lang.Double">
+            <column name="CASST_SELF_SAVINGFD" precision="126" scale="0" />
+        </property>
+        <property name="casstSelfRegsaving" type="java.lang.Double">
+            <column name="CASST_SELF_REGSAVING" precision="126" scale="0" />
+        </property>
+        <property name="casstSelfCashequ" type="java.lang.Double">
+            <column name="CASST_SELF_CASHEQU" precision="126" scale="0" />
+        </property>
+        <property name="casstSelfSrs" type="java.lang.Double">
+            <column name="CASST_SELF_SRS" precision="126" scale="0" />
+        </property>
+        <property name="casstSpsSavingfd" type="java.lang.Double">
+            <column name="CASST_SPS_SAVINGFD" precision="126" scale="0" />
+        </property>
+        <property name="casstSpsRegsaving" type="java.lang.Double">
+            <column name="CASST_SPS_REGSAVING" precision="126" scale="0" />
+        </property>
+        <property name="casstSpsCashequ" type="java.lang.Double">
+            <column name="CASST_SPS_CASHEQU" precision="126" scale="0" />
+        </property>
+        <property name="casstSpsSrs" type="java.lang.Double">
+            <column name="CASST_SPS_SRS" precision="126" scale="0" />
+        </property>
+        <property name="casstFamSavingfd" type="java.lang.Double">
+            <column name="CASST_FAM_SAVINGFD" precision="126" scale="0" />
+        </property>
+        <property name="casstFamRegsaving" type="java.lang.Double">
+            <column name="CASST_FAM_REGSAVING" precision="126" scale="0" />
+        </property>
+        <property name="casstFamCashequ" type="java.lang.Double">
+            <column name="CASST_FAM_CASHEQU" precision="126" scale="0" />
+        </property>
+        <property name="casstRpSavingfd" type="java.lang.Double">
+            <column name="CASST_RP_SAVINGFD" precision="126" scale="0" />
+        </property>
+        <property name="casstRpRegsaving" type="java.lang.Double">
+            <column name="CASST_RP_REGSAVING" precision="126" scale="0" />
+        </property>
+        <property name="casstRpCashequ" type="java.lang.Double">
+            <column name="CASST_RP_CASHEQU" precision="126" scale="0" />
+        </property>
+        <property name="casstRpSrs" type="java.lang.Double">
+            <column name="CASST_RP_SRS" precision="126" scale="0" />
+        </property>
+        <property name="casstRemSavingfd" type="string">
+            <column name="CASST_REM_SAVINGFD" length="300" />
+        </property>
+        <property name="casstRemRegsaving" type="string">
+            <column name="CASST_REM_REGSAVING" length="300" />
+        </property>
+        <property name="casstRemCashequ" type="string">
+            <column name="CASST_REM_CASHEQU" length="300" />
+        </property>
+        <property name="casstRemSrs" type="string">
+            <column name="CASST_REM_SRS" length="300" />
+        </property>
+        <property name="casstSpsRpSavingfd" type="java.lang.Double">
+            <column name="CASST_SPS_RP_SAVINGFD" precision="126" scale="0" />
+        </property>
+        <property name="casstSpsRpRegsaving" type="java.lang.Double">
+            <column name="CASST_SPS_RP_REGSAVING" precision="126" scale="0" />
+        </property>
+        <property name="casstSpsRpCashequ" type="java.lang.Double">
+            <column name="CASST_SPS_RP_CASHEQU" precision="126" scale="0" />
+        </property>
+        <property name="casstSpsRpSrs" type="java.lang.Double">
+            <column name="CASST_SPS_RP_SRS" precision="126" scale="0" />
+        </property>
+        <property name="casstSpsRemSavingfd" type="string">
+            <column name="CASST_SPS_REM_SAVINGFD" length="300" />
+        </property>
+        <property name="casstSpsRemRegsaving" type="string">
+            <column name="CASST_SPS_REM_REGSAVING" length="300" />
+        </property>
+        <property name="casstSpsRemCashequ" type="string">
+            <column name="CASST_SPS_REM_CASHEQU" length="300" />
+        </property>
+        <property name="casstSpsRemSrs" type="string">
+            <column name="CASST_SPS_REM_SRS" length="300" />
+        </property>
+        <property name="casstFamRpSavingfd" type="java.lang.Double">
+            <column name="CASST_FAM_RP_SAVINGFD" precision="126" scale="0" />
+        </property>
+        <property name="casstFamRpRegsaving" type="java.lang.Double">
+            <column name="CASST_FAM_RP_REGSAVING" precision="126" scale="0" />
+        </property>
+        <property name="casstFamRpCashequ" type="java.lang.Double">
+            <column name="CASST_FAM_RP_CASHEQU" precision="126" scale="0" />
+        </property>
+        <property name="casstFamRemSavingfd" type="string">
+            <column name="CASST_FAM_REM_SAVINGFD" length="300" />
+        </property>
+        <property name="casstFamRemRegsaving" type="string">
+            <column name="CASST_FAM_REM_REGSAVING" length="300" />
+        </property>
+        <property name="casstFamRemCashequ" type="string">
+            <column name="CASST_FAM_REM_CASHEQU" length="300" />
+        </property>
+        <property name="casstFamSrs" type="java.lang.Double">
+            <column name="CASST_FAM_SRS" precision="126" scale="0" />
+        </property>
+        <property name="casstFamRpSrs" type="java.lang.Double">
+            <column name="CASST_FAM_RP_SRS" precision="126" scale="0" />
+        </property>
+        <property name="casstFamRemSrs" type="string">
+            <column name="CASST_FAM_REM_SRS" length="300" />
+        </property>
+        <property name="casstSelfTotal" type="java.lang.Double">
+            <column name="CASST_SELF_TOTAL" precision="126" scale="0" />
+        </property>
+        <property name="casstSpsTotal" type="java.lang.Double">
+            <column name="CASST_SPS_TOTAL" precision="126" scale="0" />
+        </property>
+        <property name="casstFamTotal" type="java.lang.Double">
+            <column name="CASST_FAM_TOTAL" precision="126" scale="0" />
+        </property>
+        <property name="casstCreatedBy" type="string">
+            <column name="CASST_CREATED_BY" length="20" />
+        </property>
+        <property name="casstCreatedDate" type="date">
+            <column name="CASST_CREATED_DATE" length="7" />
+        </property>
+        <property name="casstModifiedBy" type="string">
+            <column name="CASST_MODIFIED_BY" length="20" />
+        </property>
+        <property name="casstModifiedDate" type="date">
+            <column name="CASST_MODIFIED_DATE" length="7" />
+        </property>
+    </class>
+</hibernate-mapping>

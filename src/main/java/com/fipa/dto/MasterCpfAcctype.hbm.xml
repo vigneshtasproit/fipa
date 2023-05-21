@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 16, 2018 10:05:35 AM by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.fipa.dto.MasterCpfAcctype" table="MASTER_CPF_ACCTYPE" >
+        <id name="cpfAcId" type="string">
+            <column name="CPF_AC_ID" length="20" />
+            <generator class="assigned" />
+        </id>
+        <property name="accType" type="string">
+            <column name="ACC_TYPE" length="60" not-null="true" unique="true" />
+        </property>
+        <property name="accCrtdBy" type="string">
+            <column name="ACC_CRTD_BY" length="20" />
+        </property>
+        <property name="accCrtdDate" type="date">
+            <column name="ACC_CRTD_DATE" length="7" />
+        </property>
+        <property name="accModBy" type="string">
+            <column name="ACC_MOD_BY" length="20" />
+        </property>
+        <property name="accModDate" type="date">
+            <column name="ACC_MOD_DATE" length="7" />
+        </property>
+        <property name="accCode" type="string">
+            <column name="ACC_CODE" length="20" />
+        </property>
+        <property name="accCommAge" type="string">
+            <column name="ACC_COMM_AGE" length="20" />
+        </property>
+        <property name="accWithdrawAge" type="string">
+            <column name="ACC_WITHDRAW_AGE" length="20" />
+        </property> 
+           <property name="accTopuplimit" type="java.lang.Double">
+            <column name="ACC_TOPUPLIMIT" precision="126" scale="0" />
+        </property>
+        
+    </class>
+</hibernate-mapping>
